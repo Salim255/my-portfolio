@@ -1,4 +1,56 @@
-section {
+.section {
   height: 50vh;
   background: linear-gradient(rgb(255, 255, 255), rgb(2, 17, 31));
+  text-align: center;
+  display: grid;
+  svg {
+    height: 2rem;
+  }
+
+  .links {
+    display: flex;
+
+    &__container {
+      margin: auto;
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+      &--svg {
+        height: 4rem;
+        width: 4rem;
+        background: linear-gradient(rgb(21, 93, 97), rgb(1, 42, 63));
+        border-radius: 50%;
+        position: relative;
+        box-shadow: 2px 4px 4px 2px rgba($color: #3f3e3e, $alpha: 1);
+        transition: all 0.2s ease;
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.05);
+          background: linear-gradient(rgb(41, 180, 188), rgb(1, 42, 63));
+        }
+        svg {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+
+  .copyright {
+    display: flex;
+    div {
+      margin: auto;
+      display: flex;
+      gap: 1rem;
+      svg {
+        align-self: center;
+      }
+      p {
+        align-self: center;
+        color: #707a7d;
+      }
+    }
+  }
 }

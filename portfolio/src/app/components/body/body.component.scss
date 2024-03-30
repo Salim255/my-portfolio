@@ -1,5 +1,73 @@
 section {
-  height: 100vh;
-  background: black;
+  background: rgb(2, 56, 84);
   margin: 0 2rem;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+
+  .container {
+    display: flex;
+    //height: 60vh;
+    gap: 0.1rem;
+
+    div {
+      flex: 1;
+      background: rgb(254, 255, 255);
+      text-align: center;
+      padding: 1rem;
+
+      .icon {
+        position: relative;
+        margin-bottom: 3rem;
+        div {
+          background: linear-gradient(rgb(77, 219, 226), rgb(1, 42, 63));
+          width: 4rem;
+          height: 4rem;
+          border-radius: 50%;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          div {
+            position: relative;
+            svg {
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+              height: 2rem;
+              width: 2rem;
+              fill: #fff;
+            }
+          }
+        }
+      }
+    }
+    div:first-child {
+      border-top-left-radius: 1rem;
+    }
+    div:last-child {
+      border-top-right-radius: 1rem;
+    }
+  }
+
+  ul {
+    list-style: none;
+  }
+}
+
+svg {
+  height: 3rem;
+  width: 3rem;
+}
+
+h1 {
+  background-image: linear-gradient(
+    to right bottom,
+    rgb(2, 49, 59),
+    rgb(11, 205, 223)
+  );
+  display: inline-block;
+  -webkit-background-clip: text; //to showthe color exactly where the txt is
+  background-clip: text;
+  color: transparent; //the color of the text is transpaent to make us see the -webki-clip
 }

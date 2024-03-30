@@ -1,0 +1,66 @@
+main {
+  display: grid;
+  background: #f0efef;
+
+  & section {
+    height: 90vh;
+    -webkit-clip-path: polygon(
+      0 100%,
+      100% 80%,
+      100% 0,
+      0 0
+    ); //not working in some broswers
+
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    div p:first-child {
+      font-size: 2.5rem;
+      font-weight: 700;
+      background-image: linear-gradient(
+        to right bottom,
+        rgb(2, 49, 59),
+        rgb(11, 205, 223)
+      );
+      display: inline-block;
+      -webkit-background-clip: text; //to showthe color exactly where the txt is
+      background-clip: text;
+      color: transparent; //the color of the text is transpaent to make us see the -webki-clip
+    }
+    div p:last-child {
+      font-size: 1.5rem;
+    }
+
+    text-align: center;
+    figure {
+      padding-top: 5rem;
+      figcaption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        text-align: center;
+        opacity: 0;
+        transition: all 0.5s;
+        color: white;
+        &:hover {
+          opacity: 1;
+          transform: translate(-50%, -50%);
+        }
+      }
+      img {
+        height: 15rem;
+        width: 15rem;
+        border-radius: 50%;
+        object-fit: cover;
+        transition: all 0.2s ease-in;
+        &:hover {
+          filter: blur(3px) brightness(80%);
+        }
+      }
+    }
+  }
+  & footer {
+    //background: green;
+  }
+}
