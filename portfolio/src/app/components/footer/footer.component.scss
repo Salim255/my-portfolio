@@ -1,9 +1,14 @@
+@import "../../../theme/queries";
 .section {
-  height: 30vh;
+  height: 20vh;
   //background: linear-gradient(rgb(21, 93, 97), rgb(223, 110, 11));
   text-align: center;
   display: grid;
   padding-top: 10rem;
+  padding-bottom: 2rem;
+  @include respond(bp-mobile-small) {
+    height: 10vh;
+  }
 
   svg {
     height: 2rem;
@@ -12,15 +17,21 @@
   .links {
     display: flex;
 
+    justify-content: center;
     &__container {
-      margin: auto;
+      margin-left: 0;
+      padding-left: 0;
       display: flex;
       list-style: none;
       gap: 2rem;
+
       &--svg {
+        flex: 1;
         height: 4rem;
         width: 4rem;
-        background: linear-gradient(rgb(21, 93, 97), rgb(1, 42, 63));
+        margin-left: 0;
+        padding-left: 0;
+        background: linear-gradient(rgb(118, 225, 231), rgb(1, 42, 63));
 
         border-radius: 50%;
         position: relative;

@@ -1,6 +1,6 @@
 <section>
   <div class="container">
-    <div>
+    <div class="card">
       <div class="icon">
         <div>
           <div>
@@ -20,13 +20,15 @@
         experiences
       </p>
       <div class="list-title">
-        <h3>Designing Skills:</h3>
+        <div>
+          <h3>Designing Skills:</h3>
+        </div>
       </div>
       <ul>
         <li *ngFor="let item of designList; index">{{ item }}</li>
       </ul>
     </div>
-    <div>
+    <div class="card">
       <div class="icon">
         <div>
           <div>
@@ -42,13 +44,13 @@
       <h1>Frontend Developer</h1>
       <p>Frontend it's where I can craft meaningful value for users.</p>
       <div class="list-title">
-        <h3>Frontend Skills:</h3>
+        <div><h3>Frontend Skills:</h3></div>
       </div>
       <ul>
         <li *ngFor="let item of FrontEndSkills">{{ item }}</li>
       </ul>
     </div>
-    <div>
+    <div class="card">
       <div class="icon">
         <div>
           <div>
@@ -66,13 +68,15 @@
         It's where I leverage my technical expertise to build scalable solutions
       </p>
       <div class="list-title">
-        <h3>Backend Skills:</h3>
+        <div>
+          <h3>Backend Skills:</h3>
+        </div>
       </div>
       <ul>
         <li *ngFor="let item of BackEndSkills">{{ item }}</li>
       </ul>
     </div>
-    <div>
+    <div class="card">
       <div class="icon">
         <div>
           <div>
@@ -88,12 +92,11 @@
       <h1>DevOps Practices</h1>
       <p>It's about fostering a culture of innovation and efficiency,</p>
       <div class="list-title">
-        <h3>DevOps Skills:</h3>
+        <div><h3>DevOps Skills:</h3></div>
       </div>
       <ul>
         <li *ngFor="let item of DevOpsSkills">{{ item }}</li>
       </ul>
     </div>
   </div>
-
 </section>
