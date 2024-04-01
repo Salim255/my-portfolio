@@ -1,8 +1,10 @@
 .section {
-  height: 50vh;
-  background: linear-gradient(rgb(255, 255, 255), rgb(2, 17, 31));
+  height: 30vh;
+  //background: linear-gradient(rgb(21, 93, 97), rgb(223, 110, 11));
   text-align: center;
   display: grid;
+  padding-top: 10rem;
+
   svg {
     height: 2rem;
   }
@@ -19,6 +21,7 @@
         height: 4rem;
         width: 4rem;
         background: linear-gradient(rgb(21, 93, 97), rgb(1, 42, 63));
+
         border-radius: 50%;
         position: relative;
         box-shadow: 2px 4px 4px 2px rgba($color: #3f3e3e, $alpha: 1);
@@ -26,7 +29,11 @@
         &:hover {
           cursor: pointer;
           transform: scale(1.05);
-          background: linear-gradient(rgb(41, 180, 188), rgb(1, 42, 63));
+          background-image: linear-gradient(
+            to right,
+            rgb(223, 110, 11),
+            rgb(3, 92, 112)
+          );
         }
         svg {
           position: absolute;
@@ -43,13 +50,25 @@
     div {
       margin: auto;
       display: flex;
-      gap: 1rem;
+      gap: 0.5rem;
       svg {
         align-self: center;
+        height: 1rem;
       }
       p {
         align-self: center;
-        color: #707a7d;
+        color: #606365;
+        font-size: 11px;
+
+        background-image: linear-gradient(
+          to right bottom,
+          rgb(97, 99, 99),
+          rgb(255, 255, 255)
+        );
+        display: inline-block;
+        -webkit-background-clip: text; //to showthe color exactly where the txt is
+        background-clip: text;
+        color: transparent; //the color of the text is transpaent to make us see the -webki-clip
       }
     }
   }

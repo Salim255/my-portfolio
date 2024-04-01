@@ -1,4 +1,30 @@
-section {
-  background: red;
-  height: 100vh;
+.works {
+  &__header {
+    text-align: center;
+    p {
+      font-size: 2rem;
+      background-image: linear-gradient(
+        to right bottom,
+        rgb(3, 92, 112),
+        rgb(223, 110, 11)
+      );
+      display: inline-block;
+      -webkit-background-clip: text; //to showthe color exactly where the txt is
+      background-clip: text;
+      color: transparent; //the color of the text is transpaent to make us see the -webki-clip
+    }
+  }
+  section {
+    margin: 0 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    img {
+      background: goldenrod;
+      margin: 1rem;
+      width: 40rem;
+      background: #fff;
+      padding: 1rem;
+    }
+  }
 }
