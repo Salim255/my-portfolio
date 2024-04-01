@@ -1,8 +1,7 @@
 section {
   background: rgb(2, 56, 84);
-  margin: 0 2rem;
-  border-top-right-radius: 1rem;
-  border-top-left-radius: 1rem;
+  margin: 0 4rem;
+  border-radius: 2rem;
 
   .container {
     display: flex;
@@ -27,6 +26,7 @@ section {
           left: 50%;
           top: 50%;
           transform: translate(-50%, -50%);
+
           div {
             position: relative;
             svg {
@@ -41,17 +41,32 @@ section {
           }
         }
       }
+
+      .list-title {
+        h3 {
+          color: rgb(5, 109, 132);
+        }
+      }
     }
     div:first-child {
       border-top-left-radius: 1rem;
+      border-bottom-left-radius: 1rem;
     }
     div:last-child {
       border-top-right-radius: 1rem;
+      border-bottom-right-radius: 1rem;
     }
   }
 
   ul {
     list-style: none;
+    text-align: center;
+    padding-left: 0;
+    margin-left: 0;
+    li {
+      text-align: center;
+      margin: 0.5rem 0;
+    }
   }
 }
 
@@ -63,8 +78,8 @@ svg {
 h1 {
   background-image: linear-gradient(
     to right bottom,
-    rgb(2, 49, 59),
-    rgb(11, 205, 223)
+    rgb(3, 92, 112),
+    rgb(223, 110, 11)
   );
   display: inline-block;
   -webkit-background-clip: text; //to showthe color exactly where the txt is

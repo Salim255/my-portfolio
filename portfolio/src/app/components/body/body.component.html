@@ -15,11 +15,12 @@
       </div>
       <h1>Designer</h1>
       <p>
-        I enjoy designing and turning ideas into visually user-friendly
+        Specializing in database and application design using Merise and UML. I
+        enjoy designing and turning ideas into visually user-friendly
         experiences
       </p>
-      <div>
-        <p>Design Tools:</p>
+      <div class="list-title">
+        <h3>Designing Skills:</h3>
       </div>
       <ul>
         <li *ngFor="let item of designList; index">{{ item }}</li>
@@ -40,23 +41,11 @@
       </div>
       <h1>Frontend Developer</h1>
       <p>Frontend it's where I can craft meaningful value for users.</p>
-      <div>
-        <p>Frontend Language:</p>
+      <div class="list-title">
+        <h3>Frontend Skills:</h3>
       </div>
       <ul>
-        <li *ngFor="let item of [1, 2, 3, 4, 5]">{{ item }}</li>
-      </ul>
-      <div>
-        <p>Frontend Library & Framework:</p>
-      </div>
-      <ul>
-        <li *ngFor="let item of [1, 2, 3, 4, 5]">{{ item }}</li>
-      </ul>
-      <div>
-        <p>Frontend Tools:</p>
-      </div>
-      <ul>
-        <li *ngFor="let item of [1, 2, 3, 4, 5]">{{ item }}</li>
+        <li *ngFor="let item of FrontEndSkills">{{ item }}</li>
       </ul>
     </div>
     <div>
@@ -76,11 +65,11 @@
       <p>
         It's where I leverage my technical expertise to build scalable solutions
       </p>
-      <div>
-        <p>Backend Tools:</p>
+      <div class="list-title">
+        <h3>Backend Skills:</h3>
       </div>
       <ul>
-        <li *ngFor="let item of [1, 2, 3, 4, 5]">{{ item }}</li>
+        <li *ngFor="let item of BackEndSkills">{{ item }}</li>
       </ul>
     </div>
     <div>
@@ -98,13 +87,13 @@
       </div>
       <h1>DevOps Practices</h1>
       <p>It's about fostering a culture of innovation and efficiency,</p>
-      <div>
-        <p>DevOps Tools:</p>
+      <div class="list-title">
+        <h3>DevOps Skills:</h3>
       </div>
       <ul>
-        <li *ngFor="let item of [1, 2, 3, 4, 5]">{{ item }}</li>
+        <li *ngFor="let item of DevOpsSkills">{{ item }}</li>
       </ul>
     </div>
   </div>
-  <app-work></app-work>
+
 </section>
