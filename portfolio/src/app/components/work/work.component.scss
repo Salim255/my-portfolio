@@ -1,8 +1,11 @@
+@import "../../../theme/queries";
+
 .works {
   &__header {
     text-align: center;
+    margin-top: 3rem;
     p {
-      font-size: 2rem;
+      font-size: 3rem;
       background-image: linear-gradient(
         to right bottom,
         rgb(3, 92, 112),
@@ -15,16 +18,38 @@
     }
   }
   section {
-    margin: 0 1rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 2rem;
+
     img {
-      background: goldenrod;
       margin: 1rem;
       width: 40rem;
       background: #fff;
       padding: 1rem;
+      @include respond(bp-extra-large) {
+        width: 44%;
+      }
+      @include respond(bp-laptop-large) {
+        width: 43%;
+      }
+      @include respond(bp-laptop) {
+        width: 40%;
+      }
+
+      @include respond(bp-tablet) {
+        width: 100%;
+      }
+      @include respond(bp-mobile-large) {
+        width: 100%;
+      }
+      @include respond(bp-mobile-medium) {
+        width: 100%;
+      }
+      @include respond(bp-mobile-small) {
+        width: 100%;
+      }
     }
   }
 }

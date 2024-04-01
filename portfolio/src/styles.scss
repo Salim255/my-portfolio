@@ -1,10 +1,36 @@
+@import "./theme/queries.scss";
 /* You can add global styles to this file, and also import other style files */
 html {
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
   color: #141c3a;
+  font-size: 100%;
+
+  @include respond(bp-extra-large) {
+    font-size: 100%;
+  }
+  @include respond(bp-laptop-large) {
+    font-size: 90%;
+  }
+  @include respond(bp-laptop) {
+    font-size: 80%;
+  }
+
+  @include respond(bp-tablet) {
+    font-size: 70%;
+  }
+  @include respond(bp-mobile-large) {
+    font-size: 62%;
+  }
+  @include respond(bp-mobile-medium) {
+    font-size: 56.5%;
+  }
+  @include respond(bp-mobile-small) {
+    font-size: 50%;
+  }
 }
 body {
   padding: 0;
   margin: 0;
+  background: linear-gradient(#f0efef, #f0efef, rgb(21, 93, 97));
 }

@@ -1,22 +1,50 @@
+@import "../../../theme/queries";
+
 section {
-  background: rgb(2, 56, 84);
   margin: 0 4rem;
   border-radius: 2rem;
 
   .container {
     display: flex;
-    //height: 60vh;
-    gap: 0.1rem;
+    flex-wrap: wrap;
+    gap: 4rem;
+
+    @include respond(bp-extra-large) {
+      gap: 0.2rem;
+    }
+    @include respond(bp-laptop-large) {
+    }
+    @include respond(bp-laptop) {
+      gap: 4rem;
+    }
+
+    @include respond(bp-tablet) {
+      gap: 4rem;
+    }
 
     div {
       flex: 1;
       background: rgb(254, 255, 255);
       text-align: center;
-      padding: 1rem;
+      p {
+        margin: 0 1rem;
+      }
+      @include respond(bp-tablet) {
+        width: 15rem;
+      }
+      @include respond(bp-laptop) {
+        width: 22rem;
+      }
+
+      @include respond(bp-mobile-large) {
+        width: 22rem;
+      }
 
       .icon {
         position: relative;
+        width: 100%;
         margin-bottom: 3rem;
+
         div {
           background: linear-gradient(rgb(77, 219, 226), rgb(1, 42, 63));
           width: 4rem;
@@ -27,8 +55,14 @@ section {
           top: 50%;
           transform: translate(-50%, -50%);
 
+          @include respond(bp-mobile-small) {
+            top: 36%;
+            transform: translate(-50%, -36%);
+          }
+
           div {
             position: relative;
+
             svg {
               position: absolute;
               left: 50%;
@@ -43,18 +77,32 @@ section {
       }
 
       .list-title {
-        h3 {
-          color: rgb(5, 109, 132);
+        width: 100%;
+        display: flex;
+        div {
+          margin: auto;
+          h3 {
+            margin-top: 2rem;
+            background-image: linear-gradient(
+              to right bottom,
+              rgb(3, 92, 112),
+              rgb(223, 110, 11)
+            );
+            display: inline-block;
+            -webkit-background-clip: text; //to showthe color exactly where the txt is
+            background-clip: text;
+            color: transparent; //the color of the text is transpaent to make us see the -webki-clip
+          }
         }
       }
     }
     div:first-child {
-      border-top-left-radius: 1rem;
-      border-bottom-left-radius: 1rem;
+      // border-top-left-radius: 1rem;
+      //border-bottom-left-radius: 1rem;
     }
     div:last-child {
-      border-top-right-radius: 1rem;
-      border-bottom-right-radius: 1rem;
+      // border-top-right-radius: 1rem;
+      //border-bottom-right-radius: 1rem;
     }
   }
 
@@ -63,6 +111,8 @@ section {
     text-align: center;
     padding-left: 0;
     margin-left: 0;
+    padding-bottom: 2rem;
+
     li {
       text-align: center;
       margin: 0.5rem 0;

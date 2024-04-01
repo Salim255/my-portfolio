@@ -1,22 +1,27 @@
+@import "../../../theme/queries";
 main {
   display: grid;
-  background: #f0efef;
-  background: linear-gradient(#f0efef, #f0efef, rgb(21, 93, 97));
+
+  width: 100%;
   .logo {
     padding: 2rem;
     display: flex;
     div:first-child {
       margin-right: auto;
       img {
-        height: 10rem;
+        height: 4rem;
       }
     }
     div:last-child {
       align-self: center;
+      a {
+        text-decoration: none;
+      }
       p {
         padding: 0.5rem 2rem;
         border: 3px solid rgb(5, 102, 124);
         color: rgb(5, 102, 124);
+
         border-radius: 2rem;
         font-size: 1rem;
         transition: all 0.2s ease-in;
@@ -38,6 +43,18 @@ main {
   & section {
     height: 90vh;
 
+    @include respond(bp-tablet) {
+      height: 80vh;
+    }
+    @include respond(bp-mobile-large) {
+      height: 70vh;
+    }
+    @include respond(bp-mobile-medium) {
+      height: 60vh;
+    }
+    @include respond(bp-mobile-small) {
+      height: 50vh;
+    }
     div p:first-child {
       font-size: 2.5rem;
       font-weight: 700;
@@ -50,17 +67,27 @@ main {
       -webkit-background-clip: text; //to showthe color exactly where the txt is
       background-clip: text;
       color: transparent; //the color of the text is transpaent to make us see the -webki-clip
+      margin: 0 2rem;
     }
     div p:last-child {
       font-size: 1.5rem;
+      margin: 1 2rem;
     }
 
     text-align: center;
     figure {
       padding-top: 5rem;
+      position: relative;
+      img {
+        height: 15rem;
+        width: 15rem;
+        border-radius: 50%;
+        object-fit: cover;
+        transition: all 0.2s ease-in;
+      }
       figcaption {
         position: absolute;
-        top: 50%;
+        top: 63%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-transform: uppercase;
@@ -69,24 +96,17 @@ main {
         opacity: 0;
         transition: all 0.5s;
         color: white;
-        &:hover {
-          opacity: 1;
-          transform: translate(-50%, -50%);
-        }
+        // z-index: 10;
       }
-      img {
-        height: 15rem;
-        width: 15rem;
-        border-radius: 50%;
-        object-fit: cover;
-        transition: all 0.2s ease-in;
-        &:hover {
+      &:hover {
+        img {
           filter: blur(3px) brightness(80%);
+        }
+        figcaption {
+          color: white;
+          opacity: 1;
         }
       }
     }
-  }
-  & footer {
-    //background: green;
   }
 }

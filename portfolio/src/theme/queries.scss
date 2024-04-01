@@ -1,0 +1,71 @@
+//MEDIA QUERY MANAGER
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == bp-extra-large {
+    //width<=350
+    @media only screen and (max-width: 160em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == bp-laptop-large {
+    //<1230
+    @media only screen and (max-width: 90em) {
+      @content;
+    }
+  }
+  @if $breakpoint == bp-laptop {
+    //<1230
+    @media only screen and (max-width: 64em) {
+      @content;
+    }
+  }
+  @if $breakpoint == bp-tablet {
+    //<1230
+    @media only screen and (max-width: 48em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == bp-mobile-large {
+    @media only screen and (max-width: 26.5em) {
+      @content;
+    }
+  }
+  @if $breakpoint == bp-mobile-medium {
+    //390/16 >
+    @media only screen and (max-width: 23em) {
+      @content;
+    }
+  }
+  @if $breakpoint == bp-mobile-small {
+    //300px
+    @media only screen and (max-width: 20em) {
+      @content;
+    }
+  }
+}
+
+@mixin respond-height($breakpoint) {
+  @if $breakpoint == small-phone {
+    //0-620
+
+    @media only screen and (min-height: 0em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == medium-phone {
+    //721>/16>
+    @media (min-height: 45em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == large-phone {
+    //823>/16>
+    @media (min-height: 51.4em) {
+      @content;
+    }
+  }
+}
