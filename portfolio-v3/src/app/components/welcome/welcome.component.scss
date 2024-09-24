@@ -1,5 +1,35 @@
 .welcome {
-  height: 40vh;
+  height: 100vh;
   width: 100%;
-  background-color: rgb(31, 173, 111);
+  background-color: rgb(18, 19, 19);
+  background-color: rgb(255, 255, 255);
+  i {
+
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #fff,
+    0 0 80px #fff;
+
+    animation: stars linear infinite ;
+  }
+}
+
+
+@keyframes stars {
+  0% {
+     opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
