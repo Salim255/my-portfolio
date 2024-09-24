@@ -8,7 +8,7 @@ import { FooterComponent } from 'src/app/components/footer/footer.component';
 import { AboutMeComponent } from 'src/app/components/about-me/about-me.component';
 import { WelcomeComponent } from 'src/app/components/welcome/welcome.component';
 import { StarsDirective } from 'src/app/directives/stars/stars.directive';
-
+import { ScrollDirectionDirective } from 'src/app/directives/scroll-direction/scroll-direction.directive';
 import { SharedModule } from 'src/app/shared/shared.module';
 
 
@@ -25,7 +25,7 @@ const routes: Routes = [
     AboutMeComponent,
     WelcomeComponent,
     StarsDirective,
-
+    ScrollDirectionDirective
   ],
 
   imports: [
@@ -35,4 +35,7 @@ const routes: Routes = [
   ]
 })
 
-export class HomeModule { }
+export class HomeModule {
+  onScrollUp(){}
+  onScrollDown() {}
+ }
