@@ -8,6 +8,7 @@ import { FooterComponent } from 'src/app/components/footer/footer.component';
 import { AboutMeComponent } from 'src/app/components/about-me/about-me.component';
 import { WelcomeComponent } from 'src/app/components/welcome/welcome.component';
 import { StarsDirective } from 'src/app/directives/stars/stars.directive';
+
 import { SharedModule } from 'src/app/shared/shared.module';
 
 
@@ -23,8 +24,10 @@ const routes: Routes = [
     FooterComponent,
     AboutMeComponent,
     WelcomeComponent,
-    StarsDirective
+    StarsDirective,
+
   ],
+
   imports: [
     CommonModule,
     RouterModule.forChild(routes),

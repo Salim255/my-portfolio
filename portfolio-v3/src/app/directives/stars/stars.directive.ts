@@ -10,7 +10,7 @@ export class StarsDirective implements AfterViewInit {
 
       let j = 0;
 
-      while( j< 40) {
+      while( j< 10) {
         let star = this.renderer.createElement('i');
 
         let x = Math.floor(Math.random() * window.innerWidth);
