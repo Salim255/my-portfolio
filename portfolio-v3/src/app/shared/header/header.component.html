@@ -1,7 +1,17 @@
 <section class="header-section">
-   <div>My logo</div>
-   <div>About me</div>
-   <div>Experience</div>
-   <div>Work</div>
-   <div  nightMode [changModeState]="isActive"  (click)="onChangeMode()">Resume</div>
+   <ul class="header-section__nav-links">
+    <li >
+      <a href="#logo" class="header-section__nav-links--nav-link">My logo</a>
+    </li>
+    <li class="header-section__nav-links--nav-link">
+      <a class="header-section__nav-links--nav-link" href="#about-me">About me</a>
+    </li>
+    <li>
+      <a href="#experience" class="header-section__nav-links--nav-link">Experience</a></li>
+    <li><a href="#work"  class="header-section__nav-links--nav-link">work</a></li>
+    <li  nightMode [changModeState]="isActive"  (click)="onChangeMode()">
+      <a href="#resume" class="header-section__nav-links--nav-link">Resume</a>
+    </li>
+   </ul>
+
 </section>

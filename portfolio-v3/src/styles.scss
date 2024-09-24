@@ -1,11 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
-  html {
-    scroll-behavior: smooth;
-  }
+
   body {
     padding: 0;
     margin: 0;
   }
 
+}
+
+html {
+  scroll-behavior: smooth;
 }
