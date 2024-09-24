@@ -1,3 +1,8 @@
-section {
-  background-color: rgb(156, 14, 14);
+.header-section {
+  background-color: aqua;
+  display: flex;
+
+  div {
+    flex: 1;
+  }
 }
