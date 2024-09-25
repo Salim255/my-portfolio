@@ -4,10 +4,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   &__header {
-    flex: 1;
-    display: flex;
-    justify-content: center;
+
+
+    margin-right: auto;
     &--name {
         font-size: 32px;
         font-weight: 500;
@@ -15,9 +16,8 @@
   }
   &__hero {
 
-    flex: 1;
-    display: flex;
-    justify-content: center;
+
+
    img {
       height: 20rem;
       width: 20rem;

@@ -9,6 +9,7 @@ import { AboutMeComponent } from 'src/app/components/about-me/about-me.component
 import { WelcomeComponent } from 'src/app/components/welcome/welcome.component';
 import { StarsDirective } from 'src/app/directives/stars/stars.directive';
 import { ScrollDirectionDirective } from 'src/app/directives/scroll-direction/scroll-direction.directive';
+import { SkillsComponent } from 'src/app/components/skills/skills.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 
 
@@ -24,6 +25,7 @@ const routes: Routes = [
     FooterComponent,
     AboutMeComponent,
     WelcomeComponent,
+    SkillsComponent,
     StarsDirective,
     ScrollDirectionDirective
   ],

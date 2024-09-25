@@ -1,9 +1,10 @@
 main {
-  background-color: #0d7774;
   height: 100vh;
-  overflow-y: auto;        /* Enable vertical scrolling */
+  overflow-y: auto;
   position: relative;
-
+  padding-left: 10rem;
+  padding-right: 10rem;
+  scroll-behavior: smooth;
 }
 
 

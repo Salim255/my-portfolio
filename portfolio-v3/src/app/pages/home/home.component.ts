@@ -15,7 +15,7 @@ export class HomeComponent implements AfterViewInit {
 
     ngAfterViewInit(): void {
         this.modeStatus = this.appModeService.getAppModeStatus.subscribe( appMode => {
-          let el = this.element.nativeElement.querySelector('main');
+          const el = document.querySelector('body');
           console.log('====================================');
           console.log(el);
           console.log('====================================');
