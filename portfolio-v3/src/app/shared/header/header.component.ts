@@ -3,6 +3,7 @@ import { Subscription } from 'rxjs';
 import { AppModeService } from 'src/app/services/app-mode/app-mode.service';
 import { ScrollDirectionService } from 'src/app/services/scroll-direction/scroll-direction.service';
 import { ScrollData } from 'src/app/interfaces/scroll-direction.interface';
+
 @Component({
   selector: 'app-header',  // <app-header> should match this selector
   templateUrl: './header.component.html',
@@ -21,6 +22,7 @@ export class HeaderComponent {
 
   onChangeMode() {
     this.isActive = !this.isActive;
+  console.log("hello from change mode",this.isActive);
 
     if (this.isActive ) {
       this.appModeService.setAppModeStatus('day')

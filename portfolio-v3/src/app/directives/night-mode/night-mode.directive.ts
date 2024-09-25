@@ -1,4 +1,4 @@
-import { AfterViewInit, Directive, ElementRef, Input, OnChanges, Renderer2, SimpleChanges } from "@angular/core";
+import { Directive, ElementRef, Input, OnChanges, Renderer2, SimpleChanges } from "@angular/core";
 
 
 @Directive({
@@ -19,13 +19,8 @@ export class NightModeDirective implements OnChanges {
   }
 
   changeMode() {
-    let el = this.element.nativeElement.parentElement;
-
     if (this.changModeState) {
-      //this.renderer.setStyle(el, 'backgroundColor', 'white')
       this.changModeState = !this.changModeState
-    } else {
-      //this.renderer.setStyle(el, 'backgroundColor', '#050505')
     }
   }
 }

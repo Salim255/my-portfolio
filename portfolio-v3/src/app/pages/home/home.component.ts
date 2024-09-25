@@ -20,7 +20,7 @@ export class HomeComponent implements AfterViewInit {
           console.log(el);
           console.log('====================================');
           if (appMode === 'day') {
-             this.renderer.setStyle(el, 'backgroundColor', '#fff');
+             this.renderer.setStyle(el, 'backgroundColor', '#bfbfbf');
              this.renderer.setStyle(document.body, 'color', 'black');
           } else if (appMode === 'night') {
             this.renderer.setStyle(el, 'backgroundColor', '#000000')

@@ -11,8 +11,6 @@ export class AppModeService {
     constructor(){}
 
     setAppModeStatus(state: appMode) {
-      console.log(state);
-
       this.appModeStateSource.next(state);
     }
 
