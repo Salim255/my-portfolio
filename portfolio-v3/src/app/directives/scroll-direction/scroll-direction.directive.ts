@@ -1,17 +1,13 @@
-import { Directive, ElementRef, EventEmitter, HostListener, NgZone, Output } from "@angular/core";
-
+import { Directive, ElementRef, HostListener, NgZone } from "@angular/core";
+import { ScrollDirectionService } from "src/app/services/scroll-direction/scroll-direction.service";
 
 @Directive({
-   selector: '[scroll-direction]'
+   selector: '[scrollDirection]'
 })
 export class ScrollDirectionDirective {
    private lastScrollTop = 0;
 
-   @Output() scrolledUp = new EventEmitter<void>();
-   @Output() scrolledDown = new EventEmitter<void>();
-
-   constructor(private ngZone: NgZone, private el: ElementRef){}
-
+   constructor(private ngZone: NgZone, private el: ElementRef, private scrollDirectionService : ScrollDirectionService ){}
 
    @HostListener('scroll', ['$event'])
    onMainScroll(event: Event) {
@@ -22,10 +18,10 @@ export class ScrollDirectionDirective {
 
      if (currentScroll > this.lastScrollTop) {
        //console.log('Scrolled down');
-       this.scrolledDown.emit();
+      this.scrollDirectionService.setScrollDirectionData({direction: 'down', value: currentScroll });
      } else if (currentScroll < this.lastScrollTop) {
        //console.log('Scrolled up');
-       this.scrolledUp.emit();
+       this.scrollDirectionService.setScrollDirectionData({direction: 'up', value: currentScroll });
      }
 
      this.lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Prevent negative scroll values
