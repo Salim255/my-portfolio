@@ -11,6 +11,7 @@ import { StarsDirective } from 'src/app/directives/stars/stars.directive';
 import { ScrollDirectionDirective } from 'src/app/directives/scroll-direction/scroll-direction.directive';
 import { SkillsComponent } from 'src/app/components/skills/skills.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { WorkItemComponent } from 'src/app/components/work/work-item/work-item.component';
 
 
 const routes: Routes = [
@@ -22,6 +23,7 @@ const routes: Routes = [
     HomeComponent,
     ExperienceComponent,
     WorkComponent,
+    WorkItemComponent,
     FooterComponent,
     AboutMeComponent,
     WelcomeComponent,
