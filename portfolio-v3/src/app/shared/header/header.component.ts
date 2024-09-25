@@ -21,9 +21,7 @@ export class HeaderComponent {
 
   onChangeMode() {
     this.isActive = !this.isActive;
-    console.log('====================================');
-    console.log("Hello");
-    console.log('====================================');
+
     if (this.isActive ) {
       this.appModeService.setAppModeStatus('day')
     } else {
@@ -38,8 +36,7 @@ export class HeaderComponent {
 
     if (scrollData) {
       this.scrollData = scrollData;
-      console.log(this.scrollData);
-
+      //console.log(this.scrollData);
     }
   })
  }

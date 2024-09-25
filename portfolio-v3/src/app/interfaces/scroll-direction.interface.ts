@@ -1,4 +1,4 @@
 export interface ScrollData {
   direction: String;
-  value: Number;
+  value: number;
 }

@@ -1,4 +1,9 @@
 .header-section {
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  width: 100%;
   &__nav-links {
     list-style-type: none;
     padding: 0;

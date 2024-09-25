@@ -22,10 +22,10 @@ export class NightModeDirective implements OnChanges {
     let el = this.element.nativeElement.parentElement;
 
     if (this.changModeState) {
-      this.renderer.setStyle(el, 'backgroundColor', 'white')
+      //this.renderer.setStyle(el, 'backgroundColor', 'white')
       this.changModeState = !this.changModeState
     } else {
-      this.renderer.setStyle(el, 'backgroundColor', '#050505')
+      //this.renderer.setStyle(el, 'backgroundColor', '#050505')
     }
   }
 }

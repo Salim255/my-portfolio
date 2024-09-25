@@ -14,8 +14,6 @@ export class ScrollDirectionDirective {
      const main = this.el.nativeElement; // 'main' element reference
      const currentScroll = main.scrollTop;
 
-     console.log(currentScroll);
-
      if (currentScroll > this.lastScrollTop) {
        //console.log('Scrolled down');
       this.scrollDirectionService.setScrollDirectionData({direction: 'down', value: currentScroll });

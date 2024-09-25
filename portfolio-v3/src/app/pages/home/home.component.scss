@@ -1,6 +1,16 @@
 main {
-  background-color: #fff;
+  background-color: #0d7774;
   height: 100vh;
   overflow-y: auto;        /* Enable vertical scrolling */
   position: relative;
+
+
+}
+
+app-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
 }
