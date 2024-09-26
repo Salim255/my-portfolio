@@ -10,6 +10,7 @@
 
   transition: transform 0.5s ease-in-out;  /* Smooth transition */
   transform: translateY(0);  /* Initial state */
+  z-index: 1;
   &__logo {
     flex: 1;
     padding-left: 1rem;

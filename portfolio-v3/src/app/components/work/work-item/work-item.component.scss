@@ -1,7 +1,36 @@
-figure {
+.figure {
+  display: flex;
+  margin: 0;
   img {
-    height: 30rm;
+    height: 30rem;
     width: 40rem;
+    flex: 1;
+    filter: blur(2px);
+    overflow: hidden;
+    &:hover {
+      filter: unset;
+    }
+
+
   }
 
+  &__caption {
+    flex: 1;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+     flex-direction: column;
+
+     &--header {
+      flex: 1;
+     }
+     &--content {
+      flex: 1;
+     }
+
+     &--footer {
+      margin-top: auto;
+     }
+  }
 }
