@@ -1,0 +1,26 @@
+.work {
+  h3 {
+    position: relative;
+    &::after {
+      content: "";
+      border-top: 1px solid var(--line-color);
+      width: 20%;
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 30%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+ &__container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  app-work-item {
+    justify-content: center;
+    width: 30%;
+    margin-bottom: 2rem;
+  }
+ }
+}

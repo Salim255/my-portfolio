@@ -1,0 +1,10 @@
+.work-card {
+  background: red;
+  border-radius: .5rem;
+  overflow: hidden;
+  &__img {
+    height: 20rem;
+    width: 100%;
+    object-fit:cover;
+  }
+}
