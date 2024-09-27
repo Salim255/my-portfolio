@@ -5,7 +5,19 @@
   padding-top: 16rem;
   //align-items: center;
   flex-direction: column;
+  &__link {
+      a {
+        background: #0b7285;
+        padding: .5rem;
+        display: inline-block;
+        border-radius: 2px;
+        text-decoration: none;
+        &:link, &:visited {
+            color: var(--gray-color-light-0);
+        }
+       }
 
+  }
   i {
 
     position: absolute;
