@@ -1,36 +1,94 @@
-.figure {
+.work-item {
   display: flex;
-  margin: 0;
-  img {
-    height: 30rem;
-    width: 40rem;
-    flex: 1;
-    filter: blur(2px);
-    overflow: hidden;
-    &:hover {
-      filter: unset;
+  flex-direction: column;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+
+  border-left: .5rem solid rgba(165, 85, 42, 0.792);
+  border-bottom: .5rem solid rgba(165, 85, 42, 0.792);
+ &__header {
+   text-align: right;
+   width: 100%;margin-bottom: 1.7rem;
+
+  }
+
+  .figure {
+    display: flex;
+    margin: 0;
+    position: relative;
+    //background: var(--primary-color);
+    flex-direction: column;
+
+
+    img {
+      height: 30rem;
+      flex: 1;
+      &:hover {
+        filter: unset;
+      }
+
+
     }
 
+    &__caption {
+       &--header {
+         color: var(--primary-color);
 
+       }
+
+       &:hover {
+        cursor: pointer;
+      }
+       &--content {
+        background-color: rgba($color: #070707, $alpha: 0.7);
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        .description {
+          background-color: #f3f4f6; /* #022827 */;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          border-radius: .2rem;
+          padding: 1rem;
+
+          //color: white;
+        }
+       }
+
+       &--footer {
+        color: white ;
+        background-color: rgba($color: #0b7285, $alpha: 0.3) ;
+        background-color: #021f1e;
+        padding: 1rem;
+        //border-radius: .2rem;
+        text-align: center;
+        position: absolute;
+        right: 0%;
+        bottom: 0;
+        transform: translate(0%, -50%);
+
+        font-family:  "Fira Mono", "Roboto Mono", monospace;
+        font-size: 13px;
+        font-weight: normal;
+
+        ul {
+          display: flex;
+          justify-content: right;
+          gap: 1rem;
+          margin-top: 2rem;
+          .icon {
+            font-size: 1.5rem;
+          }
+        }
+
+       }
+    }
   }
 
-  &__caption {
-    flex: 1;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-
-     flex-direction: column;
-
-     &--header {
-      flex: 1;
-     }
-     &--content {
-      flex: 1;
-     }
-
-     &--footer {
-      margin-top: auto;
-     }
-  }
 }

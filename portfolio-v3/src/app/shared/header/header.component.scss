@@ -14,6 +14,8 @@
   &__logo {
     flex: 1;
     padding-left: 1rem;
+    color: #00bcd4;
+
   }
 
   &__mode {
@@ -63,8 +65,24 @@
     }
     &--nav-link {
       text-decoration: none;
-      &:hover, &:visited ,&:active {
+       &:visited ,&:active {
         color: unset;
+        color: var(--primary-color);
+        color: #00bcd4;
+        color: #2ecc71;
+
+        color: #26a69a;
+        color: #8e44ad;
+        color: #ffca28;
+        color: #ff7043;
+        color: #046d69;
+        color: #06b3ad;
+        color: #1098ad ;
+        color: #15aabf;
+
+      }
+      &:hover {
+        color: var( --primary-color-light-1);
       }
     }
   }

@@ -20,11 +20,11 @@ export class HomeComponent implements AfterViewInit {
           console.log(el);
           console.log('====================================');
           if (appMode === 'day') {
-             this.renderer.setStyle(el, 'backgroundColor', '#bfbfbf');
-             this.renderer.setStyle(document.body, 'color', 'black');
+             this.renderer.setStyle(el, 'backgroundColor', `#f3f4f6`);
+             this.renderer.setStyle(document.body, 'color', '#343a40');
           } else if (appMode === 'night') {
-            this.renderer.setStyle(el, 'backgroundColor', '#000000')
-            this.renderer.setStyle(document.body, 'color', '#fff');
+            this.renderer.setStyle(el, 'backgroundColor', '#021f1e');
+            this.renderer.setStyle(document.body, 'color', '#f3f4f6');
           }
         }) ;
     }

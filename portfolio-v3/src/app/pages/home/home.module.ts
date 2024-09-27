@@ -12,7 +12,7 @@ import { ScrollDirectionDirective } from 'src/app/directives/scroll-direction/sc
 import { SkillsComponent } from 'src/app/components/skills/skills.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { WorkItemComponent } from 'src/app/components/work/work-item/work-item.component';
-
+import { MatIconModule } from '@angular/material/icon';
 
 const routes: Routes = [
   { path: '', component: HomeComponent }
@@ -35,7 +35,8 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    SharedModule
+    SharedModule,
+    MatIconModule
   ]
 })
 

@@ -2,14 +2,17 @@ import {  NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
+import { MatIconModule } from '@angular/material/icon';
 import { HomeModule } from './pages/home/home.module';
 import { HomeComponent } from './pages/home/home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 
 const appRoutes: Routes = [
   {
     path: '',
-    component: HomeComponent   ,
+    component:HomeComponent   ,
   }
 ];
 
@@ -18,7 +21,7 @@ const appRoutes: Routes = [
     AppComponent,
   ],
 
-  imports: [BrowserModule, RouterModule.forRoot(appRoutes)],
+  imports: [BrowserModule, RouterModule.forRoot(appRoutes), BrowserAnimationsModule, MatIconModule],
   providers: [],
   bootstrap: [AppComponent]
 })

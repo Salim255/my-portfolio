@@ -2,19 +2,59 @@
 
 @import './styles/typography/typography.scss';
 @import './styles/colors/colors.scss';
+@import './styles/base/base.scss';
 
+
+/*
+  MAIN COLOR: #0b7285;
+  GRAY COLOR: #343a40;
+
+  #f46f55
+
+  #37c0cf
+
+  //
+
+
+
+  #5a31f4
+
+  #ffb01f
+
+   #2d2d2d
+
+   #f4f4f9; #f3f4f6
+
+   #ff4c60
+
+   #1e1e2f ;
+
+   #3f51b5
+ */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 :root {
+
   --line-color: #bdc3c7;
+  --primary-color: #0b7285;
+  --primary-color-light-1: #1971c2;
+
+  --gray-color: #343a40;
+
+  --secondary-color:  #a5552aca ;
+  --background-color:  #f3f4f6 ;
+
   body {
     padding: 0;
     margin: 0;
     font-family: 'Inter', sans-serif;
     line-height: 1.5;
+    color: var(--gray-color);
+    background-color: var(--background-color);
   }
 
 }
@@ -47,6 +87,12 @@ h3 {
   text-transform: uppercase;
 }
 h4 {
-  margin-bottom: 1rem;
   font-size: 1.25rem;
 }
+
+h1, h2, h3, h4 {
+
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
