@@ -14,7 +14,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { WorkItemComponent } from 'src/app/components/work/work-item/work-item.component';
 import { FeaturedComponent } from 'src/app/components/featured/featured.component';
 import { FeaturedItemComponent } from 'src/app/components/featured/featured-item/featured-item.component';
-
+import { MediaComponent } from 'src/app/components/media/media.component';
 
 import { MatIconModule } from '@angular/material/icon';
 
@@ -35,6 +35,7 @@ const routes: Routes = [
     WelcomeComponent,
     FeaturedComponent,
     FeaturedItemComponent,
+    MediaComponent,
     SkillsComponent,
     StarsDirective,
     ScrollDirectionDirective
