@@ -1,0 +1,20 @@
+.featured {
+  h3 {
+    position: relative;
+    &::after {
+      content: "";
+      border-top: 1px solid var(--line-color);
+      width: 20%;
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 30%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  app-featured-item {
+    display: block; /* Ensure it behaves like a block element */
+    margin: 4rem 0; /* Adjust the top and bottom margins */
+  }
+}

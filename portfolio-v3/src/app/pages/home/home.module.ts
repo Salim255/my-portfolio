@@ -12,7 +12,13 @@ import { ScrollDirectionDirective } from 'src/app/directives/scroll-direction/sc
 import { SkillsComponent } from 'src/app/components/skills/skills.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { WorkItemComponent } from 'src/app/components/work/work-item/work-item.component';
+import { FeaturedComponent } from 'src/app/components/featured/featured.component';
+import { FeaturedItemComponent } from 'src/app/components/featured/featured-item/featured-item.component';
+
+
 import { MatIconModule } from '@angular/material/icon';
+
+
 
 const routes: Routes = [
   { path: '', component: HomeComponent }
@@ -27,6 +33,8 @@ const routes: Routes = [
     FooterComponent,
     AboutMeComponent,
     WelcomeComponent,
+    FeaturedComponent,
+    FeaturedItemComponent,
     SkillsComponent,
     StarsDirective,
     ScrollDirectionDirective
