@@ -15,7 +15,10 @@
     flex: 1;
     padding-left: 1rem;
     color: #00bcd4;
-
+    img {
+      height: 3rem;
+      width: 3rem;
+    }
   }
 
   &__mode {

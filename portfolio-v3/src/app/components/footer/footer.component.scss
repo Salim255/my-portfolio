@@ -1,4 +1,18 @@
 .footer {
+   padding: 10rem;
+   display: flex;
+   justify-content: center;
+   &__container {
+      margin: auto;
+      text-align: center;
+      &--logo {
+
+          img {
+            height: 5rem;
+            width: 5rem;
+          }
+      }
+   }
 
 }
 
