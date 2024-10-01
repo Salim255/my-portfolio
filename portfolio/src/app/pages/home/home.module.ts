@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { HeaderComponent } from '../../components/header/header.component';
-import { HomePage } from './home.page';
+
 
 @NgModule({
   imports: [],
-  declarations: [HeaderComponent],
+  declarations: [HeaderComponent ],
 })
-export class HomePageModule {}
+export class HomePageModule {
+  constructor() {}
+}

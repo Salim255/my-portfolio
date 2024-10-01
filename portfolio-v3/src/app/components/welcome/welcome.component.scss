@@ -1,0 +1,49 @@
+.welcome {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  padding-top: 16rem;
+  //align-items: center;
+  flex-direction: column;
+  &__link {
+      a {
+        background: #b7e915;
+        padding: .5rem;
+        display: inline-block;
+        border-radius: 2px;
+        &:link, &:visited {
+            color: var(--gray-color-light-0);
+        }
+       }
+
+  }
+  i {
+
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #fff,
+    0 0 80px #fff;
+
+    animation: stars linear infinite ;
+  }
+}
+
+
+@keyframes stars {
+  0% {
+     opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

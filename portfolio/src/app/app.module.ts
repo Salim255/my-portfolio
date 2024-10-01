@@ -8,6 +8,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { BodyComponent } from './components/body/body.component';
 import { WorkComponent } from './components/work/work.component';
 import { AboutmeComponent } from './components/aboutme/aboutme.component';
+import { MobileWorkComponent } from './components/mobile-work/mobile-work.component';
 
 const appRoutes: Routes = [
   {
@@ -23,6 +24,7 @@ const appRoutes: Routes = [
     BodyComponent,
     WorkComponent,
     AboutmeComponent,
+    MobileWorkComponent
   ],
   imports: [BrowserModule, RouterModule.forRoot(appRoutes)],
   providers: [],

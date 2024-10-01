@@ -1,0 +1,14 @@
+
+.container {
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-image: linear-gradient(black, rgb(122, 124, 120));
+  gap: 2rem;
+  img  {
+    height: 100%;
+    width: 24rem;
+    border-radius: 2rem;
+  }
+}
