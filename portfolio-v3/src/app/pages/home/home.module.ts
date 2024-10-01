@@ -16,9 +16,6 @@ import { FeaturedComponent } from 'src/app/components/featured/featured.componen
 import { FeaturedItemComponent } from 'src/app/components/featured/featured-item/featured-item.component';
 import { MediaComponent } from 'src/app/components/media/media.component';
 
-import { MatIconModule } from '@angular/material/icon';
-
-
 
 const routes: Routes = [
   { path: '', component: HomeComponent }
@@ -45,7 +42,7 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes),
     SharedModule,
-    MatIconModule
+
   ]
 })
 

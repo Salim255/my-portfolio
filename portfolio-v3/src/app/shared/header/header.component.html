@@ -1,26 +1,32 @@
 <header class="header-section"  appHeader [scrollDirectionData]="scrollData">
 
   <div class="header-section__logo">
+    <a  href="#">
       <img src="../../../assets/icons/8.svg" />
+    </a>
+
   </div>
 
-  <nav>
-    <ul class="header-section__nav-links">
-      <li class="header-section__nav-links--nav-link">
-        <a class="header-section__nav-links--nav-link btn" href="#about-me">About me</a>
+  <nav class="header-section__nav">
+    <ul class="header-section__nav--links" >
+
+
+      <li >
+        <a  href="#about-me">About me</a>
+      </li>
+      <li >
+        <a  href="#">Featured work</a>
       </li>
       <li>
-        <a href="#experience" class="header-section__nav-links--nav-link btn">Experience</a></li>
-      <li><a href="#work"  class="header-section__nav-links--nav-link">work</a></li>
-      <li  >
-        <a href="#resume" class="header-section__nav-links--nav-link btn">Resume</a>
-      </li>
+        <a href="#experience" >Experience</a></li>
+      <li><a href="#work" >work</a></li>
+
     </ul>
  </nav>
 
   <div class="header-section__mode" >
      <button class="header-section__mode--btn" nightMode [changModeState]="isActive"  (click)="onChangeMode()" >
-        <mat-icon>blur_on</mat-icon>
+      <i class="fa-solid fa-moon"></i>
      </button>
    </div>
 </header>

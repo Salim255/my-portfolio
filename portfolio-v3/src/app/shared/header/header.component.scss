@@ -21,72 +21,30 @@
     }
   }
 
-  &__mode {
-    padding-right: 1rem;
-    &--btn {
-      background: unset;
-      border: unset;
-      color: unset;
-      padding: .5rem .8rem;
-      transition: all ease-in-out .2s;
-       img {
-        height: 2rem;
-        width: 2rem;
-       }
-      .light {
-        background: red;
-        &:hover {
-          box-shadow: 3px 5px 2px 2px rgba($color: #720442, $alpha: 1.0) ;
-          transform: scale(1.01);
-        }
-      }
-      .dark {
-        background: red;
-        &:hover {
-          box-shadow: 3px 5px 2px 2px rgba($color: #000000, $alpha: 1.0) ;
-          transform: scale(1.01);
-        }
-      }
-    }
-  }
-  nav {
-    flex: 1;
-  }
 
-  &__nav-links {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    gap: 20px;
+
+  &__nav {
+    flex: 1;
+  &--links {
     display: flex;
     margin-left: auto;
-
+    justify-content: space-between;
+    text-transform: capitalize;
     li {
-      display: inline;
-      margin-right: 20px;
-      flex: 1;
+      //flex: 1;
     }
-    &--nav-link {
-      text-decoration: none;
-       &:visited ,&:active {
-        color: unset;
-        color: var(--primary-color);
-        color: #00bcd4;
-        color: #2ecc71;
+  }
+  }
 
-        color: #26a69a;
-        color: #8e44ad;
-        color: #ffca28;
-        color: #ff7043;
-        color: #046d69;
-        color: #06b3ad;
-        color: #1098ad ;
-        color: #15aabf;
-
-      }
-      &:hover {
-        color: var( --primary-color-light-1);
-      }
+  &__mode {
+    padding-right: 1rem;
+    flex: 1;
+    display: flex;
+    &--btn {
+      margin-left: auto;
+      transition: all ease-in-out .2s;
+      font-size: 2rem;
+      color: #f3f4f6;
     }
   }
 }
