@@ -15,6 +15,7 @@ import { WorkItemComponent } from 'src/app/components/work/work-item/work-item.c
 import { FeaturedComponent } from 'src/app/components/featured/featured.component';
 import { FeaturedItemComponent } from 'src/app/components/featured/featured-item/featured-item.component';
 import { MediaComponent } from 'src/app/components/media/media.component';
+import { CallForActionComponent } from 'src/app/components/call-for-action/call-for-action.component';
 
 
 const routes: Routes = [
@@ -35,7 +36,8 @@ const routes: Routes = [
     MediaComponent,
     SkillsComponent,
     StarsDirective,
-    ScrollDirectionDirective
+    ScrollDirectionDirective,
+    CallForActionComponent
   ],
 
   imports: [
