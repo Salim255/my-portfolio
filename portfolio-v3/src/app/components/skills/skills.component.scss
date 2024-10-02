@@ -1,4 +1,4 @@
-.skills-section {
+.skills {
   height: 60vh;
   width: 100%;
   h3 {
@@ -19,5 +19,13 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 3rem;
+    &--title {
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+    }
+    &--text {
+      font-size: 1.125rem;
+      line-height: 1.7;
+    }
   }
 }

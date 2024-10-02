@@ -21,17 +21,32 @@
     &--header {
       display: flex;
       justify-content: space-between;
-      h1 {
-          margin-bottom: 0;
+      margin-bottom: 2rem;
+
+      h3 {
+        font-size: 1.5rem ;
       }
+
       ul {
-        display: flex;
+         display: flex;
          gap: 1rem;
          justify-content: end;
-         align-self: center;
       }
-
     }
 
+    &--text {
+
+    }
+    &--tools {
+      font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto";
+      margin-top: 1rem;
+      font-size: .7rem;
+
+      ul {
+        display: flex;
+        justify-content: right;
+        gap: 1rem;
+      }
+   }
   }
 }

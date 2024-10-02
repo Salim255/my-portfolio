@@ -136,11 +136,11 @@
 
         .title {
           text-align: right;
-
+          margin-bottom: 1rem;
+          font-size: 1.25rem;
         }
 
         .description {
-
           position: relative;
           height: 10rem;
           &__body {
@@ -155,18 +155,29 @@
               color: white;
               p {
                 text-align: right;
+                line-height: 1.7;
+                font-size: 1.125rem;
               }
           }
         }
 
         .tools {
           text-align: right;
+          font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto";
+          margin-top: 1rem;
+          font-size: .5rem;
+          ul {
+            display: flex;
+            justify-content: right;
+            gap: 1rem;
+          }
         }
 
         .links {
           display: flex;
           justify-content: end;
           gap: 1rem;
+          margin-top: .8rem;
         }
 
       }
