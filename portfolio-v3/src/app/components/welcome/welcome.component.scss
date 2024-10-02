@@ -5,12 +5,24 @@
   padding-top: 16rem;
   //align-items: center;
   flex-direction: column;
+  &__header {
+
+    &--name {
+      display: flex;
+      gap: 6px;
+      p{
+        color: #4cb5ab;
+        font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto";
+      }
+    }
+  }
   &__link {
       a {
-        background: #b7e915;
+        background: #4cb5ab  /* #9ec6c6  *//* #a5a58d */ /* #d4e09b *//* #ccd5ae */ /* #c4dfe6  *//* #a7c7e7 */ ;
         padding: .5rem;
         display: inline-block;
-        border-radius: 2px;
+        border-radius: 1px;
+        color: black;
         &:link, &:visited {
             color: var(--gray-color-light-0);
         }

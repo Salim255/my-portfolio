@@ -1,4 +1,10 @@
 
+/*
+  FONT SIZE SYSTEM (px)
+
+  10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+ */
+
 * {
   margin: 0;
   padding: 0;
@@ -7,18 +13,17 @@
 
 :root {
 
-  --primary-color: #09d3cdeb;
+  --primary-color: #96f2d7;
   --primary-color-light-1: #1971c2;
 
   --gray-color: #343a40;
   --gray-color-light-0: #f8f9fa
 
   --secondary-color:  #a5552aca ;
-  --background-color:  #021f1e  ;
+  --background-color: #001f24 /* #002529 */  /* #002e33 */ /* #004346 */ /* #007c8a  */  /* #021f1e  */ ;
 
   body {
-    padding: 0;
-    margin: 0;
+
     font-family: 'Inter', sans-serif;
     line-height: 1.5;
     color: var(--gray-color);
@@ -30,25 +35,30 @@
   }
 
 
-  p {
-    margin: 0;
-  }
-
   ul {
     list-style-type: none;
   }
 
   a {
     text-decoration: none;
+
+    &:active, &:link, &:visited {
+      color: unset;
+    }
   }
 
-  a:active, a:link, a:visited {
-    color: unset;
-  }
+
 
   button {
     background-color: unset;
     border: unset;
+  }
+
+  h1 {
+    /* 44 / 52 / 62 */
+    font-size: 2.75rem;
+    line-height: 1.1;
+    letter-spacing: -1px;
   }
 }
 
