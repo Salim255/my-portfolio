@@ -1,0 +1,45 @@
+.menu-button {
+  position: relative;
+  width: 40px;
+  height: 30px;
+  cursor: pointer;
+  transition: all .3s ease;
+
+  &::before,
+  &::after, div {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 3px ;
+    background-color: var(--primary-color);
+    transition: background-color .3s ease;;
+  }
+
+  &::before {
+    top: 0;
+  }
+  &::after {
+    bottom: 0;
+  }
+
+  div {
+   top: 50%;
+   transform: translateY(-50%);
+  }
+
+  &:hover {
+    transform: scale(1.02);
+    &::after, &::before, & > div {
+      background-color: var(--primary-color);
+      box-shadow:  1px 1px 30px 0px #fdfdfd ;
+    }
+  }
+}
+
+
+
+
+
+
+

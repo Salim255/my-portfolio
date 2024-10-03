@@ -16,7 +16,7 @@ import { FeaturedComponent } from 'src/app/components/featured/featured.componen
 import { FeaturedItemComponent } from 'src/app/components/featured/featured-item/featured-item.component';
 import { MediaComponent } from 'src/app/components/media/media.component';
 import { CallForActionComponent } from 'src/app/components/call-for-action/call-for-action.component';
-
+import { ProcessCycleComponent } from 'src/app/components/process-cycle/process-cycle.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent }
@@ -37,7 +37,8 @@ const routes: Routes = [
     SkillsComponent,
     StarsDirective,
     ScrollDirectionDirective,
-    CallForActionComponent
+    CallForActionComponent,
+    ProcessCycleComponent
   ],
 
   imports: [

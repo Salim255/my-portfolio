@@ -11,13 +11,21 @@
     display: flex;
     flex-direction: column;
 
-    &::after {
+     &::after {
       content: "";
       border-left: 2px solid black;
       display: block;
-      height: 10rem;
+      height: 5rem;
       align-self: center;
     }
+     p{
+        writing-mode: vertical-rl;
+        font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto";
+        margin-top: 1rem;
+        font-size: .7rem;
+        margin-bottom: .5rem;
+        letter-spacing: 5px;
+     }
    }
   }
 
@@ -38,6 +46,7 @@
         height: 5rem;
         align-self: center;
       }
+
     }
   }
 
@@ -47,7 +56,7 @@
     flex-direction: column;
     gap: .5rem;
     li {
-      //writing-mode: vertical-rl;
+
       position: relative;
       display: flex;
       flex-direction: column;
