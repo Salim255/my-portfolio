@@ -1,0 +1,55 @@
+.app-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  a {
+    height: 40px;
+    width: 120px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 1rem;
+    text-transform: capitalize;
+    position: relative;
+    transition: all .4s ease-in-out;
+    color: var(--primary-color);
+    overflow: hidden;
+
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto";
+
+    span {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background-color: transparent;
+      border: 2px solid var(--primary-color);
+      z-index: -1;
+      background-color: #001f24 ;
+      &::before {
+       content: "";
+       position: absolute;
+       left: 50%;
+       top: 50%;
+       width: 8%;
+       height: 500%;
+       transform: translate(-50%, -50%) rotate(-60deg);
+       background-color: #001f24 ;
+       transition: all .3s ease-in-out;
+      }
+    }
+
+    &:hover span::before {
+      width: 100%;
+      background-color: var(--primary-color);
+      transform: translate(-50%, -50%) rotate(60deg);
+    }
+    &:hover  {
+      color: #001f24
+    }
+  }
+
+
+
+}

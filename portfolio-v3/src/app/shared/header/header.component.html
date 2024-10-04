@@ -30,7 +30,9 @@
       <i class="fa-solid fa-moon"></i>
      </button>
    </div> -->
-   <div class="header-section__menu">
-     <app-menu-button (click)="onMenu()"></app-menu-button>
+   <div class="header-section__menu" (click)="onMenu()" >
+    <app-menu-button  *ngIf="!previousStat"></app-menu-button>
+    <!--  <app-button ></app-button> -->
+    <app-button *ngIf="previousStat" ></app-button>
    </div>
 </header>
