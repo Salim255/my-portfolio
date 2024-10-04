@@ -6,5 +6,7 @@ import { Component } from "@angular/core";
   styleUrls: ['./menu-button.component.scss']
 })
 export class MenuButtonComponent {
+
   constructor(){}
+
 }

@@ -7,10 +7,8 @@
 
   </div>
 
-  <nav class="header-section__nav">
-    <ul class="header-section__nav--links" >
-
-
+  <nav [ngClass]="{'header-section__nav': true, 'header-section__nav--show': previousStat, 'header-section__nav--hide': !previousStat }">
+    <ul class="header-links" >
       <li >
         <a  href="#about-me">About me</a>
       </li>
@@ -33,6 +31,6 @@
      </button>
    </div> -->
    <div class="header-section__menu">
-     <app-menu-button></app-menu-button>
+     <app-menu-button (click)="onMenu()"></app-menu-button>
    </div>
 </header>

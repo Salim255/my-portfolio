@@ -3,6 +3,7 @@ import { Subscription } from 'rxjs';
 import { AppModeService } from 'src/app/services/app-mode/app-mode.service';
 import { ScrollDirectionService } from 'src/app/services/scroll-direction/scroll-direction.service';
 import { ScrollData } from 'src/app/interfaces/scroll-direction.interface';
+import { AppMenuService } from 'src/app/services/app-menu/app-menu.service';
 
 @Component({
   selector: 'app-header',  // <app-header> should match this selector
@@ -12,18 +13,38 @@ import { ScrollData } from 'src/app/interfaces/scroll-direction.interface';
 export class HeaderComponent {
 
   isActive: boolean = true;
+  previousStat: boolean = false ;
+  scrollData: ScrollData = {direction: '', value: 0};
 
   scrollDataSource!: Subscription;
+  private previousStatSource!: Subscription;
 
-  scrollData: ScrollData = {direction: '', value: 0};
-  constructor(private appModeService : AppModeService, private scrollDirectionService : ScrollDirectionService  ){
-
+  constructor(private appModeService : AppModeService,
+    private scrollDirectionService : ScrollDirectionService,
+    private appMenuService: AppMenuService ){
   }
+
+  ngAfterViewInit(): void {
+
+    this.scrollDataSource = this.scrollDirectionService.getScrollData.subscribe(scrollData => {
+        if (scrollData) {
+          this.scrollData = scrollData;
+        }
+    });
+
+    this.previousStatSource = this.appMenuService.getMenuStat.subscribe(stat => {
+      if (stat=== 'show') {
+        this.previousStat = true
+      } else {
+        this.previousStat = false
+      };
+
+    })
+
+   }
 
   onChangeMode() {
     this.isActive = !this.isActive;
-  console.log("hello from change mode",this.isActive);
-
     if (this.isActive ) {
       this.appModeService.setAppModeStatus('day')
     } else {
@@ -31,23 +52,23 @@ export class HeaderComponent {
     }
   }
 
- ngAfterViewInit(): void {
-  //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
-  //Add 'implements AfterViewInit' to the class.
-  this.scrollDataSource = this.scrollDirectionService.getScrollData.subscribe(scrollData => {
+ onMenu(){
 
-    if (scrollData) {
-      this.scrollData = scrollData;
-      //console.log(this.scrollData);
+    if (this.previousStat)  {
+      this.appMenuService.setMenuStat('hide')
     }
-  })
- }
+    else {
+      this.appMenuService.setMenuStat('show')
+    }
+  }
 
  ngOnDestroy(): void {
-  //Called once, before the instance is destroyed.
-  //Add 'implements OnDestroy' to the class.
-  if (this.scrollDataSource) {
-    this.scrollDataSource.unsubscribe()
-  }
+    if (this.scrollDataSource) {
+      this.scrollDataSource.unsubscribe()
+    }
+
+    if (this.previousStatSource) {
+      this.previousStatSource.unsubscribe();
+    }
  }
 }
