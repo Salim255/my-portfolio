@@ -1,17 +1,36 @@
+
+section {
+
 .footer {
-   padding: 10rem;
-   display: flex;
-   justify-content: center;
-   &__container {
-      margin: auto;
-      text-align: center;
-      &--logo {
-          img {
-            height: 5rem;
-            width: 5rem;
-          }
-      }
-   }
+  margin-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto";
+
+  &__container {
+     margin: auto;
+     text-align: center;
+
+     &--logo {
+       margin-bottom: 1rem;
+         img {
+           height: 3rem;
+           width: 3rem;
+         }
+     }
+     &--city {
+       & p:first-child{
+         font-size: 1rem;
+         text-transform: capitalize;
+       }
+       & p:nth-child(even) {
+           margin-top: .5rem;
+           font-size: .7rem;
+       }
+     }
+  }
 
 }
 
+
+}

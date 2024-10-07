@@ -2,13 +2,13 @@
 
   <div class="header-section__logo">
     <a  href="#">
-      <img src="../../../assets/icons/8.svg" />
+      <img src="../../../assets/icons/current.svg" />
     </a>
 
   </div>
 
   <nav [ngClass]="{'header-section__nav': true, 'header-section__nav--show': previousStat, 'header-section__nav--hide': !previousStat }">
-    <ul class="header-links" >
+    <ul class="header-links" (click)="onMenu()" >
       <li >
         <a  href="#about-me">About me</a>
       </li>
@@ -25,14 +25,13 @@
     </ul>
  </nav>
 
- <!--  <div class="header-section__mode" >
+ <div class="header-section__mode" >
      <button class="header-section__mode--btn" nightMode [changModeState]="isActive"  (click)="onChangeMode()" >
       <i class="fa-solid fa-moon"></i>
      </button>
-   </div> -->
+   </div>
    <div class="header-section__menu" (click)="onMenu()" >
     <app-menu-button  *ngIf="!previousStat"></app-menu-button>
-    <!--  <app-button ></app-button> -->
-    <app-button *ngIf="previousStat" ></app-button>
+    <app-button *ngIf="previousStat" [content]="'menu'" ></app-button>
    </div>
 </header>
