@@ -35,9 +35,21 @@
           padding: 1rem;
 
           p {
-            text-align: right;
+            text-align: left;
           }
       }
+      }
+
+      .tools {
+        ul {
+          justify-content: left;
+        }
+      }
+
+      .links {
+
+        justify-content: start;
+
       }
 
     }
