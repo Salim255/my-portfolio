@@ -14,19 +14,23 @@
 :root {
 
   --primary-color: #96f2d7;
-  --primary-color-light-1: #1971c2;
+  --primary-color-light-1: #baf2e1;
 
   --gray-color: #343a40;
-  --gray-color-light-0: #f8f9fa
+  --gray-color-light-0: #f8f9fa;
+  --gray-color-light-1: #f1f3f5;
+  --gray-color-light-2: #e9ecef;
+  --gray-color-light-3: #dee2e6;
+  --gray-color-light-4: #ced4da;
 
   --secondary-color:  #a5552aca ;
-  --background-color: #001f24 /* #002529 */  /* #002e33 */ /* #004346 */ /* #007c8a  */  /* #021f1e  */ ;
+  --background-color: #001f24 ;
 
   body {
 
     font-family: 'Inter', sans-serif;
     line-height: 1.5;
-    color: var(--gray-color);
+    color: var(--gray-color-light-4);
     background-color: var(--background-color);
   }
 
@@ -59,6 +63,7 @@
     font-size: 2.75rem;
     line-height: 1.1;
     letter-spacing: -1px;
+
   }
 
   h2  {

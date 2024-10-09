@@ -1,31 +1,11 @@
 .skills {
   height: 60vh;
   width: 100%;
-  h3 {
-    position: relative;
-    &::after {
-      content: "";
-      border-top: 1px solid var(--line-color);
-      width: 20%;
-      display: block;
-      position: absolute;
-      top: 50%;
-      left: 22%;
-      transform: translate(-50%, -50%);
-    }
-  }
+
 
   &__content {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
-    &--title {
-      margin-bottom: 1rem;
-      font-size: 1.25rem;
-    }
-    &--text {
-      font-size: 1.125rem;
-      line-height: 1.7;
-    }
   }
 }

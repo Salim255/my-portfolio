@@ -1,0 +1,11 @@
+
+<div class="skills-item">
+  <div class="skills-item__title">
+
+    <i [ngClass]="item.icon"></i>
+    <h3 > {{ item.title }} </h3>
+  </div>
+  <ul class="skills-item__list">
+    <li *ngFor="let item of item.stacks"><span> &mdash; </span>  {{ item }} </li>
+  </ul>
+</div>

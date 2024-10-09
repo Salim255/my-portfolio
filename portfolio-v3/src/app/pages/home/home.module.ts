@@ -18,6 +18,7 @@ import { MediaComponent } from 'src/app/components/media/media.component';
 import { CallForActionComponent } from 'src/app/components/call-for-action/call-for-action.component';
 import { ProcessCycleComponent } from 'src/app/components/process-cycle/process-cycle.component';
 import { MenuComponent } from 'src/app/components/menu/menu.component';
+import { SkillItemComponent } from 'src/app/components/skills/skills-item/skills-item.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent }
@@ -40,7 +41,8 @@ const routes: Routes = [
     ScrollDirectionDirective,
     CallForActionComponent,
     ProcessCycleComponent,
-    MenuComponent
+    MenuComponent,
+    SkillItemComponent
   ],
 
   imports: [
