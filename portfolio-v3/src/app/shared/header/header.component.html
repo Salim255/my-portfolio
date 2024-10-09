@@ -1,37 +1,12 @@
-<header class="header-section"  appHeader [scrollDirectionData]="scrollData">
+<header class="header-section"  appHeader [scrollDirectionData]="scrollData" >
 
-  <div class="header-section__logo">
+  <div class="header-section__logo" >
     <a  href="#">
       <img src="../../../assets/icons/current.svg" />
     </a>
-
   </div>
 
-  <nav [ngClass]="{'header-section__nav': true, 'header-section__nav--show': previousStat, 'header-section__nav--hide': !previousStat }">
-    <ul class="header-links" (click)="onMenu()" >
-      <li >
-        <a  href="#about-me">About me</a>
-      </li>
-      <li >
-        <a  href="#featured">Featured work</a>
-      </li>
-      <li>
-        <a href="#contact" > contact</a>
-      </li>
-      <li>
-        <a href="#work" >work</a>
-      </li>
-
-    </ul>
- </nav>
-
- <div class="header-section__mode" >
-     <button class="header-section__mode--btn" nightMode [changModeState]="isActive"  (click)="onChangeMode()" >
-      <i class="fa-solid fa-moon"></i>
-     </button>
-   </div>
-   <div class="header-section__menu" (click)="onMenu()" >
-    <app-menu-button  *ngIf="!previousStat"></app-menu-button>
-    <app-button *ngIf="previousStat" [content]="'menu'" ></app-button>
+   <div class="header-section__menu"  >
+    <app-menu-button (click)="onMenu()"  ></app-menu-button>
    </div>
 </header>

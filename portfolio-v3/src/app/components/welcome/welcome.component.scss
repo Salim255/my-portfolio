@@ -17,16 +17,9 @@
     }
   }
   &__link {
-      a {
-        background: #4cb5ab  /* #9ec6c6  *//* #a5a58d */ /* #d4e09b *//* #ccd5ae */ /* #c4dfe6  *//* #a7c7e7 */ ;
-        padding: .5rem;
+      app-button {
         display: inline-block;
-        border-radius: 1px;
-        color: black;
-        &:link, &:visited {
-            color: var(--gray-color-light-0);
-        }
-       }
+      }
 
   }
   i {

@@ -1,4 +1,4 @@
-import { Directive, ElementRef, Input, OnChanges, Renderer2, SimpleChanges } from "@angular/core";
+import { Directive, ElementRef, HostListener, Input, OnChanges, Renderer2, SimpleChanges } from "@angular/core";
 import { ScrollData } from "src/app/interfaces/scroll-direction.interface";
 
 @Directive({
@@ -16,6 +16,12 @@ export class AppHeaderDirective implements OnChanges {
       if (changes['scrollDirectionData']) {
         this.responseToScroll();
       }
+  }
+
+  @HostListener('click', ["$event"])
+   onClickMenu(event: Event){
+    const element = this.el.nativeElement ;
+    this.renderer.setStyle(element, 'box-shadow', 'none');
   }
 
   responseToScroll(){

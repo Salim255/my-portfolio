@@ -1,0 +1,133 @@
+section {
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+
+  .left-background, .right-background {
+    background-color: #001f24;
+    height: 100%;
+    width: 50%;
+    position: absolute;
+  }
+
+  .left-background {
+     position: absolute;
+     left: 0;
+     top: 0;
+  }
+
+  .right-background {
+
+    right: 0;
+    top: 0;
+ }
+
+.content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #f8f9fa;
+    text-transform: uppercase;
+    text-align: center;
+
+    .links {
+      font-size: 1rem;
+
+      a {
+        letter-spacing: .3rem;
+      }
+      li:not(:last-child) {
+        margin-bottom: 2rem;
+
+      }
+      &__hide {
+        & li:nth-child(even) {
+          transition: all .5s ease;
+          animation: leftLinksAnimationHide .5s forwards;
+        }
+
+        & li:nth-child(odd) {
+          transition: all .5s ease;
+          animation: rightLinksAnimationHide .5s forwards;
+        }
+      }
+
+      &__show {
+
+        & li:nth-child(even) {
+          transition: all 1s ease;
+          animation: leftLinksAnimation 1s  forwards;
+        }
+
+        & li:nth-child(odd) {
+          transition: all 1s ease;
+          animation: rightLinksAnimation 1s forwards;
+        }
+      }
+    }
+
+
+  }
+
+}
+
+// Show section
+@keyframes leftLinksAnimation {
+  0% {
+    transform: translate(-1000px);
+  }
+  50% {
+    transform: translate(20px);
+    letter-spacing: 1rem;
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes rightLinksAnimation {
+  0% {
+    transform: translate(1000px);
+
+  }
+  50% {
+    transform: translate(-20px);
+    letter-spacing: 1rem;
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+// Hide section
+@keyframes leftLinksAnimationHide {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(20px);
+    letter-spacing: 1rem;
+  }
+  100% {
+    transform: translate(-1000px);
+  }
+}
+
+@keyframes rightLinksAnimationHide {
+  0% {
+    transform: translate(0);
+
+  }
+  50% {
+    transform: translate(-20px);
+    letter-spacing: 1rem;
+  }
+  100% {
+    transform: translate(1000px);
+  }
+}

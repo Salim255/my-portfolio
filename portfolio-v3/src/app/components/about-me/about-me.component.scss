@@ -22,12 +22,17 @@
     &--hero {
       margin-left: auto;
       align-self: center;
+     overflow: hidden;
+
       img {
-        width:  25rem;
-        height: 25rem;
-        border-radius: 50%;
+        width:  16rem;
+        height: 15rem;
+        border-radius: 2px;
         object-fit:cover;
         z-index: 1000;
+        &:hover {
+          filter: blur(2px);
+        }
      }
     }
   }

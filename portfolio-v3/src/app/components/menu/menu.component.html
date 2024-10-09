@@ -1,0 +1,26 @@
+<section *ngIf="isActive">
+  <div class="left-background">
+
+  </div>
+  <div class="right-background">
+
+  </div>
+
+  <div class="content">
+    <ul [ngClass]="{'links': true, 'links__hide': !isShowingMenu, 'links__show': isShowingMenu }" (click)="toggleMenu()" >
+      <li >
+        <a  href="#about-me">About me</a>
+      </li>
+      <li >
+        <a  href="#featured">Featured work</a>
+      </li>
+      <li>
+        <a href="#contact" > contact</a>
+      </li>
+      <li>
+        <a href="#work" >work</a>
+      </li>
+
+    </ul>
+  </div>
+</section>

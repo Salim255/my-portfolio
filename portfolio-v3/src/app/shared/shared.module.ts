@@ -11,7 +11,7 @@ import { MenuButtonComponent } from "./menu-button/menu-button.component";
     AppHeaderDirective, AppButtonComponent,
     MenuButtonComponent ],
   imports: [CommonModule],
-  exports: [HeaderComponent,AppButtonComponent ]
+  exports: [HeaderComponent,AppButtonComponent,MenuButtonComponent  ]
 })
 
 export class SharedModule {

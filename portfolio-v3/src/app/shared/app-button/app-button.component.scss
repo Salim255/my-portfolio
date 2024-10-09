@@ -3,11 +3,12 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+
   a {
     height: 40px;
-    width: 120px;
+    //width: 120px;
     text-align: center;
-    line-height: 40px;
+    line-height: 7px;
     font-size: 1rem;
     text-transform: capitalize;
     position: relative;
@@ -16,7 +17,7 @@
     overflow: hidden;
 
     font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto";
-
+    padding: 1rem;
     span {
       position: absolute;
       left: 0;
