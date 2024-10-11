@@ -2,16 +2,21 @@ main {
   height: 100vh;
   overflow-y: auto;
   position: relative;
-  padding-left: 10rem;
-  padding-right: 10rem;
+  padding-left: 12rem;
+  padding-right: 12rem;
   scroll-behavior: smooth;
 
+  .call-to-action {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  & > *  {
+    margin-top: 14rem;
+  }
 }
 
-section {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-}
+
 
 

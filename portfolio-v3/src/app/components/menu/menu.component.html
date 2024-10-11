@@ -9,18 +9,20 @@
   <div class="content">
     <ul [ngClass]="{'links': true, 'links__hide': !isShowingMenu, 'links__show': isShowingMenu }" (click)="toggleMenu()" >
       <li >
-        <a  href="#about-me">About me</a>
+        <a  href="#home">home</a>
       </li>
       <li >
-        <a  href="#featured">Featured work</a>
+        <a  href="#about">about me</a>
+      </li>
+      <li >
+        <a  href="#skills">skills</a>
+      </li>
+      <li >
+        <a  href="#work">work</a>
       </li>
       <li>
         <a href="#contact" > contact</a>
       </li>
-      <li>
-        <a href="#work" >work</a>
-      </li>
-
     </ul>
   </div>
 </section>

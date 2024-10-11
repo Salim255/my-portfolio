@@ -8,17 +8,21 @@
       align-self: center;
     }
 
+
     i {
       color : var(--primary-color)
     }
   }
   &__list {
-    font-size: 1.125rem;
+    font-size: 1rem;
     line-height: 1.7;
     li {
+      font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto";
       span {
         color : var(--primary-color)
       }
+      color: var(--gray-color-light-5);
+
     }
   }
 }

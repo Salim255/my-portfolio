@@ -22,6 +22,7 @@
   --gray-color-light-2: #e9ecef;
   --gray-color-light-3: #dee2e6;
   --gray-color-light-4: #ced4da;
+  --gray-color-light-5: #adb5bd;
 
   --secondary-color:  #a5552aca ;
   --background-color: #001f24 ;
@@ -30,7 +31,6 @@
 
     font-family: 'Inter', sans-serif;
     line-height: 1.5;
-    color: var(--gray-color-light-4);
     background-color: var(--background-color);
   }
 
@@ -63,6 +63,7 @@
     font-size: 2.75rem;
     line-height: 1.1;
     letter-spacing: -1px;
+    color: var(--gray-color-light-3);
 
   }
 
@@ -71,13 +72,17 @@
     font-size: 2.25rem;
     line-height: 1.1;
     letter-spacing: -.5px;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     text-transform: uppercase;
 
   }
-
-  section {
-    margin-bottom: 3rem;
+  h2,h3 {
+    color: var(--gray-color-light-3);
   }
+
+  p,i {
+    color: var(--gray-color-light-5);
+  }
+
 }
 

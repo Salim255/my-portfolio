@@ -1,14 +1,16 @@
 .about-me {
   width: 100%;
-
-  h3 {
+  height: 60vh;
+  padding-top: 10rem;
+  h2 {
     position: relative;
     display: flex;
     gap: 1rem;
     &::before {
       content: "";
-      border-top: 1px solid #a5552aca;
-      width: 20%;
+      height: 1px;
+      width: 10rem;
+      background-color:#013138;
       display: block;
       align-self: center;
     }
@@ -18,20 +20,41 @@
     display: flex;
     &--text {
       align-self: center;
+      p {
+        max-width: 40rem;
+        span{
+          //line-break: normal;
+          display: block;
+          padding-top: 1rem;
+        }
+      }
     }
     &--hero {
       margin-left: auto;
       align-self: center;
-     overflow: hidden;
+      overflow: hidden;
+      padding: 1rem;
+      border-radius: 50%;
+      box-shadow: 0 8px 15px var(--primary-color);
+      position: relative;
+      width: 18rem;
+      height: 18rem;
 
       img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
         width:  16rem;
-        height: 15rem;
+        height: 16rem;
         border-radius: 2px;
         object-fit:cover;
         z-index: 1000;
+        //border-radius: 50%;
+        clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%);
+
         &:hover {
-          filter: blur(2px);
+          //filter: blur(2px);
         }
      }
     }

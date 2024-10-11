@@ -13,7 +13,7 @@
 
      &::after {
       content: "";
-      border-left: 2px solid black;
+      border-left: 2px solid  #02363e;
       display: block;
       height: 5rem;
       align-self: center;
@@ -25,6 +25,7 @@
         font-size: .7rem;
         margin-bottom: .5rem;
         letter-spacing: 5px;
+        color: #02363e;
      }
    }
   }
@@ -41,7 +42,9 @@
       flex-direction: column;
       &::after {
         content: "";
-        border-left: 2px solid black;
+        border-left: 2px solid var(--gray-color-light-5);
+
+
         display: block;
         height: 5rem;
         align-self: center;
@@ -55,21 +58,6 @@
     display: flex;
     flex-direction: column;
     gap: .5rem;
-    li {
-
-      position: relative;
-      display: flex;
-      flex-direction: column;
-
-      &::after {
-        content: "";
-        display: block;
-        height: 4px;
-        width: 4px;
-        align-self: center;
-        background: var(--secondary-color);
-      }
-    }
   }
 
 }

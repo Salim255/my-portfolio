@@ -19,6 +19,7 @@ import { CallForActionComponent } from 'src/app/components/call-for-action/call-
 import { ProcessCycleComponent } from 'src/app/components/process-cycle/process-cycle.component';
 import { MenuComponent } from 'src/app/components/menu/menu.component';
 import { SkillItemComponent } from 'src/app/components/skills/skills-item/skills-item.component';
+import { WebCreationsComponent } from 'src/app/components/web-creations/web-creations.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent }
@@ -42,7 +43,8 @@ const routes: Routes = [
     CallForActionComponent,
     ProcessCycleComponent,
     MenuComponent,
-    SkillItemComponent
+    SkillItemComponent,
+    WebCreationsComponent
   ],
 
   imports: [

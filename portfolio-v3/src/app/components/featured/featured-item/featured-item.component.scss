@@ -152,7 +152,6 @@
               width: 30rem;
               z-index: 1;
               padding: 1rem;
-              color: white;
               p {
                 text-align: right;
                 line-height: 1.7;
@@ -165,6 +164,8 @@
           font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto";
           margin-top: 1rem;
           font-size: .5rem;
+          color: var(--gray-color-light-5);
+
           ul {
             display: flex;
             justify-content: right;
@@ -180,26 +181,8 @@
         }
 
       }
-     /*   */
 
-      /* &--description {
-          position: relative;
 
-          width: 100%;
-          height: 100%;
-          div {
-            position: absolute;
-            right: 0%;
-            top: 50%;
-            transform: translate(0%, -50%);
-            background: red;
-            width: 30rem;
-            z-index: 1;
-            padding: 1rem;
-            text-align: right;
-            border-radius: 2px;
-          }
-        }
- */
+
     }
 }

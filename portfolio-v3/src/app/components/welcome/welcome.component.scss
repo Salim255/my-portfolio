@@ -1,8 +1,8 @@
 .welcome {
   width: 100%;
-  height: 100vh;
+  //height: 50vh;
   display: flex;
-  padding-top: 16rem;
+  padding-top: 5rem;
   //align-items: center;
   flex-direction: column;
   &__header {
@@ -11,12 +11,13 @@
       display: flex;
       gap: 6px;
       p{
-        color: #4cb5ab;
+        color: var(--primary-color);
         font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto";
       }
     }
   }
   &__link {
+    margin-top: 1rem;
       app-button {
         display: inline-block;
       }
