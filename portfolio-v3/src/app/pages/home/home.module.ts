@@ -20,7 +20,7 @@ import { ProcessCycleComponent } from 'src/app/components/process-cycle/process-
 import { MenuComponent } from 'src/app/components/menu/menu.component';
 import { SkillItemComponent } from 'src/app/components/skills/skills-item/skills-item.component';
 import { WebCreationsComponent } from 'src/app/components/web-creations/web-creations.component';
-
+import { MethodologyComponent } from 'src/app/components/methodology/methodology.component';
 const routes: Routes = [
   { path: '', component: HomeComponent }
 ];
@@ -44,7 +44,8 @@ const routes: Routes = [
     ProcessCycleComponent,
     MenuComponent,
     SkillItemComponent,
-    WebCreationsComponent
+    WebCreationsComponent,
+    MethodologyComponent
   ],
 
   imports: [
