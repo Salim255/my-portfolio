@@ -3,7 +3,7 @@
   width: 40px;
   height: 30px;
   cursor: pointer;
-  transition: all .3s ease;
+  transition: all .2s ease;
 
   &::before,
   &::after, div {
@@ -13,8 +13,9 @@
     right: 0;
     height: 1px ;
     background-color: var(--primary-color);
-    transition: background-color .3s ease;;
+    transition: background-color .2s ease-in-out;
   }
+
 
   &::before {
     top: 0;
@@ -26,6 +27,30 @@
   div {
    top: 50%;
    transform: translateY(-50%);
+   transition: all .2s ease-in-out;
+  }
+
+  &__active {
+
+    &::before,
+    &::after{
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 1px ;
+      background-color: var(--primary-color);
+      transition: all .3s ease-in-out;
+    }
+    &::before {
+      transform:  rotateZ(45deg)  translateX(10px)  translateY(10px) ;
+    }
+    &::after {
+      transform:  rotateZ(-45deg) translateX(10px)  translateY(-10px)   /* translateY(20px) */  ;
+    }
+    div  {
+      opacity: 0;
+    }
   }
 
   &:hover {

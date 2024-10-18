@@ -1,4 +1,4 @@
-<section *ngIf="isActive">
+<section [ngClass]="{'menu-section': true, 'menu-section__show': isActive}">
   <div class="left-background">
 
   </div>
@@ -7,7 +7,7 @@
   </div>
 
   <div class="content">
-    <ul [ngClass]="{'links': true, 'links__hide': !isShowingMenu, 'links__show': isShowingMenu }" (click)="toggleMenu()" >
+    <ul [ngClass]="{'links': true, 'links__show': isActive }" (click)="toggleMenu()" >
       <li >
         <a  href="#home">home</a>
       </li>

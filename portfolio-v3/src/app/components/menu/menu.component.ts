@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { Subscription, timeout } from "rxjs";
+import { Subscription } from "rxjs";
 import { AppMenuService } from "src/app/services/app-menu/app-menu.service";
 
 @Component({
@@ -10,8 +10,7 @@ import { AppMenuService } from "src/app/services/app-menu/app-menu.service";
 
 export class MenuComponent {
   isActive: boolean = false;
-  isShowingMenu: boolean = false;
-  timeoutId: any = null;
+
 
   private menuStatSource!: Subscription;
   constructor(private appMenuService: AppMenuService){}
@@ -20,7 +19,6 @@ export class MenuComponent {
     this.menuStatSource = this.appMenuService.getMenuStat.subscribe(stat => {
       if (stat === 'show') {
         this.isActive = true;
-        this.isShowingMenu = true;
       } else {
         this.isActive = false;
       }
@@ -30,17 +28,9 @@ export class MenuComponent {
   }
 
   toggleMenu() {
-    if (this.timeoutId) {
-      clearTimeout(this.timeoutId);
-    }
-
-   if (this.isActive) {
-    this.isShowingMenu = false;
-    this.timeoutId = setTimeout(() => {
+    if (this.isActive) {
       this.appMenuService.setMenuStat('hide');
-
-    }, 500)
-   }
+    }
   }
 
   ngOnDestroy(): void {

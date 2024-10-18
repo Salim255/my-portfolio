@@ -1,17 +1,25 @@
-section {
+.menu-section {
 
   position: fixed;
   left: 0;
   top: 0;
   height: 100vh;
   width: 100%;
-  display: flex;
-   z-index: 9;
+  display: none;
+  opacity: 0;
+  background-color: #001f24;
+
+  &__show {
+     animation: showMenu-section .5s forwards;
+     display: flex;
+     opacity: 1;
+  }
+
   .left-background, .right-background {
-    background-color: #001f24;
     height: 100%;
     width: 50%;
     position: absolute;
+
   }
 
   .left-background {
@@ -45,17 +53,6 @@ section {
         margin-bottom: 2rem;
 
       }
-      &__hide {
-        & li:nth-child(even) {
-          transition: all .5s ease;
-          animation: leftLinksAnimationHide .5s forwards;
-        }
-
-        & li:nth-child(odd) {
-          transition: all .5s ease;
-          animation: rightLinksAnimationHide .5s forwards;
-        }
-      }
 
       &__show {
 
@@ -75,6 +72,16 @@ section {
   }
 
 }
+
+@keyframes showMenu-section {
+    0%{
+      opacity: .5;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
 
 // Show section
 @keyframes leftLinksAnimation {
@@ -101,33 +108,5 @@ section {
   }
   100% {
     transform: translate(0);
-  }
-}
-
-// Hide section
-@keyframes leftLinksAnimationHide {
-  0% {
-    transform: translate(0);
-  }
-  50% {
-    transform: translate(20px);
-    letter-spacing: 1rem;
-  }
-  100% {
-    transform: translate(-1000px);
-  }
-}
-
-@keyframes rightLinksAnimationHide {
-  0% {
-    transform: translate(0);
-
-  }
-  50% {
-    transform: translate(-20px);
-    letter-spacing: 1rem;
-  }
-  100% {
-    transform: translate(1000px);
   }
 }
