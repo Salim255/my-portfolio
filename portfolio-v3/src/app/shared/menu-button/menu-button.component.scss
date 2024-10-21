@@ -1,21 +1,21 @@
 .menu-button {
   position: relative;
-  width: 40px;
-  height: 30px;
+  width: 2.5rem;
+  height: 1.875rem;
   cursor: pointer;
   transition: all .2s ease;
-
+  padding-bottom: 1rem;
   &::before,
-  &::after, div {
+  &::after {
     content: "";
     position: absolute;
     left: 0;
     right: 0;
     height: 1px ;
     background-color: var(--primary-color);
+    transform: rotateY(25deg);
     transition: background-color .2s ease-in-out;
   }
-
 
   &::before {
     top: 0;
@@ -24,38 +24,40 @@
     bottom: 0;
   }
 
-  div {
-   top: 50%;
-   transform: translateY(-50%);
-   transition: all .2s ease-in-out;
+
+  &__dis-active{
+    &::after,&::before{
+      width: 2.5rem;
+    }
+    &::before {
+      transition: all .2s ease-in-out;
+      animation: dis-active-animation-before 1s ease-in-out;
+    }
+    &::after {
+      transition: all .2s ease-in-out;
+      animation: dis-active-animation-after 1s ease-in-out;
+    }
   }
 
   &__active {
-
     &::before,
     &::after{
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      height: 1px ;
-      background-color: var(--primary-color);
-      transition: all .3s ease-in-out;
+      top: 50%;
+      left: 50%;
+      width: 2.5rem;
+      transition: all .2s ease-in-out;
     }
     &::before {
-      transform:  rotateZ(45deg)  translateX(10px)  translateY(10px) ;
+      transform: translate(-50%, -50%)  rotateZ(45deg)   ;
     }
     &::after {
-      transform:  rotateZ(-45deg) translateX(10px)  translateY(-10px)   /* translateY(20px) */  ;
-    }
-    div  {
-      opacity: 0;
+      transform:translate(-50%, -50%)  rotateZ(-45deg)  ;
     }
   }
 
   &:hover {
     transform: scale(1.02);
-    &::after, &::before, & > div {
+    &::after, &::before, div {
       background-color: var(--primary-color);
       box-shadow:  1px 1px 30px 0px #fdfdfd ;
     }
@@ -64,7 +66,16 @@
 
 
 
+@keyframes dis-active-animation-before {
+  0%{
+    transform:  rotateY(0deg) translateX(-10px)  translateY(0px)  ;
+    top: 50%;
+  }
+}
 
-
-
-
+@keyframes dis-active-animation-after {
+  0%{
+    transform:  rotateY(0deg)  translateX(-10px)  translateY(0px) ;
+    bottom: 50%;
+  }
+}

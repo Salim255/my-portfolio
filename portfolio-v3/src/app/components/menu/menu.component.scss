@@ -39,15 +39,40 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    color: #f8f9fa;
+    color: var(--gray-color-light-3);
     text-transform: uppercase;
     text-align: center;
 
     .links {
       font-size: 1rem;
+       .active {
+        a {
+          position: relative;
+          color: transparent;
+          background: linear-gradient(90deg,  rgb(0, 17, 15) , var(--primary-color));
+          background-clip: text;
+          -webkit-background-clip: text; /* For Safari */
+          transition: background-position 0.5s ease; /* Smooth transition for background */
+          background-size: 200% 100%; /* Double the width for animation effect */
+          background-position: -100% 0; /* Start from the right */
+        }
+       }
 
       a {
         letter-spacing: .3rem;
+        font-size: 20px;
+        font-weight: 700;
+        font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto";
+        &:hover {
+          position: relative;
+          color: transparent;
+          background: linear-gradient(90deg,  rgb(0, 17, 15) , var(--primary-color));
+          background-clip: text;
+          -webkit-background-clip: text; /* For Safari */
+          transition: background-position 0.5s ease; /* Smooth transition for background */
+          background-size: 200% 100%; /* Double the width for animation effect */
+          background-position: -100% 0; /* Start from the right */
+        }
       }
       li:not(:last-child) {
         margin-bottom: 2rem;
@@ -57,13 +82,13 @@
       &__show {
 
         & li:nth-child(even) {
-          transition: all 1s ease;
-          animation: leftLinksAnimation 1s  forwards;
+          transition: all .5s ease;
+          animation: leftLinksAnimation .5s  forwards;
         }
 
         & li:nth-child(odd) {
-          transition: all 1s ease;
-          animation: rightLinksAnimation 1s forwards;
+          transition: all .5s ease;
+          animation: rightLinksAnimation .5s forwards;
         }
       }
     }
@@ -87,10 +112,11 @@
 @keyframes leftLinksAnimation {
   0% {
     transform: translate(-1000px);
+    letter-spacing: 3px;
   }
   50% {
     transform: translate(20px);
-    letter-spacing: 1rem;
+    letter-spacing: 2rem;
   }
   100% {
     transform: translate(0);
@@ -104,7 +130,7 @@
   }
   50% {
     transform: translate(-20px);
-    letter-spacing: 1rem;
+    letter-spacing: 2rem;
   }
   100% {
     transform: translate(0);

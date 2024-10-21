@@ -2,6 +2,7 @@ import { Component } from "@angular/core";
 import { Subscription } from "rxjs";
 import { AppMenuService } from "src/app/services/app-menu/app-menu.service";
 
+
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
@@ -10,10 +11,13 @@ import { AppMenuService } from "src/app/services/app-menu/app-menu.service";
 
 export class MenuComponent {
   isActive: boolean = false;
-
-
+  activeIndex: Number = 0;
+  links = ['home' , 'skills' , 'work' , 'contact', 'about'];
   private menuStatSource!: Subscription;
-  constructor(private appMenuService: AppMenuService){}
+
+  constructor(
+     private appMenuService: AppMenuService,
+    ){}
 
   ngAfterViewInit(): void {
     this.menuStatSource = this.appMenuService.getMenuStat.subscribe(stat => {
@@ -27,7 +31,9 @@ export class MenuComponent {
 
   }
 
-  toggleMenu() {
+  setActive(index: Number) {
+    this.activeIndex = index;
+
     if (this.isActive) {
       this.appMenuService.setMenuStat('hide');
     }
