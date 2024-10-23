@@ -8,6 +8,7 @@
   display: none;
   opacity: 0;
   background-color: #001f24;
+  background: linear-gradient(to right bottom, #001f24  , #01404a );
 
   &__show {
      animation: showMenu-section .5s forwards;
@@ -60,7 +61,7 @@
 
       a {
         letter-spacing: .3rem;
-        font-size: 20px;
+        font-size: 1.25rem;
         font-weight: 700;
         font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto";
         &:hover {
@@ -80,12 +81,10 @@
       }
 
       &__show {
-
         & li:nth-child(even) {
           transition: all .5s ease;
           animation: leftLinksAnimation .5s  forwards;
         }
-
         & li:nth-child(odd) {
           transition: all .5s ease;
           animation: rightLinksAnimation .5s forwards;
@@ -116,7 +115,7 @@
   }
   50% {
     transform: translate(20px);
-    letter-spacing: 2rem;
+    letter-spacing: 3px;
   }
   100% {
     transform: translate(0);
@@ -130,7 +129,7 @@
   }
   50% {
     transform: translate(-20px);
-    letter-spacing: 2rem;
+    letter-spacing: 3px;
   }
   100% {
     transform: translate(0);

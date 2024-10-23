@@ -19,7 +19,8 @@
     li {
       font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto";
       span {
-        color : var(--secondary-color)
+        color : var(--secondary-color);
+        margin-right: 1rem;
       }
       color: var(--gray-color-light-5);
 

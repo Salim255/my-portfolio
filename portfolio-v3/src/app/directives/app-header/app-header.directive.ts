@@ -42,7 +42,6 @@ export class AppHeaderDirective implements OnChanges {
 
   hideHeader() {
     const element = this.el.nativeElement ;
-    /* this.renderer.setStyle(element, 'top', '-24%'); */
     this.renderer.setStyle(element,'transform', 'translateY(-100%)');
 
   }

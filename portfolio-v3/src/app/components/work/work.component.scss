@@ -1,3 +1,5 @@
+@import '../../../styles/queries/queries.scss';
+
 .work {
   h3 {
    font-size: 1.875rem;
@@ -11,6 +13,9 @@
     justify-content: center;
     width: 32%;
     margin-bottom: 2rem;
+    @include respond(bp-tablet) {
+       width: 100%;
+    }
   }
  }
 }

@@ -1,4 +1,4 @@
-
+@import '../queries/queries';
 /*
   FONT SIZE SYSTEM (px)
 
@@ -26,63 +26,113 @@
 
   --secondary-color:  gold ;
   --background-color: #001f24 ;
+}
 
-  body {
 
-    font-family: 'Inter', sans-serif;
-    line-height: 1.5;
-    background-color: var(--background-color);
+
+
+html {
+  scroll-behavior: smooth;
+
+  @include respond(bp-extra-large) {
+    font-size: 100%;
+  }
+  @include respond(bp-laptop-large) {
+    font-size: 90%;
+  }
+  @include respond(bp-laptop) {
+    font-size: 80%;
   }
 
-  html {
-    scroll-behavior: smooth;
+  @include respond(bp-tablet) {
+    font-size: 70%;
   }
-
-
-  ul {
-    list-style-type: none;
+  @include respond(bp-mobile-large) {
+    font-size: 62%;
   }
-
-  a {
-    text-decoration: none;
-
-    &:active, &:link, &:visited {
-      color: unset;
-    }
+  @include respond(bp-mobile-medium) {
+    font-size: 56.5%;
   }
-
-
-
-  button {
-    background-color: unset;
-    border: unset;
+  @include respond(bp-mobile-small) {
+    font-size: 50%;
   }
+}
 
-  h1 {
-    /* 44 / 52 / 62 */
-    font-size: 2.75rem;
-    line-height: 1.1;
+
+body {
+
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  background-color: var(--background-color);
+}
+
+
+
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+
+  &:active, &:link, &:visited {
+    color: unset;
+  }
+}
+
+
+
+button {
+  background-color: unset;
+  border: unset;
+}
+
+h1 {
+  /* 44 / 52 / 62 */
+  font-size: 2.75rem;
+  line-height: 1.1;
+
+  color: var(--gray-color-light-3);
+
+  @include respond(bp-extra-large) {
+    font-size: 100%;
     letter-spacing: -1px;
-    color: var(--gray-color-light-3);
+  }
+  @include respond(bp-laptop-large) {
+    font-size: 90%;
+    letter-spacing: .5px;
+  }
+  @include respond(bp-laptop) {
+    font-size: 80%;
 
   }
 
-  h2  {
-    /* 24 / 30 / 36 */
-    font-size: 2.25rem;
-    line-height: 1.1;
-    letter-spacing: -.5px;
-    margin-bottom: 2rem;
-    text-transform: uppercase;
-
+  @include respond(bp-tablet) {
+    font-size: 70%;
   }
-  h2,h3 {
-    color: var(--gray-color-light-3);
+  @include respond(bp-mobile-large) {
+    font-size: 62%;
   }
-
-  p,i {
-    color: var(--gray-color-light-5);
+  @include respond(bp-mobile-medium) {
+    font-size: 56.5%;
+  }
+  @include respond(bp-mobile-small) {
+    font-size: 50%;
   }
 
 }
 
+h2  {
+  /* 24 / 30 / 36 */
+
+  text-transform: uppercase;
+
+}
+h2,h3 {
+  color: var(--gray-color-light-3);
+}
+
+p,i {
+  color: var(--gray-color-light-5);
+}

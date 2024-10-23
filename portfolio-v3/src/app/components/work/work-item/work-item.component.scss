@@ -30,12 +30,9 @@
       ul {
          display: flex;
          gap: 1rem;
-         justify-content: end;
+         justify-content: flex-end;
+
       }
-    }
-
-    &--text {
-
     }
     &--tools {
       font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto";

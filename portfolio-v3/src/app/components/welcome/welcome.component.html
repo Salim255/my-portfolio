@@ -1,24 +1,21 @@
 
 <section class="welcome" starsLights nightMode>
-<div class="welcome__header">
-
-  <div class="welcome__header--presentation">
-    <div class="title" >
-      <p>This is </p>
-        <h1 class="margin-btm__md">Salim,</h1>
+    <div class="welcome__header">
+      <div class="welcome__header--presentation">
+        <div class="title" >
+          <p>This is </p>
+          <h1 class="margin-btm__md">Salim,</h1>
+        </div>
+        <h1 class="margin-btm__big "> I Build Things for the Web</h1>
+        <p class="header-text">
+            &mdash; Junior full-stack web developer with a focus on creating seamless applications.<br>
+        </p>
+      </div>
+      <a class="welcome__header--link" href="#work">
+        <app-button [content]="'Explore my work'"></app-button>
+      </a>
     </div>
-    <h1 class="margin-btm__big "> I Build Things for the Web</h1>
-    <p class="header-text">
-        &mdash; Junior full-stack web developer with a focus on creating seamless web applications.<br>
-    </p>
-  </div>
-
-  <a class="welcome__header--link" href="#work">
-    <app-button [content]="'Explore my work'"></app-button>
-  </a>
-
-</div>
- <div>
-  <app-methodology></app-methodology>
- </div>
+    <div class="welcome__methodology">
+      <app-methodology></app-methodology>
+    </div>
 </section>

@@ -1,3 +1,5 @@
+@import '../../../styles/queries/queries.scss';
+
 .featured {
   h3 {
     font-size: 1.875rem;
@@ -13,20 +15,22 @@
 
   ::ng-deep app-featured-item:nth-of-type(even) .featured-item  {
     flex-direction: row-reverse;
+
+    @include respond(bp-tablet) {
+      flex-direction: column;
+    }
+
     &__details--container {
       align-self: flex-start;
+
       .description {
-
         &__body {
-
           position: absolute;
           left: 0%;
           top: 50%;
           transform: translate(0%, -50%);
           width: 30rem;
-          z-index: 1;
           padding: 1rem;
-
           p {
             text-align: left;
           }

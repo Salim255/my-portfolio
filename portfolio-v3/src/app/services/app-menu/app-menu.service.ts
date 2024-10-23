@@ -12,6 +12,9 @@ export class AppMenuService {
   constructor(){}
 
   setMenuStat(input: MenuStat){
+    console.log('====================================');
+    console.log(input, 'from service service');
+    console.log('====================================');
       this.menStatSource.next(input);
   }
 

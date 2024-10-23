@@ -1,4 +1,9 @@
+@import '../../../styles/queries/queries.scss';
+
 .web-creation-section {
+  @include respond(bp-tablet) {
+
+ }
   h2 {
     position: relative;
     display: flex;

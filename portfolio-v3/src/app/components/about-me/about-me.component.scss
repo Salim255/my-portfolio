@@ -1,11 +1,23 @@
+@import '../../../styles/queries/queries.scss';
 .about-me {
   width: 100%;
   height: 60vh;
-  padding-top: 10rem;
+
+  @include respond(bp-tablet) {
+   // background-color: rgb(147, 147, 231);
+    padding-top: 0rem;
+    height: 100%;
+  }
+
   h2 {
     position: relative;
     display: flex;
     gap: 1rem;
+
+    @include respond(bp-tablet) {
+       margin-bottom: 4rem;
+     }
+
     &::before {
       content: "";
       height: 1px;
@@ -18,12 +30,17 @@
 
   &__content {
     display: flex;
+    @include respond(bp-tablet) {
+        flex-direction: column;
+        gap: 4rem;
+    }
     &--text {
       align-self: center;
+
+    &--
       p {
         max-width: 40rem;
         span{
-          //line-break: normal;
           display: block;
           padding-top: 1rem;
         }
@@ -35,11 +52,16 @@
       overflow: hidden;
       padding: 1rem;
       border-radius: 50%;
-      box-shadow: 0 8px 15px var(--primary-color);
+      box-shadow: 0 .5rem 0.937rem var(--primary-color);
       position: relative;
       width: 18rem;
       height: 18rem;
 
+      @include respond(bp-tablet) {
+          margin-right: auto;
+          width: 28rem;
+          height: 28rem;
+      }
       img {
         position: absolute;
         left: 50%;
@@ -49,12 +71,10 @@
         height: 16rem;
         border-radius: 2px;
         object-fit:cover;
-       // z-index: 1;
-        //border-radius: 50%;
         clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%);
-
-        &:hover {
-          //filter: blur(2px);
+        @include respond(bp-tablet) {
+           width:  26rem;
+           height: 26rem;
         }
      }
     }

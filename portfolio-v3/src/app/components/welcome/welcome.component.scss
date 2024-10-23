@@ -1,13 +1,28 @@
+@import '../../../styles/queries/queries.scss';
+
 .welcome {
   width: 100%;
   display: flex;
   padding-top: 5rem;
   justify-content: space-between;
 
+  @include respond(bp-tablet) {
+    //background-color: rgb(147, 147, 231);
+    flex-direction: column-reverse;
+    gap: 6rem;
+  }
+
   &__header {
+    h1{
+      font-size: 2.25rem;
+      line-height: 1.1;
+      letter-spacing: -.5px;
+      margin-bottom: 2rem;
+     }
     .title {
       display: flex;
       gap: 6px;
+
       p {
         font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto";
       }
@@ -16,10 +31,10 @@
     a {
         margin-top: 1.5rem;
         display: inline-block;
+        background-color: red;
         app-button {
           display: inline-block;
         }
-
     }
   }
 
@@ -35,9 +50,12 @@
 
     animation: stars linear infinite ;
   }
+
+  &__methodology {
+    display: flex;
+    justify-content: center;
+  }
 }
-
-
 
 @keyframes stars {
   0% {

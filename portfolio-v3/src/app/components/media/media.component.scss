@@ -1,11 +1,25 @@
+@import '../../../styles/queries/queries.scss';
+
 .media {
-
-
+  opacity: .3;
+  @include respond(bp-tablet) {
+    //background-color: rgb(147, 147, 231);
+     display: none;
+  }
   &__left {
     position: fixed;
     bottom: 0;
     left: 0;
     padding-left: 5rem;
+
+
+     @include respond(bp-tablet) {
+       //background-color: rgb(147, 147, 231);
+       flex-direction: column;
+       //justify-content: center;
+       padding-left: 2rem;
+     }
+
    &--content {
     position: relative;
     display: flex;
@@ -13,7 +27,7 @@
 
      &::after {
       content: "";
-      border-left: 2px solid  #02363e;
+      border-left: 2px solid var(--gray-color-light-5)  ;
       display: block;
       height: 5rem;
       align-self: center;
@@ -25,7 +39,8 @@
         font-size: .7rem;
         margin-bottom: .5rem;
         letter-spacing: 5px;
-        color: #02363e;
+        color: var(--gray-color-light-5);
+
      }
    }
   }
@@ -36,6 +51,13 @@
     right: 0;
     text-align: right;
     padding-right: 5rem;
+
+     @include respond(bp-tablet) {
+
+       padding-right: 2rem;
+     }
+
+
     &--content {
       position: relative;
       display: flex;

@@ -1,4 +1,4 @@
-import { Directive, ElementRef, Input, OnChanges, Renderer2, SimpleChanges } from "@angular/core";
+import { Directive, Input, OnChanges, SimpleChanges } from "@angular/core";
 
 
 @Directive({
@@ -10,7 +10,7 @@ export class NightModeDirective implements OnChanges {
 
   @Input() changModeState: boolean = false;
 
-  constructor(private element: ElementRef, private renderer: Renderer2){}
+  constructor(){}
 
 
 

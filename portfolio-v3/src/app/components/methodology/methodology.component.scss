@@ -1,20 +1,23 @@
+@import '../../../styles/queries/queries.scss';
 .methodology {
-  /* Central sun element */
   position: relative;
-  width: 300px;
-  height: 250px;
+
+  @include respond(bp-extra-large) {
+    font-size: 100%;
+    width: 18.75rem;
+    height: 15.625rem;
+
+  }
 
   &__orbit-container {
     position: relative;
-    width: 300px;
-    height: 250px;
-
-    perspective: 1000px;
+    width: 18.75rem;
+    height: 15.625rem;
+    perspective: 62rem;
 
     &--sun {
-      width: 130px;
-      height: 130px;
-
+      width: 8.125rem;
+      height: 8.125rem;
       border-radius: 50%;
       position: absolute;
       top: 40%;
@@ -23,7 +26,7 @@
       z-index: 1;
       background: radial-gradient(circle at 30% 30%, #02788a 40%, #01343c 60% );
       border-radius: 50%;
-      box-shadow: 10px 10px 100px #2390ac;
+      box-shadow: 0.625rem 0.625rem 6.25rem #2390ac;
       transform-style: preserve-3d;
       animation: spinEarth 1.7s ease-in-out infinite;
 
@@ -45,19 +48,18 @@
       }
     }
 
-    /* Orbital container */
+
     &--orbit {
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 300px;
-      height: 300px;
+      width: 18.75rem;
+      height: 18.75rem;
       border: 2px dotted var(--gray-color-light-5);
       border-radius: 50%;
       transform: translate(-50%, -50%) rotateX(60deg) rotate(360deg);
       transform-style: preserve-3d;
       animation: rotateOrbitY 30s linear infinite  ;
-
       &::after {
         content: "";
         position: absolute;
@@ -78,8 +80,13 @@
         top: 50%;
         left: 50%;
 
-        transform: translate(-50%, -50%) rotateZ(calc(var(--i) * 90deg)) translateX(-150px) translateZ(20px) rotateX(270deg)  ;
         transform-style: preserve-3d;
+        transform: translate(-50%, -50%) rotateZ(calc(var(--i) * 90deg)) translateX(-150px) translateZ(20px) rotateX(270deg)  ;
+
+        @include respond(bp-tablet) {
+          //background-color: rgb(147, 147, 231);
+          transform: translate(-50%, -50%) rotateZ(calc(var(--i) * 90deg)) translateX(-90px) translateZ(12px) rotateX(270deg)  ;
+        }
 
         p {
           display: flex;
@@ -102,7 +109,6 @@
           }
         }
         .text-1 {
-
           animation: text-1-Animation 30s ease infinite;
         }
         .text-2{
@@ -123,8 +129,8 @@
       position: absolute;
       top: 70%;
       left: 50%;
-      width: 170px;
-      height: 170px;
+      width: 10.625rem;
+      height:10.625rem;
       border: 2px dotted var(--gray-color-light-5);
       border-radius: 50%;
       animation: rotateOrbitY 30s linear infinite  reverse ;
@@ -135,15 +141,15 @@
       position: absolute;
       top: 80%;
       left: 50%;
-      width: 120px;
-      height: 120px;
+      width: 7.5rem;
+      height:  7.5rem;
       border: 2px dotted var(--gray-color-light-5);
       border-radius: 50%;
       transform-style: preserve-3d;
       animation: rotateOrbitY 30s linear infinite  ;
+
     }
   }
-
 }
 
 /* Animation to spin the orbit */

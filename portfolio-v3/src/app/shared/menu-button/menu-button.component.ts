@@ -13,8 +13,20 @@ export class MenuButtonComponent {
 
   ngAfterViewInit(): void {
     this.menStatusSource = this.menuService.getMenuStat.subscribe(stat => {
-       this.isActive =!this.isActive
+          if (stat === 'show') {
+            this.isActive = true;
+          }
     })
+  }
+
+  onToggleMenu(){
+      if (this.isActive) {
+        this.isActive = false;
+        this.menuService.setMenuStat('hide');
+      } else {
+        this.isActive = true;
+        this.menuService.setMenuStat('show');
+      }
   }
 
   ngOnDestroy(): void {

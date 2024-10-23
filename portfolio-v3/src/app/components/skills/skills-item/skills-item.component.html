@@ -6,6 +6,6 @@
     <h3 > {{ item.title }} </h3>
   </div>
   <ul class="skills-item__list">
-    <li *ngFor="let item of item.stacks"><span> &mdash; </span>  {{ item }} </li>
+    <li *ngFor="let item of item?.stacks"><span> &mdash; </span>  {{ item }} </li>
   </ul>
 </div>

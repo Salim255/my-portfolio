@@ -1,10 +1,14 @@
+@import '../../../styles/queries/queries.scss';
+
 .skills {
   width: 100%;
-
   h2 {
     position: relative;
     display: flex;
     gap: 1rem;
+    @include respond(bp-tablet) {
+      margin-bottom: 4rem;
+   }
     &::before {
       content: "";
       height: 1px;
@@ -18,5 +22,9 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
+
+    @include respond(bp-tablet) {
+      grid-template-columns: repeat(2, 1fr);
+   }
   }
 }
