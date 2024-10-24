@@ -4,17 +4,26 @@ main {
   height: 100vh;
   overflow-y: auto;
   position: relative;
-  padding-left: 10rem;
-  padding-right: 10rem;
+  padding-left: 16rem;
+  padding-right: 16rem;
   scroll-behavior: smooth;
-
-
-  @include respond(bp-tablet) {
-     padding-left: 3rem;
-     padding-right: 3rem;
-    //justify-content: center;
-    //background-color: rgb(147, 147, 231);
+   @include respond(bp-extra-large) {
+    padding-left: 16rem;
+    padding-right: 16rem;
   }
+   @include respond(bp-laptop-large) {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+  @include respond(bp-laptop) {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  @include respond(bp-tablet) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
 
   .call-to-action {
     display: flex;
@@ -24,6 +33,7 @@ main {
 
   & > *  {
     margin-top: 14rem;
+
 
     @include respond(bp-tablet) {
       margin-top: 8rem;

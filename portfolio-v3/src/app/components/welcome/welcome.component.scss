@@ -5,11 +5,9 @@
   display: flex;
   padding-top: 5rem;
   justify-content: space-between;
-
-  @include respond(bp-tablet) {
-    //background-color: rgb(147, 147, 231);
+  gap: 6rem;
+  @include respond(bp-laptop) {
     flex-direction: column-reverse;
-    gap: 6rem;
   }
 
   &__header {
