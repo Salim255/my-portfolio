@@ -1,0 +1,19 @@
+ <section class="methodology">
+  <div class="methodology__orbit-container">
+    <div class="methodology__orbit-container--sun"></div>
+    <div class="methodology__orbit-container--orbit" >
+      <div class="orbit-text-container" [ngStyle]="{'--i': i}" *ngFor="let item of methodology let i = index" >
+        <p [ngClass]="'text-' + (i+1)*1 ">
+           {{ item }}
+        </p>
+    </div>
+    </div>
+    <div class="methodology__orbit-container--orbit-2" >
+    </div>
+    <div class="methodology__orbit-container--orbit-3" >
+    </div>
+  </div>
+</section>
+
+
+

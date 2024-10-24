@@ -2,7 +2,7 @@
 
   border-radius: 2px;
   overflow: hidden;
-  background-color:  #033937 ;
+  background-color: #013038;
   transition: all ease-in-out .2s;
   cursor: pointer;
   &:hover {
@@ -10,7 +10,7 @@
   }
 
   &__img {
-    height: 20rem;
+    height: 18rem;
     width: 100%;
     object-fit:cover;
   }
@@ -21,17 +21,29 @@
     &--header {
       display: flex;
       justify-content: space-between;
-      h1 {
-          margin-bottom: 0;
+      margin-bottom: 2rem;
+
+      h3 {
+        font-size: 1.5rem ;
       }
+
+      ul {
+         display: flex;
+         gap: 1rem;
+         justify-content: flex-end;
+
+      }
+    }
+    &--tools {
+      font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto";
+      margin-top: 1rem;
+      font-size: .7rem;
+
       ul {
         display: flex;
-         gap: 1rem;
-         justify-content: end;
-         align-self: center;
+        justify-content: right;
+        gap: 1rem;
       }
-
-    }
-
+   }
   }
 }

@@ -30,6 +30,8 @@ export class HomeComponent implements AfterViewInit {
             this.renderer.setStyle(modeIcon, 'color', `#f3f4f6`)
           }
         }) ;
+
+
     }
 
     ngOnDestroy(): void {

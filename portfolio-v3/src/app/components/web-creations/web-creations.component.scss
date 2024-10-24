@@ -1,0 +1,24 @@
+@import '../../../styles/queries/queries.scss';
+
+.web-creation-section {
+  @include respond(bp-tablet) {
+
+ }
+  h2 {
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 4rem;
+    &::before {
+      content: "";
+      height: 1px;
+      width: 10rem;
+      background-color:#013138;
+      display: block;
+      align-self: center;
+    }
+  }
+    & > *:not(h2) {
+      margin-bottom: 8rem;
+    }
+}

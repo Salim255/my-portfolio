@@ -1,14 +1,32 @@
+@import '../../../styles/queries/queries.scss';
 .about-me {
   width: 100%;
+  height: 60vh;
 
-  h3 {
+  @include respond(bp-laptop) {
+    padding-top: 0rem;
+    height: 100%;
+  }
+
+
+  h2 {
     position: relative;
     display: flex;
     gap: 1rem;
+
+    @include respond(bp-laptop) {
+      margin-bottom: 4rem;
+    }
+
+ /*    @include respond(bp-tablet) {
+
+     } */
+
     &::before {
       content: "";
-      border-top: 1px solid #a5552aca;
-      width: 20%;
+      height: 1px;
+      width: 10rem;
+      background-color:#013138;
       display: block;
       align-self: center;
     }
@@ -16,18 +34,88 @@
 
   &__content {
     display: flex;
+    gap: 4rem;
+    @include respond(bp-tablet) {
+      flex-direction: column;
+      gap: 2rem;
+    }
+
     &--text {
       align-self: center;
+      //background-color: green;
+      p {
+        max-width: 40rem;
+        @include respond(bp-laptop-large) {
+          //background-color: red;
+         // max-width: 30rem;
+        }
+
+        @include respond(bp-laptop) {
+          max-width: 35rem;
+        }
+        @include respond(bp-tablet) {
+          max-width: 40rem;
+        }
+
+        span{
+          display: block;
+          padding-top: 1rem;
+        }
+      }
+
     }
     &--hero {
       margin-left: auto;
       align-self: center;
+      overflow: hidden;
+      padding: 1rem;
+      border-radius: 50%;
+      box-shadow: 0 .5rem 0.937rem var(--primary-color);
+      position: relative;
+      width: 18rem;
+      height: 18rem;
+      align-self: center;
+
+
+       @include respond(bp-laptop-large) {
+        width:  18rem;
+        height: 18rem;
+      }
+      @include respond(bp-laptop) {
+        width:  16rem;
+        height: 16rem;
+        padding: .5rem;
+      }
+      @include respond(bp-tablet) {
+        margin-right: auto;
+        width: 28rem;
+        height: 28rem;
+        padding: 1rem;
+      }
+
       img {
-        width:  30rem;
-        height: 30rem;
-        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width:  16rem;
+        height: 16rem;
+        border-radius: 2px;
         object-fit:cover;
-        z-index: 1000;
+        clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%);
+        @include respond(bp-laptop-large) {
+          width:  16rem;
+          height: 16rem;
+        }
+        @include respond(bp-laptop) {
+          width:  14rem;
+          height: 14rem;
+        }
+
+        @include respond(bp-tablet) {
+          width:  26rem;
+          height: 26rem;
+        }
      }
     }
   }

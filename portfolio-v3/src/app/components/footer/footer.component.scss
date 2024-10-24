@@ -1,17 +1,76 @@
-.footer {
-   padding: 10rem;
-   display: flex;
-   justify-content: center;
-   &__container {
-      margin: auto;
-      text-align: center;
-      &--logo {
-          img {
-            height: 5rem;
-            width: 5rem;
-          }
-      }
-   }
+@import '../../../styles/queries/queries.scss';
 
+.footer {
+  margin-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto";
+
+  &__container {
+     margin: auto;
+     text-align: center;
+
+     &--logo {
+       margin-bottom: 1rem;
+         img {
+           height: 3rem;
+           width: 3rem;
+         }
+     }
+     &--city {
+       & p:first-child{
+         font-size: 1rem;
+         text-transform: capitalize;
+       }
+       & p:nth-child(even) {
+           margin-top: .5rem;
+           font-size: .7rem;
+       }
+     }
+  }
+
+  ::ng-deep app-media .media{
+      @include respond(bp-tablet) {
+          opacity: 1;
+          display: flex;
+          justify-content: center;
+          flex-direction: column-reverse;
+          margin-top: 2rem;
+          &__left {
+            position: static;
+            padding: 0;
+            &--content {
+
+              &::after {
+                height: 0;
+              }
+                p {
+                  writing-mode: initial;
+                  letter-spacing: 1px;
+                  font-size: .7rem;
+                  color: var(--gray-color-light-5);
+                  opacity: .6;
+                }
+            }
+          }
+
+          &__right{
+            position: static;
+            padding: 0;
+            align-self: center;
+            &--content {
+              &::after {
+                height: 0;
+              }
+
+              .links {
+                flex-direction: row;
+              }
+            }
+          }
+    }
+  }
 }
+
+
 

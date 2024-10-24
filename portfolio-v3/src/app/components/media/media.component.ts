@@ -6,5 +6,6 @@ import { Component } from "@angular/core";
   styleUrls: ['./media.component.scss']
 })
 export class MediaComponent {
+  yearString = new Date().getFullYear() ;
   constructor(){}
 }

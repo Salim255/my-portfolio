@@ -1,26 +1,24 @@
+@import '../../../styles/queries/queries.scss';
+
 .work {
   h3 {
-    position: relative;
-    &::after {
-      content: "";
-      border-top: 1px solid var(--line-color);
-      width: 20%;
-      display: block;
-      position: absolute;
-      top: 50%;
-      left: 30%;
-      transform: translate(-50%, -50%);
-    }
+   font-size: 1.875rem;
+   margin-bottom: 4rem;
   }
-
  &__container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  @include respond(bp-tablet) {
+    gap: 2rem;
+ }
   app-work-item {
     justify-content: center;
     width: 32%;
     margin-bottom: 2rem;
+    @include respond(bp-tablet) {
+       width: 100%;
+    }
   }
  }
 }

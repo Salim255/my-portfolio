@@ -1,10 +1,27 @@
 import { Component } from "@angular/core";
 
+export interface SkillsItem {
+  title: string;
+  icon: string;
+  stacks: any
+}
+
 @Component({
   selector: 'app-skills',
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent {
-    constructor(){}
+  skillsList :SkillsItem [] = []
+    constructor(){
+      this.skillsList = [{title: 'Frontend Development', icon: "fa-solid fa-desktop", stacks:
+        ['Angular', 'React', 'Ionic','React native (Occasionally)', 'Sass, CSS', 'HTML' ] },
+        {title: 'Backend Development', icon: 'fa-solid fa-database',
+          stacks: ['Nodejs', 'JavasScript', 'Python', 'Postgresql', 'Mongodb']},
+        {title: 'DevOps', icon: 'fa-brands fa-aws',
+          stacks: ['Docker', 'Kubernetes','Ansible', 'Jenkins', 'prometheus', 'Grafana'
+
+         ]}]
+    }
+
 }
