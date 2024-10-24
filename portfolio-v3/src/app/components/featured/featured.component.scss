@@ -1,6 +1,7 @@
 @import '../../../styles/queries/queries.scss';
 
 .featured {
+  counter-reset: featured-item; /* Initialize the counter */
   h3 {
     font-size: 1.875rem;
     margin-bottom: 3rem;
@@ -13,6 +14,7 @@
     margin-bottom: 8rem;
   }
 
+
   ::ng-deep app-featured-item:nth-of-type(even) .featured-item  {
     flex-direction: row-reverse;
 
@@ -22,17 +24,15 @@
 
     &__details--container {
       align-self: flex-start;
-
+      .title {
+        text-align: left;
+      }
       .description {
         &__body {
-          position: absolute;
           left: 0%;
-          top: 50%;
           transform: translate(0%, -50%);
-          width: 30rem;
-          padding: 1rem;
-          p {
-            text-align: left;
+          @include respond(bp-tablet) {
+           transform: translate(0, 0%);
           }
       }
       }

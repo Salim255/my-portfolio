@@ -8,7 +8,7 @@
   display: none;
   opacity: 0;
   background-color: #001f24;
-  background: linear-gradient(to right bottom, #001f24  , #01404a );
+ // background: linear-gradient(to right bottom, #001f24  , #01404a );
 
   &__show {
      animation: showMenu-section .5s forwards;
@@ -63,7 +63,7 @@
         letter-spacing: .3rem;
         font-size: 1.25rem;
         font-weight: 700;
-        font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto";
+        font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
         &:hover {
           position: relative;
           color: transparent;

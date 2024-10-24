@@ -1,3 +1,4 @@
+@import '../../../styles/queries/queries.scss';
 
 .footer {
   margin-bottom: 5rem;
@@ -28,6 +29,47 @@
      }
   }
 
+  ::ng-deep app-media .media{
+      @include respond(bp-tablet) {
+          opacity: 1;
+          display: flex;
+          justify-content: center;
+          flex-direction: column-reverse;
+          margin-top: 2rem;
+          &__left {
+            position: static;
+            padding: 0;
+            &--content {
+
+              &::after {
+                height: 0;
+              }
+                p {
+                  writing-mode: initial;
+                  letter-spacing: 1px;
+                  font-size: .7rem;
+                  color: var(--gray-color-light-5);
+                  opacity: .6;
+                }
+            }
+          }
+
+          &__right{
+            position: static;
+            padding: 0;
+            align-self: center;
+            &--content {
+              &::after {
+                height: 0;
+              }
+
+              .links {
+                flex-direction: row;
+              }
+            }
+          }
+    }
+  }
 }
 
 

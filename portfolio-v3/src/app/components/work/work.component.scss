@@ -9,6 +9,9 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  @include respond(bp-tablet) {
+    gap: 2rem;
+ }
   app-work-item {
     justify-content: center;
     width: 32%;

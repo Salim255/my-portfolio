@@ -26,9 +26,22 @@
 
   --secondary-color:  gold ;
   --background-color: #001f24 ;
+
+
+  /* Font section */
+  --font-family-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', system-ui, sans-serif;
+  --font-family-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+  --font-size-xxs: .75rem;
+  --font-size-xs: .812rem;
+  --font-size-sm: .875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-xxl: 1.375rem;
+
+  --border-radius: 4px;
+
 }
-
-
 
 
 html {
@@ -62,6 +75,7 @@ html {
 body {
 
   font-family: 'Inter', sans-serif;
+
   line-height: 1.5;
   background-color: var(--background-color);
 }

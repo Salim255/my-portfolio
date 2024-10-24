@@ -4,7 +4,7 @@
     display:  flex;
     justify-content: space-between;
     gap: 1rem;
-
+    counter-increment: featured-item 1;
     @include respond(bp-tablet) {
       flex-direction: column;
       position: relative;
@@ -43,38 +43,66 @@
         object-fit: cover;
         border-radius: 2px;
         @include respond(bp-tablet) {
-          height: 30rem;
+          height: 50rem;
         }
       }
 
     }
-    &__details {
 
+    &__details {
       flex: .5;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      overflow: hidden;
       @include respond(bp-tablet) {
         position: absolute;
         left: 0;
         right: 0;
-        padding: 2rem 1rem;
+        height: 100%;
+        padding: 2rem;
       }
 
       &--container {
         align-self: flex-end;
+        @include respond(bp-tablet) {
+          display: flex;
+          flex-direction: column;
+          height: 50rem;
+          width: 100%;
+        }
+
         .title {
           text-align: right;
           margin-bottom: 1rem;
           font-size: 1.25rem;
+
+          @include respond(bp-tablet) {
+            margin-bottom: 2rem;
+          }
+
+         h3 {
+          @include respond(bp-tablet) {
+            color: var(--gray-color-light-0);
+            &::before {
+              content: "0" counter(featured-item) ".";
+              font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+              color: var(--primary-color);
+            }
+          }
+         }
+
         }
 
         .description {
           position: relative;
-          height: 10rem;
+
+          ///height: 10rem;
+        /*   @include respond(bp-tablet) {
+            background-color: green;
+          } */
           &__body {
-              background-color: #032e2d;
               background-color: #001f24;
               position: absolute;
               right: 0%;
@@ -83,14 +111,24 @@
               width: 30rem;
               padding: 1rem;
               @include respond(bp-tablet) {
-                background-color: #001f24;
+                background-color: unset;
                 opacity: 0.8;
                 overflow: hidden;
+                padding: 0rem;
+                position: static;
+                top: 0;
+                transform: translate(0%, 0%);
+                width: 100%;
               }
               p {
                 text-align: right;
                 line-height: 1.7;
                 font-size: 1.125rem;
+
+                @include respond(bp-tablet) {
+                   color: var(--gray-color-light-0);
+                   text-align: left;
+                }
               }
           }
         }
@@ -101,6 +139,9 @@
           font-size: .5rem;
           color: var(--gray-color-light-5);
 
+          @include respond(bp-tablet) {
+            margin-top: auto;
+          }
           ul {
             display: flex;
             justify-content: right;
