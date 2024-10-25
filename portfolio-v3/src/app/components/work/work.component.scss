@@ -16,6 +16,10 @@
     justify-content: center;
     width: 32%;
     margin-bottom: 2rem;
+    @include respond(bp-laptop) {
+        width: 48%;
+    }
+
     @include respond(bp-tablet) {
        width: 100%;
     }
