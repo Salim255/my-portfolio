@@ -9,10 +9,14 @@
       flex-direction: column;
       position: relative;
     }
+
     &__work {
       flex: .9;
-      position: relative;
-      overflow: hidden;
+
+      @include respond(bp-extra-large) {
+        position: relative;
+      }
+
       &::after {
         content: "";
         position: absolute;
@@ -25,9 +29,9 @@
         height: 100%;
         width: 100%;
         @include respond(bp-tablet) {
-          background-color: #001f24;
-          opacity: 0.9;
-          overflow: hidden;
+            background-color: #001f24;
+            opacity: 0.9;
+
         }
       }
 
@@ -39,6 +43,7 @@
       }
       img {
         height: 26rem;
+        width: 100%;
         display: block;
         object-fit: cover;
         border-radius: 2px;
@@ -55,17 +60,18 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      overflow: hidden;
       @include respond(bp-tablet) {
         position: absolute;
         left: 0;
         right: 0;
         height: 100%;
         padding: 2rem;
+
       }
 
       &--container {
         align-self: flex-end;
+
         @include respond(bp-tablet) {
           display: flex;
           flex-direction: column;
@@ -96,26 +102,29 @@
         }
 
         .description {
-          position: relative;
 
-          ///height: 10rem;
-        /*   @include respond(bp-tablet) {
-            background-color: green;
-          } */
+          height: 10rem;
+          position: relative;
           &__body {
-              background-color: #001f24;
+              background-color: #013038;;
               position: absolute;
               right: 0%;
               top: 50%;
               transform: translate(0%, -50%);
               width: 30rem;
               padding: 1rem;
+              z-index: 1;
+
+              @include respond(bp-laptop) {
+                position: absolute;
+              }
+
               @include respond(bp-tablet) {
-                background-color: unset;
+                 background-color: unset;
                 opacity: 0.8;
-                overflow: hidden;
+
                 padding: 0rem;
-                position: static;
+                position: relative;
                 top: 0;
                 transform: translate(0%, 0%);
                 width: 100%;
@@ -124,11 +133,17 @@
                 text-align: right;
                 line-height: 1.7;
                 font-size: 1.125rem;
+                 span {
+                  display: none;
+                }
 
                 @include respond(bp-tablet) {
-                   color: var(--gray-color-light-0);
-                   text-align: left;
-                }
+                  color: var(--gray-color-light-0);
+                  text-align: left;
+                  span {
+                    display: initial;
+                  }
+               }
               }
           }
         }
