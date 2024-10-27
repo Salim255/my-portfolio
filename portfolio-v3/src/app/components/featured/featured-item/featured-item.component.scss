@@ -113,7 +113,6 @@
               transform: translate(0%, -50%);
               width: 30rem;
               padding: 1rem;
-              z-index: 1;
 
               @include respond(bp-laptop) {
                 position: absolute;
