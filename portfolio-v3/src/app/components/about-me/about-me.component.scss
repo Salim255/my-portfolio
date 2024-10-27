@@ -4,7 +4,7 @@
   height: 60vh;
 
   @include respond(bp-laptop) {
-    padding-top: 0rem;
+    padding-top: 0;
     height: 100%;
   }
 
@@ -12,21 +12,16 @@
   h2 {
     position: relative;
     display: flex;
-    gap: 1rem;
-
+    gap: var(--gap-md);
     @include respond(bp-laptop) {
-      margin-bottom: 4rem;
+      margin-bottom: var(--margin-6xl);
     }
-
- /*    @include respond(bp-tablet) {
-
-     } */
 
     &::before {
       content: "";
       height: 1px;
       width: 10rem;
-      background-color:#013138;
+      background-color: var(--background-color-1);
       display: block;
       align-self: center;
     }
@@ -34,22 +29,18 @@
 
   &__content {
     display: flex;
-    gap: 4rem;
+    gap: var(--gap-md);
+
     @include respond(bp-tablet) {
       flex-direction: column;
-      gap: 2rem;
+      gap: var(--gap-2xl);
     }
 
     &--text {
       align-self: center;
-      //background-color: green;
+
       p {
         max-width: 40rem;
-        @include respond(bp-laptop-large) {
-          //background-color: red;
-         // max-width: 30rem;
-        }
-
         @include respond(bp-laptop) {
           max-width: 35rem;
         }
@@ -59,7 +50,7 @@
 
         span{
           display: block;
-          padding-top: 1rem;
+          padding-top: var(--padding-md);
         }
       }
 
@@ -68,15 +59,13 @@
       margin-left: auto;
       align-self: center;
       overflow: hidden;
-      padding: 1rem;
+      padding: var(--padding-md);
       border-radius: 50%;
       box-shadow: 0 .5rem 0.937rem var(--primary-color);
       position: relative;
       width: 18rem;
       height: 18rem;
       align-self: center;
-
-
        @include respond(bp-laptop-large) {
         width:  18rem;
         height: 18rem;
@@ -91,7 +80,7 @@
         margin-right: auto;
         width: 28rem;
         height: 28rem;
-        padding: 1rem;
+        padding: var(--padding-md);
         box-shadow: 0 .5rem 0.937rem var(--primary-color);
       }
 

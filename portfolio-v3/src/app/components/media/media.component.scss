@@ -3,14 +3,13 @@
 .media {
   opacity: .3;
   @include respond(bp-tablet) {
-    //background-color: rgb(147, 147, 231);
      opacity: 0;
   }
   &__left {
     position: fixed;
     bottom: 0;
     left: 0;
-    padding-left: 5rem;
+    padding-left: var(--padding-3xl);
 
    &--content {
     position: relative;
@@ -27,8 +26,8 @@
      p {
         writing-mode: vertical-rl;
         font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
-        margin-top: 2rem;
-        margin-bottom: .5rem;
+        margin-top: var(--margin-2xl);
+        margin-bottom: var(--margin-xs);
         color: var(--gray-color-light-5);
      }
    }
@@ -39,10 +38,9 @@
     bottom: 0;
     right: 0;
     text-align: right;
-    padding-right: 5rem;
-
+    padding-right: var(--padding-3xl);
       @include respond(bp-tablet) {
-       padding-right: 2rem;
+       padding-right: var(--margin-2xl);
      }
 
 
@@ -65,12 +63,12 @@
   .links {
     display: flex;
     flex-direction: column;
-    gap: .5rem;
+    gap: var(--gap-sm);
     @include respond(bp-tablet) {
       li {
-        margin: 1rem 2rem;
+        margin: var(--margin-md) var(--margin-2xl);
         i {
-          font-size: 2.4rem;
+          font-size: var(--font-size-5xl);
         }
       }
     }

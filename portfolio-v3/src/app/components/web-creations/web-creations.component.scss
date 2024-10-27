@@ -7,18 +7,18 @@
   h2 {
     position: relative;
     display: flex;
-    gap: 1rem;
-    margin-bottom: 4rem;
+    gap: var(--gap-md);
+    margin-bottom: var(--margin-6xl);
     &::before {
       content: "";
       height: 1px;
       width: 10rem;
-      background-color:#013138;
+      background-color: var(--background-color-1);
       display: block;
       align-self: center;
     }
   }
     & > *:not(h2) {
-      margin-bottom: 8rem;
+      margin-bottom: var(--margin-10xl);
     }
 }

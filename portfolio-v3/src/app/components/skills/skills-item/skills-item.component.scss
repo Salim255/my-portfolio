@@ -1,26 +1,25 @@
 .skills-item {
   &__title {
-    margin-bottom: 1rem;
-    font-size: 1.25rem;
+    margin-bottom: var(--margin-md);
+    font-size: var(--font-size-xl);
     display: flex;
-    gap: 1rem;
+    gap: var(--gap-md);
     h3,i {
       align-self: center;
     }
-
 
     i {
       color : var(--primary-color)
     }
   }
   &__list {
-    font-size: 1rem;
+    font-size: var(--font-size-md);
     line-height: 1.7;
     li {
       font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto";
       span {
         color : var(--secondary-color);
-        margin-right: 1rem;
+        margin-right: var(--margin-md);
       }
       color: var(--gray-color-light-5);
 

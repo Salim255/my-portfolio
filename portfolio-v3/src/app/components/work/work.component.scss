@@ -2,20 +2,20 @@
 
 .work {
   h3 {
-   font-size: 1.875rem;
-   margin-bottom: 4rem;
+   font-size: var(--font-size-3xl);
+   margin-bottom: var(--margin-6xl);
   }
  &__container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   @include respond(bp-tablet) {
-    gap: 2rem;
+    gap: var(--gap-xl);
  }
   app-work-item {
     justify-content: center;
     width: 32%;
-    margin-bottom: 2rem;
+    margin-bottom: var(--margin-2xl);
     @include respond(bp-laptop) {
         width: 48%;
     }

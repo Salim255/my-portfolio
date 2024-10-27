@@ -3,7 +3,7 @@
 .featured-item {
     display:  flex;
     justify-content: space-between;
-    gap: 1rem;
+    gap: var(--gap-md);
     counter-increment: featured-item 1;
     @include respond(bp-tablet) {
       flex-direction: column;
@@ -12,7 +12,6 @@
 
     &__work {
       flex: .9;
-
       @include respond(bp-extra-large) {
         position: relative;
       }
@@ -46,7 +45,7 @@
         width: 100%;
         display: block;
         object-fit: cover;
-        border-radius: 2px;
+        border-radius: var(--border-radius-xs);
         @include respond(bp-tablet) {
           height: 50rem;
         }
@@ -65,7 +64,7 @@
         left: 0;
         right: 0;
         height: 100%;
-        padding: 2rem;
+        padding: var(--padding-xl);
 
       }
 
@@ -81,11 +80,11 @@
 
         .title {
           text-align: right;
-          margin-bottom: 1rem;
-          font-size: 1.25rem;
+          margin-bottom: var(--margin-md);
+          font-size: var(--font-size-xl);
 
           @include respond(bp-tablet) {
-            margin-bottom: 2rem;
+            margin-bottom: var(--font-size-4xl);
           }
 
          h3 {
@@ -112,17 +111,16 @@
               top: 50%;
               transform: translate(0%, -50%);
               width: 30rem;
-              padding: 1rem;
+              padding: var( --padding-md);
 
               @include respond(bp-laptop) {
                 position: absolute;
               }
 
               @include respond(bp-tablet) {
-                 background-color: unset;
+                background-color: unset;
                 opacity: 0.8;
-
-                padding: 0rem;
+                padding: 0;
                 position: relative;
                 top: 0;
                 transform: translate(0%, 0%);
@@ -131,7 +129,7 @@
               p {
                 text-align: right;
                 line-height: 1.7;
-                font-size: 1.125rem;
+                font-size: var(--font-size-lg);
                  span {
                   display: none;
                 }
@@ -149,8 +147,8 @@
 
         .tools {
           font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto";
-          margin-top: 1rem;
-          font-size: .5rem;
+          margin-top: var(--margin-md);
+          font-size: var(--font-size-xs);
           color: var(--gray-color-light-5);
 
           @include respond(bp-tablet) {
@@ -159,15 +157,15 @@
           ul {
             display: flex;
             justify-content: right;
-            gap: 1rem;
+            gap: var(--gap-md);
           }
         }
 
         .links {
           display: flex;
           justify-content: flex-end;
-          gap: 1rem;
-          margin-top: .8rem;
+          gap: var(--gap-md);
+          margin-top: var( --margin-md);
         }
       }
     }

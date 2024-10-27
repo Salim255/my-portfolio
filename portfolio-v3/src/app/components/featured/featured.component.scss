@@ -3,15 +3,16 @@
 .featured {
   counter-reset: featured-item; /* Initialize the counter */
   h3 {
-    font-size: 1.875rem;
-    margin-bottom: 3rem;
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--font-size-5xl);
+
   }
 
   app-featured-item {
     display: block;
   }
   & > app-featured-item:not(:last-child) {
-    margin-bottom: 8rem;
+    margin-bottom: var(--margin-10xl);
   }
 
 

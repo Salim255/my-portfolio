@@ -1,8 +1,8 @@
 .work-card {
 
-  border-radius: 2px;
+  border-radius: var(--border-radius-xs);
   overflow: hidden;
-  background-color: #013038;
+  background-color: var( --background-color-1);
   transition: all ease-in-out .2s;
   cursor: pointer;
   &:hover {
@@ -15,34 +15,34 @@
     object-fit:cover;
   }
   &__caption {
-    padding: 2rem;
+    padding: var(--padding-xl);
     color: #f3f4f6;
 
     &--header {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 2rem;
+      margin-bottom: var(--margin-2xl);
 
       h3 {
-        font-size: 1.5rem ;
+        font-size: var(--font-size-xxl) ;
       }
 
       ul {
          display: flex;
-         gap: 1rem;
+         gap: var(--gap-md);
          justify-content: flex-end;
 
       }
     }
     &--tools {
       font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto";
-      margin-top: 1rem;
-      font-size: .7rem;
+      margin-top: var(--margin-md);
+      font-size: var(--font-size-xs);
 
       ul {
         display: flex;
         justify-content: right;
-        gap: 1rem;
+        gap: var(--gap-md);
       }
    }
   }

@@ -4,10 +4,10 @@
   height: 100vh;
   width: 100%;
   display: flex;
-  padding-top: 5rem;
+  padding-top: var(--padding-2xl);
   justify-content: space-between;
   align-items: center;
-  gap: 6rem;
+  gap: var(--gap-4xl);
   @include respond(bp-laptop) {
     flex-direction: column-reverse;
   }
@@ -27,10 +27,10 @@
           color: transparent;
       }
       h1{
-        font-size: 2.25rem;
+        font-size: var(--font-size-4xl);
         line-height: 1.1;
         letter-spacing: -.5px;
-        margin-bottom: 2rem;
+        margin-bottom: var(--margin-2xl);
         @include respond(bp-tablet) {
           letter-spacing: 1px;
         }
@@ -38,21 +38,21 @@
 
       .title {
         display: flex;
-        gap: 6px;
+        gap: var(--gap-sm);
         font-family: var(--font-family-mono);
         p {
           color: var(--primary-color);
-          margin-right: .5rem;
+          margin-right: var(--margin-xs);
           font-weight: 700;
         }
       }
 
     }
     &--link {
-      margin-top: 1.5rem;
+      margin-top: var(--margin-xl);
       display: inline-block;
       @include respond(bp-tablet) {
-        margin-top: 4rem;
+        margin-top: var(--margin-6xl);
       }
       app-button {
         display: inline-block;
@@ -63,7 +63,7 @@
   i {
     position: absolute;
     background: white;
-    border-radius: 50%;
+    border-radius: var(--border-radius-full);
     box-shadow: 0 0 10px #fff,
     0 0 20px #fff,
     0 0 40px #fff,
