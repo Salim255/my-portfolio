@@ -4,27 +4,21 @@
   margin-bottom: 5rem;
   display: flex;
   justify-content: center;
-  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto";
 
   &__container {
      margin: auto;
      text-align: center;
 
-     &--logo {
-       margin-bottom: 1rem;
-         img {
-           height: 3rem;
-           width: 3rem;
-         }
-     }
-     &--city {
-       & p:first-child{
+
+     &--coordination {
+       p{
          font-size: 1rem;
          text-transform: capitalize;
-       }
-       & p:nth-child(even) {
-           margin-top: .5rem;
-           font-size: .7rem;
+         font-size: 1rem;
+         margin-top: 1rem;
+         color: var(--gray-color-light-5);
+         opacity: .6;
+         font-family: var(--font-family-mono)
        }
      }
   }
@@ -47,9 +41,10 @@
                 p {
                   writing-mode: initial;
                   letter-spacing: 1px;
-                  font-size: .7rem;
-                  color: var(--gray-color-light-5);
+                  font-size: 1.2rem;
+                  color: var(--gray-color-light-4);
                   opacity: .6;
+
                 }
             }
           }

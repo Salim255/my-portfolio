@@ -24,15 +24,12 @@
       height: 5rem;
       align-self: center;
     }
-     p{
+     p {
         writing-mode: vertical-rl;
         font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
-        margin-top: 1rem;
-        font-size: .7rem;
+        margin-top: 2rem;
         margin-bottom: .5rem;
-        letter-spacing: 5px;
         color: var(--gray-color-light-5);
-
      }
    }
   }
@@ -69,6 +66,14 @@
     display: flex;
     flex-direction: column;
     gap: .5rem;
+    @include respond(bp-tablet) {
+      li {
+        margin: 1rem 2rem;
+        i {
+          font-size: 2.4rem;
+        }
+      }
+    }
   }
 
 }
