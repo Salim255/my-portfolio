@@ -1,12 +1,11 @@
 @import '../../../styles/queries/queries.scss';
+
 .methodology {
   position: relative;
 
   @include respond(bp-extra-large) {
-    font-size: 100%;
     width: 18.75rem;
     height: 15.625rem;
-
   }
 
   &__orbit-container {
@@ -24,28 +23,44 @@
       left: 50%;
       transform: translate(-50%, -50%) translateZ(-100px);
       z-index: 1;
-      background: radial-gradient(circle at 30% 30%, #02788a 40%, #01343c 60% );
+      background: radial-gradient(circle at 30% 30%, #025865 40%, #01242a 60% );
       border-radius: 50%;
       box-shadow: 0.625rem 0.625rem 6.25rem #2390ac;
       transform-style: preserve-3d;
       animation: spinEarth 1.7s ease-in-out infinite;
+      .sun-text {
+        width: 100%;
+        position: relative;
+        &::after {
+          content: "Learn";
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -130%);
+          color: var(--gray-color-light-5);
+          font-size: 1.2rem;
+          font-weight: 700;
+          font-family: var(--font-family-mono);
+        }
+        &::before {
+          content: "";
+          flex: 1;
+          position: absolute;
+          left: 50%;
+          top: 70%;
+          transform: translate(-50%, -50%);
+          background-color: var(--secondary-color);
+           height: 1rem;
+           width: 2px;
+          @include respond(bp-mobile-large) {
+            //top: 50%;
+            //left: 50%;
+          }
 
-      &::before {
-        content: "Learn";
-        position: absolute;
-        top: 48%;
-        left: 40%;
-        transform: translate(-50%, -50%);
-        background: linear-gradient(45deg, var(--primary-color) 10%, var(--gray-color-light-0) 90%);
-        background-clip: text;
-        color: transparent;
-        font-weight: 600;
-        font-size: .8rem;
-        transform-style: preserve-3d;
-        transform: translateZ(300px);
-        font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto";
 
+        }
       }
+
     }
 
 
@@ -81,11 +96,16 @@
         left: 50%;
 
         transform-style: preserve-3d;
-        transform: translate(-50%, -50%) rotateZ(calc(var(--i) * 90deg)) translateX(-150px) translateZ(20px) rotateX(270deg)  ;
+        transform: translate(-50%, -50%) rotateZ(calc(var(--i) * 90deg))
+        translateX(-150px) translateZ(20px) rotateX(270deg)  ;
 
         @include respond(bp-tablet) {
-          //background-color: rgb(147, 147, 231);
-          transform: translate(-50%, -50%) rotateZ(calc(var(--i) * 90deg)) translateX(-90px) translateZ(12px) rotateX(270deg)  ;
+          transform: translate(-50%, -50%) rotateZ(calc(var(--i) * 90deg))
+          translateX(-90px) translateZ(12px) rotateX(270deg)  ;
+        }
+        @include respond(bp-mobile-large) {
+          transform: translate(-50%, -50%) rotateZ(calc(var(--i) * 90deg))
+          translateX(-90px) translateZ(12px) rotateX(270deg)  ;
         }
 
         p {
@@ -95,7 +115,7 @@
            transform-style: preserve-3d;
            font-size: .8rem;
            font-weight: 700;
-           font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto";
+           font-family: var(--font-family-mono);
            transition: all 30s infinite;
            color: var(--gray-color-light-4);
           &::after {
@@ -106,6 +126,10 @@
             background-color: var(--secondary-color);
             align-self: center;
             margin-top: 1.5rem;
+            @include respond(bp-mobile-large) {
+              height: .5rem;
+            }
+
           }
         }
         .text-1 {

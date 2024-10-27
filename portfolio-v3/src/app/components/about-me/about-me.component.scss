@@ -82,15 +82,17 @@
         height: 18rem;
       }
       @include respond(bp-laptop) {
-        width:  16rem;
-        height: 16rem;
+        width:  14rem;
+        height: 14rem;
         padding: .5rem;
+        box-shadow: unset;
       }
       @include respond(bp-tablet) {
         margin-right: auto;
         width: 28rem;
         height: 28rem;
         padding: 1rem;
+        box-shadow: 0 .5rem 0.937rem var(--primary-color);
       }
 
       img {
@@ -100,9 +102,9 @@
         transform: translate(-50%, -50%);
         width:  16rem;
         height: 16rem;
-        border-radius: 2px;
         object-fit:cover;
         clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%);
+        border-radius: 50%;
         @include respond(bp-laptop-large) {
           width:  16rem;
           height: 16rem;
@@ -113,8 +115,9 @@
         }
 
         @include respond(bp-tablet) {
-          width:  26rem;
-          height: 26rem;
+          width:  18rem;
+          height: 18rem;
+
         }
      }
     }

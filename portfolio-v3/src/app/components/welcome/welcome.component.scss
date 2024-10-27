@@ -1,43 +1,66 @@
 @import '../../../styles/queries/queries.scss';
 
 .welcome {
+  height: 100vh;
   width: 100%;
   display: flex;
   padding-top: 5rem;
   justify-content: space-between;
+  align-items: center;
   gap: 6rem;
   @include respond(bp-laptop) {
     flex-direction: column-reverse;
   }
 
+  @include respond(bp-tablet) {
+    justify-content: flex-end;
+    height: 70vh;
+    padding-top: 0;
+  }
+
   &__header {
-    h1{
-      font-size: 2.25rem;
-      line-height: 1.1;
-      letter-spacing: -.5px;
-      margin-bottom: 2rem;
-     }
-    .title {
-      display: flex;
-      gap: 6px;
-
-      p {
-        font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto";
+    &--presentation {
+      .title-description {
+          background-image: linear-gradient(45deg, var(--gray-color-light-5),
+           var(--gray-color-light-2));
+          background-clip: text;
+          color: transparent;
       }
-    }
-
-    a {
-        margin-top: 1.5rem;
-        display: inline-block;
-        background-color: red;
-        app-button {
-          display: inline-block;
+      h1{
+        font-size: 2.25rem;
+        line-height: 1.1;
+        letter-spacing: -.5px;
+        margin-bottom: 2rem;
+        @include respond(bp-tablet) {
+          letter-spacing: 1px;
         }
+       }
+
+      .title {
+        display: flex;
+        gap: 6px;
+        font-family: var(--font-family-mono);
+        p {
+          color: var(--primary-color);
+          margin-right: .5rem;
+          font-weight: 700;
+        }
+      }
+
     }
+    &--link {
+      margin-top: 1.5rem;
+      display: inline-block;
+      @include respond(bp-tablet) {
+        margin-top: 4rem;
+      }
+      app-button {
+        display: inline-block;
+      }
+     }
   }
 
   i {
-
     position: absolute;
     background: white;
     border-radius: 50%;
