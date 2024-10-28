@@ -9,31 +9,35 @@
 
 :root {
 
+  /* Primary color */
   --primary-color: #96f2d7;
   --primary-color-light-1: #baf2e1;
 
-  --gray-color: #343a40;
   --gray-color-light-0: #f8f9fa;
   --gray-color-light-1: #f1f3f5;
   --gray-color-light-2: #e9ecef;
   --gray-color-light-3: #dee2e6;
   --gray-color-light-4: #ced4da;
   --gray-color-light-5: #adb5bd;
+  --gray-color-light-6: #343a40;
 
+  /* Secondary color */
   --secondary-color:  gold ;
   --background-color: #001f24 ;
   --background-color-1: #013138;
 
 
   /* Font family */
-  --font-family-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', system-ui, sans-serif;
-  --font-family-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+  --font-family-sans: 'Calibre', 'Inter', 'San Francisco',
+  'SF Pro Text', system-ui, sans-serif;
+  --font-family-mono: 'SF Mono', 'Fira Code', 'Fira Mono',
+   'Roboto Mono', monospace;
 
- /*
-  FONT SIZE SYSTEM (px)
-  10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
- */
-
+  /*
+    FONT SIZE SYSTEM (px)
+    10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36
+     / 44 / 52 / 62 / 74 / 86 / 98
+  */
   --font-size-xxs: 0.625rem;  // 10px
   --font-size-xs: 0.75rem;    // 12px
   --font-size-sm: 0.875rem;   // 14px
@@ -47,11 +51,11 @@
   --font-size-6xl: 3.25rem;   // 52px
   --font-size-7xl: 3.875rem;  // 62px
 
-
   /*
   MARGIN SYSTEM (px)
-  4 / 8 / 12 / 16 / 20 / 24 / 32 / 40 / 48 / 56 / 64 / 80 / 96 / 112 / 128
-*/
+  4 / 8 / 12 / 16 / 20 / 24 / 32 / 40 /
+  48 / 56 / 64 / 80 / 96 / 112 / 128
+  */
   --margin-xxs: 0.25rem;
   --margin-xs: 0.5rem;
   --margin-sm: 0.75rem;
@@ -124,15 +128,10 @@ html {
 
 
 body {
-
   font-family: 'Inter', sans-serif;
-
   line-height: 1.5;
   background-color: var(--background-color);
 }
-
-
-
 
 ul {
   list-style-type: none;
@@ -140,13 +139,10 @@ ul {
 
 a {
   text-decoration: none;
-
   &:active, &:link, &:visited {
     color: unset;
   }
 }
-
-
 
 button {
   background-color: unset;
@@ -155,11 +151,9 @@ button {
 
 h1 {
   /* 44 / 52 / 62 */
-  font-size: 2.75rem;
+  font-size: var(--font-size-5xl);
   line-height: 1.1;
-
   color: var(--gray-color-light-3);
-
   @include respond(bp-extra-large) {
     font-size: 100%;
     letter-spacing: -1px;
@@ -185,15 +179,13 @@ h1 {
   @include respond(bp-mobile-small) {
     font-size: 50%;
   }
-
 }
 
 h2  {
   /* 24 / 30 / 36 */
-
   text-transform: uppercase;
-
 }
+
 h2,h3 {
   color: var(--gray-color-light-3);
 }

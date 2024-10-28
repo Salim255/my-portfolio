@@ -29,13 +29,14 @@ main {
     justify-content: center;
   }
 
-  & > :last-child{
-    margin-top: 8rem;
+  &>:not(:first-child):not(:nth-child(5)):not(:nth-child(6)):not(:nth-child(8)){
+    margin-bottom: 8rem;
   }
-  & > *  {
 
+  & >*  {
     @include respond(bp-tablet) {
-      margin-bottom: 14rem;
+       padding-top: 4rem;
+       padding-bottom: 4rem;
     }
   }
 
