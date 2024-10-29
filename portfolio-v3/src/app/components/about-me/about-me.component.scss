@@ -8,14 +8,11 @@
     height: 100%;
   }
 
-
   h2 {
     position: relative;
     display: flex;
     gap: var(--gap-md);
-    @include respond(bp-laptop) {
-      margin-bottom: var(--margin-6xl);
-    }
+    margin-bottom: var(--margin-3xl);
 
     &::before {
       content: "";
@@ -29,9 +26,10 @@
 
   &__content {
     display: flex;
-    gap: var(--gap-md);
+    gap: var(--gap-3xl);
+    justify-content: space-between;
 
-    @include respond(bp-tablet) {
+    @include respond(bp-tablet-md) {
       flex-direction: column;
       gap: var(--gap-2xl);
     }
@@ -39,13 +37,15 @@
     &--text {
       align-self: center;
 
+      @include respond(bp-tablet-md) {
+        align-self: flex-start;
+      }
       p {
         max-width: 40rem;
-        @include respond(bp-laptop) {
+
+        @include respond(bp-tablet-large) {
           max-width: 35rem;
-        }
-        @include respond(bp-tablet) {
-          max-width: 40rem;
+          text-align: left;
         }
 
         span{
@@ -56,59 +56,80 @@
 
     }
     &--hero {
-      margin-left: auto;
-      align-self: center;
-      overflow: hidden;
-      padding: var(--padding-md);
-      border-radius: 50%;
-      box-shadow: 0 .5rem 0.937rem var(--primary-color);
-      position: relative;
-      width: 18rem;
-      height: 18rem;
-      align-self: center;
-       @include respond(bp-laptop-large) {
-        width:  18rem;
-        height: 18rem;
-      }
-      @include respond(bp-laptop) {
-        width:  14rem;
-        height: 14rem;
-        padding: .5rem;
-        box-shadow: unset;
-      }
-      @include respond(bp-tablet) {
-        margin-right: auto;
-        width: 28rem;
-        height: 28rem;
+        align-self: center;
+
+      .image-container {
         padding: var(--padding-md);
+        position: relative;
+        width: 18rem;
+        height: 18rem;
+
         box-shadow: 0 .5rem 0.937rem var(--primary-color);
-      }
-
-      img {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        width:  16rem;
-        height: 16rem;
-        object-fit:cover;
-        clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%);
         border-radius: 50%;
-        @include respond(bp-laptop-large) {
-          width:  16rem;
-          height: 16rem;
-        }
-        @include respond(bp-laptop) {
-          width:  14rem;
-          height: 14rem;
+        overflow: hidden;
+        div {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%) rotate(45deg) ;
+          height: 30rem;
+          width: 1rem;
+          background-color: var(--background-color);
+
         }
 
-        @include respond(bp-tablet) {
-          width:  18rem;
+        &::before {
+          content: "";
+          position: absolute;
+           height: 92%;
+           width: 92%;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           border: 2px solid #013138 ;
+           box-shadow: 0 .5rem 0.937rem var(--primary-color);
+        }
+        &::after {
+          content: "";
+          position: absolute;
+           height: 90%;
+           width: 90%;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           border: 2px solid #013138 ;
+           background-image: url('../../../assets/images/hero4.png');
+           background-size: cover;
+           background-position: center;
+           border-radius: 50%;
+
+        }
+
+        @include respond(bp-laptop-md  ) {
+            width: 16rem;
+            height: 16rem;
+        }
+
+        @include respond(bp-laptop-sm )  {
+            width: 14rem;
+            height: 14rem;
+        }
+
+        @include respond (bp-tablet-large) {
+          width: 13rem;
+          height: 13rem;
+        }
+
+        @include respond (bp-tablet-md) {
+          width: 18rem;
           height: 18rem;
 
         }
-     }
-    }
+
+      }
+
+
+
+  }
   }
 }

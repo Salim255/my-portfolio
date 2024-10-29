@@ -2,14 +2,19 @@
 
 .media {
   opacity: .3;
-  @include respond(bp-tablet) {
-     opacity: 0;
-  }
+    @include respond(bp-tablet-md) {
+      display: none;
+    }
+
   &__left {
     position: fixed;
     bottom: 0;
     left: 0;
     padding-left: var(--padding-3xl);
+
+    @include respond(bp-laptop-md) {
+      padding-left: var(--padding-xl);
+    }
 
    &--content {
     position: relative;
@@ -39,9 +44,9 @@
     right: 0;
     text-align: right;
     padding-right: var(--padding-3xl);
-      @include respond(bp-tablet) {
-       padding-right: var(--margin-2xl);
-     }
+    @include respond(bp-laptop-md) {
+      padding-right: var(--padding-xl);
+    }
 
 
     &--content {
@@ -64,7 +69,7 @@
     display: flex;
     flex-direction: column;
     gap: var(--gap-sm);
-    @include respond(bp-tablet) {
+    @include respond(bp-tablet-md) {
       li {
         margin: var(--margin-md) var(--margin-2xl);
         i {

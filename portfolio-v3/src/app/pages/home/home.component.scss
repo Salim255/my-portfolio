@@ -8,37 +8,52 @@ main {
   padding-right: 16rem;
   scroll-behavior: smooth;
 
-   @include respond(bp-laptop-large) {
-    padding-left: 14rem;
-    padding-right: 14rem;
-  }
-  @include respond(bp-laptop) {
-    padding-left: 8rem;
-    padding-right: 8rem;
+
+  @include respond( bp-xx-large ){
+    padding-left: 16rem;
+    padding-right: 16rem;
   }
 
-  @include respond(bp-tablet) {
-    padding-left: 3rem;
-    padding-right: 3rem;
+   @include respond(bp-laptop-md) {
+
+     padding-left: 8rem;
+     padding-right: 8rem;
+   }
+
+   @include respond(bp-laptop-sm) {
+      padding-left: 6rem;
+      padding-right: 6rem;
+
+   }
+
+   @include respond(bp-tablet-large) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+   // background-color: green;
+
   }
 
 
-  .call-to-action {
+  #contact {
     display: flex;
     width: 100%;
     justify-content: center;
   }
 
-  &>:not(:first-child):not(:nth-child(5)):not(:nth-child(6)):not(:nth-child(8)){
-    margin-bottom: 8rem;
+
+  #about, #home, #skills {
+    margin-bottom: var(--margin-10xl);
   }
 
-  & >*  {
-    @include respond(bp-tablet) {
-       padding-top: 4rem;
-       padding-bottom: 4rem;
-    }
+  & >:not(#contact):not(#media-section):not(#app-menu):not(#app-footer) {
+    padding-top: var(--padding-3xl);
+    padding-bottom: var(--padding-3xl);
   }
+
+  #contact, #media-section, #app-menu, #app-footer {
+    margin-bottom: var(--margin-8xl);
+  }
+
 
 }
 

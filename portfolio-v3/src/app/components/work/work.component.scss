@@ -9,18 +9,18 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  @include respond(bp-tablet) {
-    gap: var(--gap-xl);
+  @include respond(bp-tablet-large) {
+    gap: var(--gap-md);
  }
   app-work-item {
     justify-content: center;
     width: 32%;
     margin-bottom: var(--margin-2xl);
-    @include respond(bp-laptop) {
-        width: 48%;
+    @include respond(bp-laptop-md) {
+      width: 48%;
     }
 
-    @include respond(bp-tablet) {
+    @include respond(bp-tablet-sm) {
        width: 100%;
     }
   }

@@ -6,9 +6,8 @@
     position: relative;
     display: flex;
     gap: var(--gap-md);
-    @include respond(bp-tablet) {
-      margin-bottom: var(--margin-6xl);
-   }
+    margin-bottom: var(--margin-3xl);
+
     &::before {
       content: "";
       height: 1px;
@@ -22,7 +21,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--gap-2xl);
-    @include respond(bp-tablet) {
+    @include respond(bp-tablet-large) {
       grid-template-columns: repeat(2, 1fr);
    }
   }

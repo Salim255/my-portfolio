@@ -13,13 +13,16 @@
   }
   & > app-featured-item:not(:last-child) {
     margin-bottom: var(--margin-10xl);
+    @include respond(bp-tablet-md) {
+      margin-bottom: var(--margin-6xl);
+    }
   }
 
 
   ::ng-deep app-featured-item:nth-of-type(even) .featured-item  {
     flex-direction: row-reverse;
 
-    @include respond(bp-tablet) {
+    @include respond(bp-tablet-md) {
       flex-direction: column;
     }
 
@@ -32,7 +35,7 @@
         &__body {
           left: 0%;
           transform: translate(0%, -50%);
-          @include respond(bp-tablet) {
+          @include respond(bp-tablet-md) {
            transform: translate(0, 0%);
           }
       }

@@ -1,21 +1,23 @@
 @import '../../../styles/queries/queries.scss';
 
 .welcome {
-  height: 100vh;
+  height: 60vh;
   width: 100%;
   display: flex;
   padding-top: var(--padding-2xl);
   justify-content: space-between;
   align-items: center;
   gap: var(--gap-4xl);
+
   @include respond(bp-laptop) {
     flex-direction: column-reverse;
   }
 
   @include respond(bp-tablet) {
-    justify-content: flex-end;
+    justify-content: center;
     height: 70vh;
     padding-top: 0;
+    gap: 10rem;
   }
 
   &__header {
