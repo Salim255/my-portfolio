@@ -20,6 +20,10 @@
     gap: var(--gap-4xl);
   }
 
+  @include respond(bp-mobile-large) {
+    height: 50vh;
+  }
+
   &__header {
     &--presentation {
       .title-description {
