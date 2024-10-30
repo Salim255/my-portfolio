@@ -9,15 +9,15 @@
   align-items: center;
   gap: var(--gap-4xl);
 
-  @include respond(bp-laptop) {
+  @include respond(bp-laptop-md) {
     flex-direction: column-reverse;
   }
 
-  @include respond(bp-tablet) {
+  @include respond(bp-tablet-large) {
     justify-content: center;
     height: 70vh;
     padding-top: 0;
-    gap: 10rem;
+    gap: var(--gap-4xl);
   }
 
   &__header {
@@ -33,7 +33,7 @@
         line-height: 1.1;
         letter-spacing: -.5px;
         margin-bottom: var(--margin-2xl);
-        @include respond(bp-tablet) {
+        @include respond(bp-tablet-large) {
           letter-spacing: 1px;
         }
        }
@@ -53,7 +53,7 @@
     &--link {
       margin-top: var(--margin-xl);
       display: inline-block;
-      @include respond(bp-tablet) {
+      @include respond(bp-tablet-large) {
         margin-top: var(--margin-6xl);
       }
       app-button {

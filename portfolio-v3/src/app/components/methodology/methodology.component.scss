@@ -27,6 +27,11 @@
       box-shadow: 0.625rem 0.625rem 6.25rem #2390ac;
       transform-style: preserve-3d;
       animation: spinEarth 1.7s ease-in-out infinite;
+      @include respond(bp-tablet-large) {
+        width: 6.125rem;
+        height: 6.125rem;
+        top: 45%;
+      }
       .sun-text {
         width: 100%;
         position: relative;
@@ -35,11 +40,12 @@
           position: absolute;
           left: 50%;
           top: 50%;
-          transform: translate(-50%, -130%);
-          color: var(--gray-color-light-5);
+          transform: translate(-50%, -110%);
+          color: var(--gray-color-light-4);
           font-size: var(--font-size-xl);
           font-weight: 700;
           font-family: var(--font-family-mono);
+
         }
         &::before {
           content: "";
@@ -49,9 +55,8 @@
           top: 70%;
           transform: translate(-50%, -50%);
           background-color: var(--secondary-color);
-          height: 1rem;
+          height: .5rem;
           width: 2px;
-
         }
       }
 
@@ -69,6 +74,11 @@
       transform: translate(-50%, -50%) rotateX(60deg) rotate(360deg);
       transform-style: preserve-3d;
       animation: rotateOrbitY 30s linear infinite  ;
+
+      @include respond(bp-tablet-large) {
+        width: 15.125rem;
+        height: 15.125rem;
+      }
       &::after {
         content: "";
         position: absolute;
@@ -89,39 +99,38 @@
         left: 50%;
         transform-style: preserve-3d;
         transform: translate(-50%, -50%) rotateZ(calc(var(--i) * 90deg))
-        translateX(-150px) translateZ(20px) rotateX(270deg)  ;
+        translateX(-9.375rem) translateZ(20px) rotateX(270deg)  ;
 
-        @include respond(bp-tablet) {
+        @include respond(bp-tablet-large) {
           transform: translate(-50%, -50%) rotateZ(calc(var(--i) * 90deg))
-          translateX(-90px) translateZ(12px) rotateX(270deg)  ;
+          translateX(-110px) translateZ(10px) rotateX(270deg)  ;
         }
 
         @include respond(bp-mobile-large) {
           transform: translate(-50%, -50%) rotateZ(calc(var(--i) * 90deg))
-          translateX(-90px) translateZ(12px) rotateX(270deg)  ;
+          translateX(-73px) translateZ(10px) rotateX(270deg)  ;
         }
 
         p {
           display: flex;
           flex-direction: column;
-           height: 3rem ;
+           height: 2rem ;
            transform-style: preserve-3d;
            font-size: var(--font-size-sm);
            font-weight: 700;
            font-family: var(--font-family-mono);
            transition: all 30s infinite;
            color: var(--gray-color-light-4);
+
           &::after {
             content: "";
             position: absolute;
-            height: 1rem;
+            height: .5rem;
             width: 2px;
             background-color: var(--secondary-color);
             align-self: center;
             margin-top: var(--margin-xl);
-            @include respond(bp-mobile-large) {
-              height: .5rem;
-            }
+
 
           }
         }
@@ -144,26 +153,34 @@
     &--orbit-2{
       content: "";
       position: absolute;
-      top: 70%;
+      top: 65%;
       left: 50%;
-      width: 10.625rem;
-      height:10.625rem;
+      width: 12.625rem;
+      height: 12.625rem;
       border: 2px dotted var(--gray-color-light-5);
       border-radius: var(--border-radius-full);
       animation: rotateOrbitY 30s linear infinite  reverse ;
+      @include respond(bp-tablet-large) {
+        top: 60%;
+        width: 11.625rem;
+        height: 11.625rem;
+      }
 
     }
     &--orbit-3{
       content: "";
       position: absolute;
-      top: 80%;
+      top: 79%;
       left: 50%;
       width: 7.5rem;
       height:  7.5rem;
       border: 2px dotted var(--gray-color-light-5);
       border-radius: var(--border-radius-full);
       transform-style: preserve-3d;
-      animation: rotateOrbitY 30s linear infinite  ;
+      animation: rotateOrbitY 30s linear infinite ;
+      @include respond(bp-tablet-large) {
+        top: 72%;
+      }
 
     }
   }
