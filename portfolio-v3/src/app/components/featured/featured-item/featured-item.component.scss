@@ -5,9 +5,24 @@
     justify-content: space-between;
     gap: var(--gap-md);
     counter-increment: featured-item 1;
+    position: relative;
     @include respond(bp-tablet-md) {
       flex-direction: column;
-      position: relative;
+      //position: relative;
+      background-image: url('../../../../assets/work/nextier2.png');
+      background-size: cover;
+      background-position: center;
+      padding: 2rem;
+      &::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        background-color: var(--background-color);
+        opacity: 0.85;
+      }
     }
 
     &__work {
@@ -15,7 +30,9 @@
       @include respond(bp-extra-large) {
         position: relative;
       }
-
+      @include respond(bp-tablet-md) {
+          display: none;
+       }
       &::after {
         content: "";
         position: absolute;
@@ -27,10 +44,10 @@
         opacity: .6;
         height: 100%;
         width: 100%;
-        @include respond(bp-tablet-md) {
+       /*  @include respond(bp-tablet-md) {
             background-color: #001f24;
             opacity: 0.9;
-        }
+        } */
       }
 
       &:hover {
@@ -58,28 +75,23 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      @include respond(bp-tablet-md) {
-        position: absolute;
-        left: 0;
-        right: 0;
-        height: 100%;
-        padding: var(--padding-xl);
 
+
+      @include respond(bp-tablet-md) {
+        z-index: 1;
       }
 
       &--container {
         align-self: flex-end;
-
         @include respond(bp-tablet-md) {
           display: flex;
           flex-direction: column;
-          height: 30rem;
           width: 100%;
         }
 
         .title {
           text-align: right;
-          margin-bottom: var(--margin-md);
+          margin-bottom: var(--margin-2xl);
           font-size: var(--font-size-xl);
 
           @include respond(bp-tablet-md) {
@@ -103,8 +115,11 @@
 
           height: 10rem;
           position: relative;
+          @include respond(bp-tablet-md) {
+            height: 100%;
+          }
           &__body {
-              background-color: #013038;;
+              background-color: #013038;
               position: absolute;
               right: 0%;
               top: 50%;
@@ -122,6 +137,7 @@
                 transform: translate(0%, 0%);
                 width: 100%;
               }
+
               p {
                 text-align: right;
                 line-height: 1.7;
@@ -143,13 +159,11 @@
 
         .tools {
           font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto";
-          margin-top: var(--margin-md);
+          margin-top: var(--margin-2xl);
           font-size: var(--font-size-xs);
           color: var(--gray-color-light-5);
 
-          @include respond(bp-tablet-md) {
-            margin-top: auto;
-          }
+
           ul {
             display: flex;
             justify-content: right;
@@ -160,8 +174,9 @@
         .links {
           display: flex;
           justify-content: flex-end;
-          gap: var(--gap-md);
+          gap: var(--gap-lg);
           margin-top: var( --margin-md);
+          font-size: var( --font-size-xxl);
         }
       }
     }

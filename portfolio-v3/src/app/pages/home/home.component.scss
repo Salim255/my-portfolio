@@ -15,7 +15,6 @@ main {
   }
 
    @include respond(bp-laptop-md) {
-
      padding-left: 8rem;
      padding-right: 8rem;
    }
@@ -23,17 +22,12 @@ main {
    @include respond(bp-laptop-sm) {
       padding-left: 6rem;
       padding-right: 6rem;
-
    }
 
-   @include respond(bp-tablet-large) {
+   @include respond(bp-mobile-large) {
     padding-left: 4rem;
     padding-right: 4rem;
-   // background-color: green;
-
   }
-
-
   #contact {
     display: flex;
     width: 100%;

@@ -9,6 +9,7 @@
      margin: auto;
      text-align: center;
      &--coordination {
+
        p{
          font-size: var(--font-size-md);
          text-transform: capitalize;
@@ -21,34 +22,20 @@
   }
 
   ::ng-deep app-media .media{
-      @include respond(bp-tablet) {
-          opacity: 1;
+      @include respond(bp-tablet-large) {
           display: flex;
           justify-content: center;
           flex-direction: column-reverse;
           margin-top: var(--margin-2xl);
           &__left {
-            position: static;
-            padding: 0;
-            &--content {
-
-              &::after {
-                height: 0;
-              }
-                p {
-                  writing-mode: initial;
-                  letter-spacing: 1px;
-                  font-size: var(--font-size-xl);
-                  color: var(--gray-color-light-4);
-                  opacity: .6;
-                }
-            }
+            display: none;
           }
 
           &__right{
             position: static;
             padding: 0;
             align-self: center;
+
             &--content {
               &::after {
                 height: 0;
@@ -56,6 +43,12 @@
 
               .links {
                 flex-direction: row;
+                li {
+                  margin: 1rem 2rem;
+                  i {
+                    font-size: 3rem !important;
+                  }
+                }
               }
             }
           }

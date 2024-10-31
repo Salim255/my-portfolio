@@ -1,7 +1,7 @@
 @import '../../../styles/queries/queries.scss';
 
 .media {
-  opacity: .3;
+  //opacity: .3;
     @include respond(bp-tablet-md) {
       display: none;
     }
@@ -20,7 +20,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-
+    gap: var(--padding-lg);
      &::after {
       content: "";
       border-left: 2px solid var(--gray-color-light-5)  ;
@@ -34,6 +34,8 @@
         margin-top: var(--margin-2xl);
         margin-bottom: var(--margin-xs);
         color: var(--gray-color-light-5);
+        font-size: var(--font-size-xs);
+        letter-spacing: .5rem;
      }
    }
   }
@@ -53,6 +55,7 @@
       position: relative;
       display: flex;
       flex-direction: column;
+      gap: var(--padding-lg);
       &::after {
         content: "";
         border-left: 2px solid var(--gray-color-light-5);
@@ -69,12 +72,13 @@
     display: flex;
     flex-direction: column;
     gap: var(--gap-sm);
-    @include respond(bp-tablet-md) {
-      li {
-        margin: var(--margin-md) var(--margin-2xl);
-        i {
-          font-size: var(--font-size-5xl);
-        }
+    opacity: .7;
+    li {
+      i {
+        font-size: var( --font-size-xxl);
+        margin-bottom:var(--margin-md) ;
+        color: var(--gray-color-light-5);
+
       }
     }
   }

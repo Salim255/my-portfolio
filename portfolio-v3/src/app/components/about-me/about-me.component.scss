@@ -1,7 +1,6 @@
 @import '../../../styles/queries/queries.scss';
 .about-me {
   width: 100%;
-  height: 60vh;
 
   @include respond(bp-laptop) {
     padding-top: 0;
@@ -121,9 +120,12 @@
         }
 
         @include respond (bp-tablet-md) {
-          width: 18rem;
-          height: 18rem;
-
+          width: 20rem;
+          height: 20rem;
+        }
+        @include respond (  bp-mobile-large) {
+          width: 24rem;
+          height: 24rem;
         }
 
       }
