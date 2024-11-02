@@ -7,6 +7,6 @@ import { Component, Input } from "@angular/core";
 })
 
 export class FeaturedItemComponent {
-  @Input() itemNumber: any;
+  @Input() item: any;
   constructor(){}
 }

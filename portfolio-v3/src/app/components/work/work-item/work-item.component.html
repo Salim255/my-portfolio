@@ -1,8 +1,8 @@
 <figure class="work-card">
-    <img class="work-card__img" src="../../../../assets/work/scroll.png"  alt="work"/>
+    <img class="work-card__img" [src]="work.image"  alt="work"/>
     <figcaption class="work-card__caption">
      <div class="work-card__caption--header">
-        <h3>First project</h3>
+        <h3>{{ work.title }}</h3>
         <ul >
           <li>
             <a href="#git"><i class="fab fa-github icon"></i></a>
@@ -14,14 +14,16 @@
         </ul>
      </div>
      <div class="work-card__caption--text">
-       <p class="heade-text"> A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more.
-        Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm. </p>
+       <p class="heade-text">
+        {{ work.description }}
+         </p>
       </div>
        <div class="work-card__caption--tools">
           <ul>
-            <li>html</li>
-            <li>react</li>
-            <li>nodejs</li>
+            <li *ngFor="let link of work.tools">
+              {{ link }}
+            </li>
+
           </ul>
       </div>
     </figcaption>
