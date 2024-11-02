@@ -15,6 +15,8 @@ export class AppLoadingService {
   }
 
   hide(){
+   setTimeout(() => {
     this.loadingSubject.next(false);
+   },1500)
   }
 }
