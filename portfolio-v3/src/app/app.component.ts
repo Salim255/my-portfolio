@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavigationEnd, NavigationStart, Router } from '@angular/router';
+import { NavigationStart, Router } from '@angular/router';
 import { AppLoadingService } from './services/app-loading/app-loading.service';
 
 @Component({
@@ -10,21 +10,40 @@ import { AppLoadingService } from './services/app-loading/app-loading.service';
 export class AppComponent implements OnInit {
   title = 'portfolio-v3';
   loading= true;
-
+  timeOutId:any;
   constructor(private router: Router, private appLoadingService: AppLoadingService){}
+
   ngOnInit(): void {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationStart) {
         this.appLoadingService.hide();// Internal navigation, no spinner
       }
     })
-     // Show spinner on full page load
-    window.addEventListener('beforeunload', () => {
+
+    // Full page load/reload
+    window.addEventListener('load', () => {
       this.appLoadingService.show();
+      this.timeOutId = setTimeout(() => {
+        this.appLoadingService.hide();
+      }, 2000)
+    })
+
+    // Full page reload scenario
+    window.addEventListener('beforeunload', () => {
+      this.appLoadingService.hide();
+      if (this.timeOutId) {
+        clearTimeout(this.timeOutId);
+      }
     });
 
     this.appLoadingService.getLoading$.subscribe(isLoading => {
       this.loading = isLoading;
     })
+  }
+
+  ngOnDestroy(): void {
+    if (this.timeOutId) {
+      clearTimeout(this.timeOutId)
+    }
   }
 }
