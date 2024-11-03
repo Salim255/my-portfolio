@@ -73,14 +73,14 @@
     transform: translate(-50%, -50%)   ;
   }
   50%{
-    transform: translate(-50%, -50%)  rotateZ(180deg)    ;
     left: 50%;
     top: 50%;
+    transform: translate(-50%, -50%)  rotateZ(180deg)    ;
   }
   100%  {
-    transform: rotateZ(180deg);
     left: 0;
     top: 0;
+    transform: rotateZ(180deg) translate(0, 0);
   }
 
 }
@@ -97,7 +97,7 @@
     bottom: 50%;
   }
   100%{
-   transform: rotateZ(-180deg);
+   transform: rotateZ(-180deg) translate(0, 0);
     left: 0;
     bottom: 0;
   }

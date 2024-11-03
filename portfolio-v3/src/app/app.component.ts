@@ -14,18 +14,14 @@ export class AppComponent implements OnInit {
   constructor(private router: Router, private appLoadingService: AppLoadingService){}
 
   ngOnInit(): void {
-    this.router.events.subscribe(event => {
-      if (event instanceof NavigationStart) {
-        this.appLoadingService.hide();// Internal navigation, no spinner
-      }
-    })
+    // Set loading to true by default on initial load
+    this.appLoadingService.show();
 
     // Full page load/reload
     window.addEventListener('load', () => {
-      this.appLoadingService.show();
       this.timeOutId = setTimeout(() => {
         this.appLoadingService.hide();
-      }, 2000)
+      }, 1000)
     })
 
     // Full page reload scenario

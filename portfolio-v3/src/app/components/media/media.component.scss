@@ -1,7 +1,6 @@
 @import '../../../styles/queries/queries.scss';
 
 .media {
-  //opacity: .3;
     @include respond(bp-tablet-md) {
       display: none;
     }

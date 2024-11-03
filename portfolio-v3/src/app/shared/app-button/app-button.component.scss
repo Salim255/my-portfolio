@@ -1,3 +1,5 @@
+@import '../../../styles/queries/queries.scss';
+
 .app-btn {
   display: flex;
   justify-content: center;
@@ -24,10 +26,10 @@
       top: 0;
       height: 100%;
       width: 100%;
-      background-color: transparent;
       border: 2px solid var(--primary-color);
       z-index: -1;
-      background-color: #001f24 ;
+      background-color: var(--background-color) ;
+
       &::before {
        content: "";
        position: absolute;
@@ -36,7 +38,7 @@
        width: 8%;
        height: 500%;
        transform: translate(-50%, -50%) rotate(-60deg);
-       background-color: #001f24 ;
+       background-color: var(--background-color) ;
        transition: all .3s ease-in-out;
       }
     }
@@ -45,9 +47,16 @@
       width: 100%;
       background-color: var(--primary-color);
       transform: translate(-50%, -50%) rotate(60deg);
+      @include respond( bp-mobile-large) {
+        background-color: var(--background-color) ;
+        width: initial;
+      }
     }
     &:hover  {
-      color: #001f24
+      color: var(--background-color);
+      @include respond( bp-mobile-large) {
+       color: var(--primary-color) ;
+      }
     }
   }
 }
