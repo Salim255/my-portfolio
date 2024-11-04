@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavigationStart, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { AppLoadingService } from './services/app-loading/app-loading.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { AppLoadingService } from './services/app-loading/app-loading.service';
 })
 export class AppComponent implements OnInit {
   title = 'portfolio-v3';
-  loading= true;
+  loading = true;
   timeOutId:any;
   constructor(private router: Router, private appLoadingService: AppLoadingService){}
 
@@ -17,24 +17,22 @@ export class AppComponent implements OnInit {
     // Set loading to true by default on initial load
     this.appLoadingService.show();
 
-    // Full page load/reload
-    window.addEventListener('load', () => {
-      this.timeOutId = setTimeout(() => {
-        this.appLoadingService.hide();
-      }, 1000)
-    })
-
-    // Full page reload scenario
-    window.addEventListener('beforeunload', () => {
-      this.appLoadingService.hide();
-      if (this.timeOutId) {
-        clearTimeout(this.timeOutId);
-      }
-    });
 
     this.appLoadingService.getLoading$.subscribe(isLoading => {
       this.loading = isLoading;
+      console.log("Loadin service", isLoading);
     })
+  }
+
+
+  ngAfterViewInit(): void {
+   // Once the view has initialized, hide the spinner after a short delay
+    if (this.timeOutId) {
+      clearTimeout(this.timeOutId);
+    }
+     this.timeOutId = setTimeout(() => {
+        this.appLoadingService.hide();
+      }, 1500)
   }
 
   ngOnDestroy(): void {
