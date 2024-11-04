@@ -12,7 +12,7 @@ import { AppMenuService } from "src/app/services/app-menu/app-menu.service";
 export class MenuComponent {
   isActive: boolean = false;
   activeIndex: Number = 0;
-  links = ['home' , 'skills' , 'work' , 'contact', 'about'];
+  links = ['home','about', 'skills' , 'work' , 'contact'];
   private menuStatSource!: Subscription;
 
   constructor(

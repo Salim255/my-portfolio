@@ -1,7 +1,7 @@
 
 <div class="featured-item" [ngStyle]="{'--background-url': 'url(' + item.image + ')'}">
   <div class="featured-item__work">
-    <img [src]="item.image"  />
+    <img [src]="item.image" alt="featured_work"  />
   </div>
   <div class="featured-item__details">
       <div class="featured-item__details--container">
@@ -29,10 +29,14 @@
 
           <ul class="links" >
             <li>
-              <a href="#git"><i class="fab fa-github icon"></i></a>
+              <a href="#git">
+                <i class="fab fa-github icon"></i>
+              </a>
             </li>
             <li>
-            <a href="#globe"><i class="fa-solid fa-globe icon"></i></a>
+              <a href="#globe">
+                <i class="fa-solid fa-globe icon"></i>
+              </a>
             </li>
         </ul>
 

@@ -18,7 +18,7 @@ export class FeaturedComponent {
       Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm
       It was a amazing expercince,  Atom Package Manager, and npm`,
 
-      image: 'http://res.cloudinary.com/dlaztxrfw/image/upload/v1711921152/ogwxasnbvcfskr0ehijr.png',
+      image: "https://res.cloudinary.com/dlaztxrfw/image/upload/v1730727630/aubhlzwcngmbg70wyenr.webp",
 
       github: '',
       web:'',
@@ -34,7 +34,7 @@ export class FeaturedComponent {
       Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm
       It was a amazing expercince,  Atom Package Manager, and npm`,
 
-      image: "http://res.cloudinary.com/dlaztxrfw/image/upload/v1711921304/j3eadk04rsa3hyntziuv.png",
+      image: "https://res.cloudinary.com/dlaztxrfw/image/upload/v1730727718/laxvmy9z5ostperevjtl.webp",
 
       github: '',
       web:'',
@@ -50,7 +50,7 @@ export class FeaturedComponent {
       Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm
       It was a amazing expercince,  Atom Package Manager, and npm`,
 
-      image: "http://res.cloudinary.com/dlaztxrfw/image/upload/v1711921365/px2mrv6xboiiz7auqsmn.png",
+      image:  "https://res.cloudinary.com/dlaztxrfw/image/upload/v1730727782/fezrhx9zdih1wcao9lp1.webp",
 
       github: '',
       web:'',
