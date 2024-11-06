@@ -1,4 +1,4 @@
-import { Component, Input } from "@angular/core";
+import { Component, HostListener, Input } from "@angular/core";
 
 @Component({
   selector: "app-featured-item",
@@ -8,5 +8,16 @@ import { Component, Input } from "@angular/core";
 
 export class FeaturedItemComponent {
   @Input() item: any;
-  constructor(){}
+  constructor(){
+
+  }
+  ngOnInit() {
+    console.log('Component initialized');
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onScroll(event: Event) {
+    console.log('Scroll detected:', event);
+  }
+
 }

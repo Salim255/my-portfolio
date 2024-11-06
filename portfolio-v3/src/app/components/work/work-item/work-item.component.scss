@@ -10,9 +10,9 @@
   }
 
   &__img {
-    height: 18rem;
+    //height: 18rem;
     width: 100%;
-    object-fit:cover;
+    object-fit:fill;
   }
   &__caption {
     padding: var(--padding-xl);

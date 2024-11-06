@@ -9,7 +9,7 @@ import { Component } from "@angular/core";
 export class FeaturedComponent {
    featuredData = [
     {
-      title:'Project1',
+      title:'IntiMacy',
       description: `It was a amazing expercince, I work with difence tecnonlie such as soketjs,
                web sokcets angualr ionic, nodejs expres for the backe end as
               alsso uyou van see for the front end wioth angualr and ionic
@@ -18,7 +18,7 @@ export class FeaturedComponent {
       Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm
       It was a amazing expercince,  Atom Package Manager, and npm`,
 
-      image: "https://res.cloudinary.com/dlaztxrfw/image/upload/v1730727630/aubhlzwcngmbg70wyenr.webp",
+      image:  "https://res.cloudinary.com/dlaztxrfw/image/upload/v1730763745/f6ra2qnzpjkhk6jjitcb.webp",
 
       github: '',
       web:'',
@@ -34,7 +34,7 @@ export class FeaturedComponent {
       Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm
       It was a amazing expercince,  Atom Package Manager, and npm`,
 
-      image: "https://res.cloudinary.com/dlaztxrfw/image/upload/v1730727718/laxvmy9z5ostperevjtl.webp",
+      image: "https://res.cloudinary.com/dlaztxrfw/image/upload/v1730727630/aubhlzwcngmbg70wyenr.webp",
 
       github: '',
       web:'',
@@ -57,6 +57,8 @@ export class FeaturedComponent {
       tools: ['html', 'css', 'JavaScript']
     }
    ]
+
   constructor(){}
+
 
 }

@@ -21,7 +21,15 @@
      }
   }
 
-  ::ng-deep app-media .media{
+  .media-section{
+   opacity: 0;
+  }
+  @include respond(bp-tablet-large){
+    .media-section{
+      opacity: 1;
+    }
+    ::ng-deep app-media .media{
+
       @include respond(bp-tablet-large) {
           display: flex;
           justify-content: center;
@@ -54,6 +62,9 @@
           }
     }
   }
+  }
+
+
 }
 
 

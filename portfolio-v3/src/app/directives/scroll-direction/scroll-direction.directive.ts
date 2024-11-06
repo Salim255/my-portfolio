@@ -1,4 +1,4 @@
-import { Directive, ElementRef, HostListener, NgZone } from "@angular/core";
+import { Directive, ElementRef, HostListener } from "@angular/core";
 import { ScrollDirectionService } from "src/app/services/scroll-direction/scroll-direction.service";
 
 @Directive({
@@ -7,7 +7,7 @@ import { ScrollDirectionService } from "src/app/services/scroll-direction/scroll
 export class ScrollDirectionDirective {
    private lastScrollTop = 0;
 
-   constructor(private ngZone: NgZone, private el: ElementRef, private scrollDirectionService : ScrollDirectionService ){}
+   constructor( private el: ElementRef, private scrollDirectionService : ScrollDirectionService ){}
 
    @HostListener('scroll', ['$event'])
    onMainScroll(event: Event) {

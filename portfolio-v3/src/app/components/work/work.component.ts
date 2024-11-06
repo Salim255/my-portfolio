@@ -18,7 +18,7 @@ export class WorkComponent {
       title: 'Project2',
       description: `A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more.
         Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.`,
-      image: "https://res.cloudinary.com/dlaztxrfw/image/upload/v1730728697/hiy2rlmzvzhkvejgz8w4.webp",
+      image:  "https://res.cloudinary.com/dlaztxrfw/image/upload/v1730727718/laxvmy9z5ostperevjtl.webp",  /* "https://res.cloudinary.com/dlaztxrfw/image/upload/v1730728697/hiy2rlmzvzhkvejgz8w4.webp", */
       tools: ['html', 'react', 'nodejs']
     },
     {

@@ -6,6 +6,8 @@
     gap: var(--gap-md);
     counter-increment: featured-item 1;
     position: relative;
+
+
     @include respond(bp-tablet-md) {
       flex-direction: column;
       background-image: var(--background-url);
@@ -177,3 +179,15 @@
       }
     }
 }
+
+.animate-featured {
+  opacity: 0;
+  transform: scale(0.7) ;
+  transition: transform 0.5s ease;
+  filter: blur(5px);
+  &__show {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+  }
+};
