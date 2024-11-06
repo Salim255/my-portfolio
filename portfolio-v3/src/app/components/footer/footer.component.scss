@@ -13,7 +13,6 @@
        p{
          font-size: var(--font-size-md);
          text-transform: capitalize;
-         margin-top: var(--margin-md);
          color: var(--gray-color-light-5);
          opacity: .6;
          font-family: var(--font-family-mono)
@@ -54,7 +53,7 @@
                 li {
                   margin: 1rem 2rem;
                   i {
-                    font-size: 3rem !important;
+                    font-size: 2rem !important;
                   }
                 }
               }

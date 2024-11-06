@@ -54,7 +54,6 @@
       position: relative;
       display: flex;
       flex-direction: column;
-      gap: var(--padding-lg);
       &::after {
         content: "";
         border-left: 2px solid var(--gray-color-light-5);
