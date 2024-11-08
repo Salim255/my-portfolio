@@ -58,6 +58,7 @@ export class AppHeaderDirective implements OnChanges {
     const element = this.el.nativeElement ;
     this.renderer.setStyle(element,'backdrop-filter', 'unset');
     this.renderer.setStyle(element,'-webkit-backdrop-filter', 'unset');
+    this.renderer.setStyle(element,'background-color',`unset`);
     this.renderer.setStyle(element, 'box-shadow', 'unset');
   }
 }

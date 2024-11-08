@@ -11,7 +11,7 @@
   flex-wrap: wrap;
   @include respond(bp-tablet-large) {
     gap: var(--gap-md);
- }
+  }
   app-work-item {
     justify-content: center;
     width: 32%;

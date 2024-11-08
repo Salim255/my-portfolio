@@ -10,9 +10,9 @@
         </div>
         <div class="description" >
          <div class="description__body">
-            <p>
+            <p [ngStyle]="{'--project-name': '\'' + item.title + '\''}">
              {{ item.description}}
-             <span>
+             <span class="sub-description">
               {{ item.subDescription}}
              </span>
             </p>

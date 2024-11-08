@@ -140,14 +140,19 @@
                 text-align: right;
                 line-height: 1.7;
                 font-size: var(--font-size-lg);
-                 span {
+                &::before{
+                    content: var(--project-name);
+                    color: var(--primary-color);
+                    font-weight: bold;
+                 }
+                 .sub-description {
                   display: none;
                 }
 
                 @include respond(bp-tablet-md) {
                   color: var(--gray-color-light-0);
                   text-align: left;
-                  span {
+                  .sub-description {
                     display: initial;
                   }
                }

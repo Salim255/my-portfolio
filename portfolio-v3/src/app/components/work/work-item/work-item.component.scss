@@ -8,9 +8,7 @@
   &:hover {
     transform: translateY(-1%);
   }
-
   &__img {
-    //height: 18rem;
     width: 100%;
     object-fit:fill;
   }
@@ -21,7 +19,7 @@
     &--header {
       display: flex;
       justify-content: space-between;
-      margin-bottom: var(--margin-2xl);
+      margin-bottom: var(--margin-md);
 
       h3 {
         font-size: var(--font-size-xxl) ;
@@ -36,9 +34,11 @@
     }
     &--tools {
       font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto";
-      margin-top: var(--margin-md);
-      font-size: var(--font-size-xs);
-
+      margin-top: var(--margin-lg);
+      font-size: var(--font-size-xxs);
+      color: #9da5ae;
+      font-family: var(--font-family-mono);
+      letter-spacing: 1px;
       ul {
         display: flex;
         justify-content: right;
