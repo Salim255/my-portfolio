@@ -24,8 +24,10 @@ export class MenuButtonComponent {
 
       if (this.isActive) {
         this.isActive = false;
+        this.menuService.setMenuStat('hide')
       } else {
         this.isActive = true;
+        this.menuService.setMenuStat('show')
       }
   }
 

@@ -1,8 +1,64 @@
 .menu-button {
   position: relative;
-  width: 2.2rem;
-  height: 2.2rem;
+  width: 4rem;
+  height: 4rem;
   cursor: pointer;
+  text-align: center;
+  transition: all .2s;
+
+  &__icon {
+    position: relative;
+    margin-top: 1rem;
+    z-index: 100;
+    &,
+    &::before,
+    &::after {
+      background-color: var(--primary-color);
+      width: 3rem;
+      height: 2px;
+      display: inline-block;
+      transition: all .2s;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+
+    }
+    &::before {
+      top: -.8rem;
+    }
+    &::after {
+      top: .8rem;
+    }
+
+    &--show {
+        & {
+           background-color: transparent;
+        }
+       &::after {
+        top: 0;
+        transform: rotate(-135deg);
+       }
+       &::before {
+        top: 0;
+        transform: rotate(135deg);
+       }
+    }
+  }
+
+  &__hide {
+    &:hover .menu-button__icon {
+      &::after {
+        top: 1rem;
+      }
+      &::before {
+        top: -1rem;
+      }
+    }
+  }
 
   .menu-background {
     position: absolute;
@@ -13,98 +69,14 @@
     background-image: radial-gradient(var(--background-color), rgb(0, 0, 0));
     transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     &__show{
-      width: 6rem;
-      height: 6rem;
+      width: 4rem;
+      height: 4rem;
       transform: scale(80);
     }
     &__hide {
-      height: 2rem;
-      width: 2rem;
-      opacity: 0;
+      height: 1px;
+      width: 1px;
     }
-  }
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 2px ;
-    background-color: var(--primary-color);
-    z-index: 10;
-  }
-
-   &::before {
-    top: 0;
-    width: 100%;
-  }
-  &::after {
-    bottom: 0;
-  }
-
-  &__dis-active{
-    &::after,&::before{
-      width: 2.2rem;
-    }
-    &::before {
-      transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-      animation: dis-active-animation-before .5s ease-in-out;
-    }
-    &::after {
-      transition: all .5s ease-in-out;
-      animation: dis-active-animation-after .5s ease-in-out;
-    }
-  }
-
-  &__active {
-    transform: rotate(45deg);
-    width: 2.2rem;
-    height: 2.2rem;
-    &::before,
-    &::after{
-      right: 0;
-      left: 0;
-      width: 2.2rem;
-      transition: all .3s ease-in-out;
-
-    }
-    &::before {
-      top: 50%;
-      transform: rotate(90deg);
-    }
-    &::after {
-      top: 50%;
-    }
-
-  }
-
-}
-
-
-
-
-@keyframes dis-active-animation-before {
-  0% {
-    top: 50%;
-    transform: rotate(0);
-    -webkit-transform: rotate(0);
-  }
-  50% {
-    top: 70%;
-  }
-  100%{
-    top: 0%;
   }
 }
 
-@keyframes dis-active-animation-after {
-  0%{
-    bottom: 50%;
-  }
-  50%{
-    bottom: 70%;
-  }
-  100%{
-    bottom: 0;
-  }
-}

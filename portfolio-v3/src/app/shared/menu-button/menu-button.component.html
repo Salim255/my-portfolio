@@ -1,6 +1,10 @@
 <div [ngClass]="{ 'menu-button' : true,
-'menu-button__active': isActive,
-'menu-button__dis-active': !isActive }"  (click)="onToggleMenu()">
+'menu-button__show': isActive,
+'menu-button__hide': !isActive }"  (click)="onToggleMenu()">
+  <span class="menu-button__icon"
+  [ngClass]="{ 'menu-button__icon' : true,
+    'menu-button__icon--show': isActive,
+    'menu-button__icon--hide': !isActive }" >&nbsp;</span>
   <div
     [ngClass]="{ 'menu-background' : true,
     'menu-background__show': isActive,

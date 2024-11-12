@@ -32,6 +32,9 @@ export class MenuComponent {
 
   setActive(index: Number) {
     this.activeIndex = index;
+    if (this.isActive) {
+      this.appMenuService.setMenuStat('hide')
+    }
   }
 
   ngOnDestroy(): void {
