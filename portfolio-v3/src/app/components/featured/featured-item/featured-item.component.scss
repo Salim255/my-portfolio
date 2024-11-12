@@ -124,8 +124,6 @@
               transform: translate(0%, -50%);
               width: 30rem;
               padding: var( --padding-md);
-
-
               @include respond(bp-tablet-md) {
                 background-color: unset;
                 opacity: 0.8;

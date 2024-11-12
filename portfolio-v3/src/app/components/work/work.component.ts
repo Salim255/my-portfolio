@@ -18,9 +18,9 @@ export class WorkComponent {
     },
     {
       title: 'Stripe',
-      description: `A modern navigation interface built with vanilla JavaScript,
-      inspired by sites like Stripe. This project showcases dynamic submenus that reveal
-       additional content on hover.`,
+      description: `A modern navigation interface built with vanilla JavaScript,inspired by sites like
+                     Stripe. This project showcases dynamic submenus that reveal additional content on hover.
+                     that reveal additional content on hover.`,
       image:  "https://res.cloudinary.com/dlaztxrfw/image/upload/v1730727718/laxvmy9z5ostperevjtl.webp",  /* "https://res.cloudinary.com/dlaztxrfw/image/upload/v1730728697/hiy2rlmzvzhkvejgz8w4.webp", */
       tools: ['html', 'CSS', 'JavaScript'],
       siteLink: 'https://fastidious-bonbon-cf5c45.netlify.app/',
@@ -28,9 +28,8 @@ export class WorkComponent {
     {
       title: 'Trillo',
       description: `The Trillo project is a fictional all-in-one booking app, built to showcase
-       modern web development techniques. Users can browse and book hotels, flights, cars, and
-        tours within a sleek and responsive interface. The project focuses on Flexbox for layout
-         design `,
+                  modern web development techniques. Users can browse and book hotels, flights, cars, and
+                   tours within a sleek and responsive interface.`,
       image: "https://res.cloudinary.com/dlaztxrfw/image/upload/v1731075375/hteufdzdssa5sqqobwpf.webp",
       tools: ['html', 'react', 'node.js'],
       siteLink: "https://flexbox-trillo.netlify.app/",

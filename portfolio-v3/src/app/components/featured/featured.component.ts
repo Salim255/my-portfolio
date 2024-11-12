@@ -10,7 +10,7 @@ export class FeaturedComponent {
    featuredData = [
     {
       title:'IntiMacy',
-      description: `IntiMacy it's love application is designed to connect people in
+      description: `its love application is designed to connect people in
                     a way similar to Tinder, offering a seamless and interactive user experience.
                     It combines a Node.js backend with Angular and Ionic for a responsive, mobile-friendly frontend. ` ,
       subDescription: ` Utilizing Socket.io for real-time updates, the application enables instant messaging and live interactions,
@@ -25,10 +25,10 @@ export class FeaturedComponent {
     },
     {
       title:'Photography',
-      description: `This static web application was designed to present a photographer’s
-                    portfolio in a visually engaging layout. Built using React.js with HTML and CSS
-                    , the project required an eye for arrangement and design to effectively showcase
-                    the photographer’s work .` ,
+      description: `its a static web application was designed to present a photographer’s
+                    portfolio in a visually engaging layout. Built using React.js, HTML, CSS.
+                    The project required an eye for arrangement and design to showcase
+                    the photographer’s work.` ,
       subDescription: `I worked extensively with layout structures to ensure that the photographs
                       were displayed attractively, creating a seamless viewing experience that emphasized
                        the photographer’s creative vision. This project enhanced my skills in web design,
@@ -42,10 +42,9 @@ export class FeaturedComponent {
     },
     {
       title:'Developer Connecter',
-      description: `I created Developer Connecter, a full-stack social network application, as part
+      description: `its a full-stack social network application, as part
                     of a tutorial to enhance my proficiency in React and the MERN stack
-                    This project involved building an API with Node.js, Express, and MongoDB, and designing a
-                     front end with React and Redux for state management.` ,
+                    the project involved Node.js, Express, React and Redux.` ,
       subDescription: `The app features user profiles, experience and education tracking, GitHub integration,
                       and an interactive post and comment section. It allowed me to deepen my understanding of building a
                       structured application using the MERN stack.`,
@@ -59,9 +58,4 @@ export class FeaturedComponent {
    ]
 
   constructor(){}
-
-/* This love application is designed to connect people in
-a way similar to Tinder, offering a seamless and interactive user experience.
-It combines a Node.js backend with Angular and Ionic for a responsive, mobile-friendly frontend.
- */
 }

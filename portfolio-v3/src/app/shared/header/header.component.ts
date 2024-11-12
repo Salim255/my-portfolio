@@ -14,10 +14,13 @@ import { AppMenuService } from 'src/app/services/app-menu/app-menu.service';
 export class HeaderComponent {
 
   isActive: boolean = true;
+  menuShowing: boolean = false;
   previousStat: boolean = false ;
   scrollData: ScrollData = {direction: '', value: 0};
   isMenuVisible: boolean = false;
   scrollDataSource!: Subscription;
+  private menuStatSource!: Subscription;
+
   private previousStatSource!: Subscription;
 
   constructor(private appModeService : AppModeService,
@@ -45,6 +48,14 @@ export class HeaderComponent {
 
     })
 
+    this.menuStatSource = this.appMenuService.getMenuStat.subscribe(state => {
+      if (state === 'show') {
+        this.menuShowing = true;
+      } else {
+        this.menuShowing = false;
+      }
+
+    })
    }
 
   onChangeMode() {

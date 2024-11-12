@@ -5,46 +5,59 @@
   background-color: var( --background-color-1);
   transition: all ease-in-out .2s;
   cursor: pointer;
+
   &:hover {
     transform: translateY(-1%);
   }
-  &__img {
-    width: 100%;
-    object-fit:fill;
+
+  &__image {
+    height: 14rem;
+    background-size: cover;
+    background-blend-mode: screen;
+    background-repeat: no-repeat;
+    background-image: var(--background-url) ;
+    opacity: .5;
   }
   &__caption {
     padding: var(--padding-xl);
-    color: #f3f4f6;
-
     &--header {
       display: flex;
       justify-content: space-between;
       margin-bottom: var(--margin-md);
-
       h3 {
         font-size: var(--font-size-xxl) ;
       }
 
       ul {
          display: flex;
-         gap: var(--gap-md);
+         gap: var(--gap-lg);
          justify-content: flex-end;
+         align-self: center;
+         i {
+          font-size: var(--font-size-xxl);
+         }
 
       }
     }
-    &--tools {
-      font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto";
-      margin-top: var(--margin-lg);
-      font-size: var(--font-size-xxs);
-      color: #9da5ae;
-      font-family: var(--font-family-mono);
-      letter-spacing: 1px;
-      ul {
-        display: flex;
-        justify-content: right;
-        gap: var(--gap-md);
+    &--text {
+      .work-description {
+        margin-bottom: 1.5rem;
       }
-   }
+      .work--tools {
+        font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto";
+        font-size: var(--font-size-xxs);
+        color: #9da5ae;
+        font-family: var(--font-family-mono);
+        letter-spacing: 1px;
+        ul {
+          display: flex;
+          justify-content: right;
+          gap: var(--gap-md);
+
+        }
+     }
+    }
+
   }
 }
 

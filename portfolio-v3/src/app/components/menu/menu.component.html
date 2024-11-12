@@ -1,16 +1,12 @@
-<section [ngClass]="{'menu-section': true, 'menu-section__show': isActive}">
-  <div class="left-background">
-
-  </div>
-  <div class="right-background">
-  </div>
-
+<section [ngClass]="{'menu-section': true, 'menu-section__show': isActive,
+'menu-section__hide': !isActive}">
   <div class="content">
-    <ul [ngClass]="{'links': true, 'links__show': isActive }"  >
+    <ul class="links"  >
       <li *ngFor="let link of  links; let i = index"
       [ngClass]="{'active': activeIndex === i}"
-      (click)="setActive(i)">
-         <a [href]="'#' + link ">{{ link }}</a>
+      (click)="setActive(i)"
+      class="item-link">
+         <a [href]="'#' + link " >{{ link }}</a>
        </li>
     </ul>
   </div>

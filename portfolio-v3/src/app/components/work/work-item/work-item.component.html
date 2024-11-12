@@ -1,5 +1,8 @@
 <figure class="work-card animate-more-creation">
-    <img class="work-card__img" [src]="work.image"  alt="work"/>
+
+     <div class="work-card__image" [ngStyle]="{'--background-url': 'url(' + work.image + ')'}">
+     </div>
+
     <figcaption class="work-card__caption">
      <div class="work-card__caption--header">
         <h3>{{ work.title }}</h3>
@@ -18,16 +21,18 @@
         </ul>
      </div>
      <div class="work-card__caption--text">
-       <p class="heade-text">
-        {{ work.description }}
-         </p>
-      </div>
-       <div class="work-card__caption--tools">
-          <ul>
-            <li *ngFor="let link of work.tools">
-              {{ link }}
-            </li>
-          </ul>
+        <div class="work-description">
+          <p >
+            {{ work.description }}
+          </p>
+        </div>
+         <div class="work--tools">
+            <ul>
+              <li *ngFor="let link of work.tools">
+                {{ link }}
+              </li>
+            </ul>
+        </div>
       </div>
     </figcaption>
 </figure>

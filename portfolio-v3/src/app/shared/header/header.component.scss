@@ -8,31 +8,31 @@
   transition: transform 0.5s ease-in-out;
   transform: translateY(0);
   z-index: 10;
-  padding:  2rem ;
+  //
 
   padding-bottom: 1rem;
   &__logo {
     margin-right: auto;
     width: 100%;
+    padding:  2rem ;
     img {
       height: 3rem;
       width: 3rem;
     }
   }
 
-
-
   &__menu {
     height: 3.125rem;
     cursor: pointer;
+    padding: 2rem;
     app-button, app-menu-button {
       cursor: pointer;
       transition: all ease-in-out .2s;
       font-size: 2rem;
     }
+
   }
 }
-
 
 @keyframes lineAnimation {
   0% {
