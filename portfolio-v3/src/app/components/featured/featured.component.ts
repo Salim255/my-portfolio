@@ -10,9 +10,9 @@ export class FeaturedComponent {
    featuredData = [
     {
       title:'IntiMacy',
-      description: `its love application is designed to connect people in
-                    a way similar to Tinder, offering a seamless and interactive user experience.
-                    It combines a Node.js backend with Angular and Ionic for a responsive, mobile-friendly frontend. ` ,
+      description: `it's dating application is designed to connect people similarly to Tinder,
+                    offering a seamless and interactive user experience. It combines a Node.js
+                    backend with Angular and Ionic for a responsive, mobile-friendly frontend. ` ,
       subDescription: ` Utilizing Socket.io for real-time updates, the application enables instant messaging and live interactions,
                       enhancing user engagement and connectivity. The tech stack brings together the efficiency of JavaScript
                       with Angular's dynamic UI capabilities, resulting in a smooth, reliable matchmaking platform.`,
@@ -25,7 +25,7 @@ export class FeaturedComponent {
     },
     {
       title:'Photography',
-      description: `its a static web application was designed to present a photographer’s
+      description: `it's a static web application was designed to present a photographer’s
                     portfolio in a visually engaging layout. Built using React.js, HTML, CSS.
                     The project required an eye for arrangement and design to showcase
                     the photographer’s work.` ,
@@ -42,9 +42,9 @@ export class FeaturedComponent {
     },
     {
       title:'Developer Connecter',
-      description: `its a full-stack social network application, as part
-                    of a tutorial to enhance my proficiency in React and the MERN stack
-                    the project involved Node.js, Express, React and Redux.` ,
+      description: `It’s a full-stack social network application developed as part of a tutorial to enhance
+                    my proficiency in React and the MERN stack. The project involved using Node.js, Express,
+                     React, and Redux.` ,
       subDescription: `The app features user profiles, experience and education tracking, GitHub integration,
                       and an interactive post and comment section. It allowed me to deepen my understanding of building a
                       structured application using the MERN stack.`,

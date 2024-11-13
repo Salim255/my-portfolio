@@ -52,7 +52,7 @@
         a {
           position: relative;
           color: transparent;
-          background: linear-gradient(90deg,  rgb(0, 17, 15) , var(--primary-color));
+          background: linear-gradient(90deg, var(--background-color) , var(--primary-color) );
           background-clip: text;
           -webkit-background-clip: text; /* For Safari */
           transition: background-position 0.5s ease; /* Smooth transition for background */
@@ -66,8 +66,13 @@
         letter-spacing: .3rem;
         font-size: 2rem;
         font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+        display: flex;
+        justify-content: center;
+        gap: 4px;
         &::before {
           content: "0" counter(linkCounter )  ". ";
+          font-size: 1rem;
+          align-self: center;
         }
       }
     }

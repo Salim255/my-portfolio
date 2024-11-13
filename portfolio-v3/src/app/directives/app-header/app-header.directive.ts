@@ -50,7 +50,9 @@ export class AppHeaderDirective implements OnChanges {
     const element = this.el.nativeElement ;
     this.renderer.setStyle(element, 'top', '0%');
     this.renderer.setStyle(element,'transform', 'translateY(0)');
-    this.renderer.setStyle(element,'background-color',`var(--background-color)`);
+    this.renderer.setStyle(element,'backdrop-filter', 'blur(30px)');
+    this.renderer.setStyle(element,'-webkit-backdrop-filter', 'blur(30px)');
+   /*  this.renderer.setStyle(element,'background-color',`var(--background-color)`); */
     this.renderer.setStyle(element, 'box-shadow', '0 4px 20px rgba(0, 0, 0, 0.1)');
   }
 
@@ -58,7 +60,6 @@ export class AppHeaderDirective implements OnChanges {
     const element = this.el.nativeElement ;
     this.renderer.setStyle(element,'backdrop-filter', 'unset');
     this.renderer.setStyle(element,'-webkit-backdrop-filter', 'unset');
-    this.renderer.setStyle(element,'background-color',`unset`);
     this.renderer.setStyle(element, 'box-shadow', 'unset');
   }
 }

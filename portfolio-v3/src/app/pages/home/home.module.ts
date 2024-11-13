@@ -13,7 +13,6 @@ import { ScrollAnimationDirective } from 'src/app/directives/scroll-animation/sc
 import { SkillItemComponent } from 'src/app/components/skills/skills-item/skills-item.component';
 import { SkillsComponent } from 'src/app/components/skills/skills.component';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { WorkItemComponent } from 'src/app/components/work/work-item/work-item.component';
 import { FeaturedComponent } from 'src/app/components/featured/featured.component';
 import { FeaturedItemComponent } from 'src/app/components/featured/featured-item/featured-item.component';
 import { MediaComponent } from 'src/app/components/media/media.component';
@@ -29,7 +28,6 @@ const routes: Routes = [
     HomeComponent,
     ExperienceComponent,
     WorkComponent,
-    WorkItemComponent,
     FooterComponent,
     AboutMeComponent,
     WelcomeComponent,

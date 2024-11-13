@@ -66,7 +66,7 @@
     top: 50%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    background-image: radial-gradient(var(--background-color), rgb(0, 0, 0));
+    background-image: radial-gradient(var(--background-color), var(--primary-color)  );/* #1e5551 */
     transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     &__show{
       width: 4rem;
