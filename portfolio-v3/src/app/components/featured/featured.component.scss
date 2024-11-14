@@ -20,43 +20,54 @@
 
 
   ::ng-deep app-featured-item:nth-of-type(even) .featured-item  {
-    flex-direction: row-reverse;
+    grid-template-columns: reverse;
+    grid-auto-flow: column;
 
-    @include respond(bp-tablet-md) {
-      flex-direction: column;
+    &__figure {
+      grid-column: 4/ -1;
+      @include respond(bp-tablet-md) {
+        grid-column: 1 / -1;
+      }
     }
 
-    &__details--container {
-      align-self: flex-start;
-      .title {
-        text-align: left;
-      }
-      .description {
-
-        &__body {
-          left: 0%;
-          transform: translate(0%, -50%);
-          p {
-            text-align: left;
-          }
-          @include respond(bp-tablet-md) {
-           transform: translate(0, 0%);
-          }
-      }
-      }
-
-      .tools {
-        ul {
-          justify-content: left;
-
+    &__details{
+      grid-column: 1/ 10;
+       @include respond(bp-tablet-md) {
+         grid-column: 1 / -1;
+       }
+      &--container {
+        .title {
+          text-align: left;
         }
-      }
+        .description {
+         &__body {
+            p {
+              text-align: left;
+            }
+            @include respond(bp-tablet-md) {
+             //transform: translate(0, 0%);
+            }
+          }
+        }
 
-      .links {
-        justify-content: start;
-      }
+       .tools {
+          ul {
+            justify-content: left;
 
+          }
+        }
+
+        .links {
+          justify-content: start;
+        }
+
+      }
     }
+   /*  @include respond(bp-tablet-md) {
+      flex-direction: column;
+    } */
+
+
   }
 
 }

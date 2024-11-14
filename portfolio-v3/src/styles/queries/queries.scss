@@ -19,8 +19,14 @@
     }
   }
 
-  @if $breakpoint == bp-laptop-large {
+  @if $breakpoint == bp-laptop-x-large {
     @media only screen and (max-width: 90em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == bp-laptop-large {
+    @media only screen and (max-width: 80em) {
       @content;
     }
   }
