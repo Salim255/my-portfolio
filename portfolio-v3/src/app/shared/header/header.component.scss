@@ -1,3 +1,5 @@
+@import "../../../styles/queries/queries.scss";
+
 .header-section {
   position: fixed;
   left: 0;
@@ -15,6 +17,11 @@
     margin-right: auto;
     width: 100%;
     padding:  1rem 2rem ;
+    padding-bottom: .5rem;
+    @include respond(bp-tablet-large){
+      padding: 1.5rem 2rem ;
+      padding-bottom: 1rem;
+    }
     img {
       height: 3rem;
       width: 3rem;
@@ -25,10 +32,14 @@
     height: 3.125rem;
     cursor: pointer;
     padding: 1rem 2rem;
+
+    @include respond(bp-tablet-large){
+      padding: 1.5rem 2rem ;
+    }
     app-button, app-menu-button {
       cursor: pointer;
       transition: all ease-in-out .2s;
-      font-size: 2rem;
+      //font-size: 2rem;
     }
 
   }

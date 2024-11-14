@@ -7,20 +7,18 @@
   }
  &__container {
   display: flex;
-  gap: 1rem;
+  gap: var(--gap-md);
   flex-wrap: wrap;
   justify-content: space-between;
 
   &--item {
     margin-bottom: var(--margin-2xl);
     width: 32%;
-    @include respond(bp-tablet-large) {
-      gap: var(--gap-md);
-    }
 
-    @include respond(bp-laptop-md) {
+     @include respond(bp-laptop-large) {
       width: 48%;
     }
+
 
     @include respond(bp-tablet-sm) {
        width: 100%;

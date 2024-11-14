@@ -28,9 +28,9 @@
       transform-style: preserve-3d;
       animation: spinEarth 1.7s ease-in-out infinite;
       @include respond(bp-tablet-large) {
-        width: 6.125rem;
-        height: 6.125rem;
-        top: 45%;
+        width: 8rem;
+        height: 8rem;
+        top: 40%;
       }
       .sun-text {
         width: 100%;
@@ -91,6 +91,9 @@
         box-sizing: border-box;
         transform: translate(-50%, -50%)  ;
         animation: runLine 20s linear infinite;
+        @include respond(bp-tablet-large) {
+            border: none;
+        }
       }
 
       .orbit-text-container {
