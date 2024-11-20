@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { Subscription } from "rxjs";
+import { Subscription, take } from "rxjs";
 import { AppMenuService } from "src/app/services/app-menu/app-menu.service";
 
 
@@ -12,7 +12,7 @@ import { AppMenuService } from "src/app/services/app-menu/app-menu.service";
 export class MenuComponent {
   isActive: boolean = false;
   activeIndex: Number = 0;
-  links = ['home' , 'skills' , 'work' , 'contact', 'about'];
+  links = ['home','about', 'skills' , 'work' , 'contact'];
   private menuStatSource!: Subscription;
 
   constructor(
@@ -20,22 +20,20 @@ export class MenuComponent {
     ){}
 
   ngAfterViewInit(): void {
-    this.menuStatSource = this.appMenuService.getMenuStat.subscribe(stat => {
-      if (stat === 'show') {
+    this.menuStatSource = this.appMenuService.getMenuStat.subscribe(state => {
+      if (state === "show") {
         this.isActive = true;
       } else {
         this.isActive = false;
       }
-
     })
 
   }
 
   setActive(index: Number) {
     this.activeIndex = index;
-
     if (this.isActive) {
-      this.appMenuService.setMenuStat('hide');
+      this.appMenuService.setMenuStat('hide')
     }
   }
 
@@ -43,6 +41,5 @@ export class MenuComponent {
     if (this.menuStatSource) {
       this.menuStatSource.unsubscribe();
     }
-
   }
 }

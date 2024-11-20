@@ -1,9 +1,5 @@
 @import '../queries/queries';
-/*
-  FONT SIZE SYSTEM (px)
 
-  10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
- */
 
 * {
   margin: 0;
@@ -13,43 +9,98 @@
 
 :root {
 
-  --primary-color: #96f2d7;
-  --primary-color-light-1: #baf2e1;
+  /* Primary color */
+  --primary-color:  #4FD1C5 ;
 
-  --gray-color: #343a40;
-  --gray-color-light-0: #f8f9fa;
-  --gray-color-light-1: #f1f3f5;
+  --gray-color-light-0:  #f8f9fa;
   --gray-color-light-2: #e9ecef;
   --gray-color-light-3: #dee2e6;
   --gray-color-light-4: #ced4da;
   --gray-color-light-5: #adb5bd;
 
+
+  /* Secondary color */
   --secondary-color:  gold ;
-  --background-color: #001f24 ;
+  --background-color:  #001f24 ;
+  --background-color-1: #013138;
 
 
-  /* Font section */
-  --font-family-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', system-ui, sans-serif;
-  --font-family-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
-  --font-size-xxs: .75rem;
-  --font-size-xs: .812rem;
-  --font-size-sm: .875rem;
-  --font-size-md: 1rem;
-  --font-size-lg: 1.125rem;
-  --font-size-xl: 1.25rem;
-  --font-size-xxl: 1.375rem;
+  /* Font family */
+  --font-family-sans: 'Calibre', 'Inter', 'San Francisco',
+  'SF Pro Text', system-ui, sans-serif;
+  --font-family-mono: 'SF Mono', 'Fira Code', 'Fira Mono',
+   'Roboto Mono', monospace;
 
-  --border-radius: 4px;
+  /*
+    FONT SIZE SYSTEM (px)
+    10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36
+     / 44 / 52 / 62 / 74 / 86 / 98
+  */
+  --font-size-xxs: 0.625rem;  // 10px
+  --font-size-xs: 0.75rem;    // 12px
+  --font-size-sm: 0.875rem;   // 14px
+  --font-size-md: 1rem;       // 16px (base)
+  --font-size-lg: 1.125rem;   // 18px
+  --font-size-xl: 1.25rem;    // 20px
+  --font-size-xxl: 1.5rem;    // 24px
+  --font-size-3xl: 1.875rem;  // 30px
+  --font-size-4xl: 2.25rem;   // 36px
+  --font-size-5xl: 2.75rem;   // 44px
+  --font-size-6xl: 3.25rem;   // 52px
+  --font-size-7xl: 3.875rem;  // 62px
 
+  /*
+  MARGIN SYSTEM (px)
+  4 / 8 / 12 / 16 / 20 / 24 / 32 / 40 /
+  48 / 56 / 64 / 80 / 96 / 112 / 128
+  */
+  --margin-xxs: 0.25rem;
+  --margin-xs: 0.5rem;
+  --margin-sm: 0.75rem;
+  --margin-md: 1rem;
+  --margin-lg: 1.25rem;
+  --margin-xl: 1.5rem;
+  --margin-2xl: 2rem;
+  --margin-3xl: 2.5rem;
+  --margin-4xl: 3rem;
+  --margin-5xl: 3.5rem;
+  --margin-6xl: 4rem;
+  --margin-7xl: 5rem;
+  --margin-8xl: 6rem;
+  --margin-9xl: 7rem;
+  --margin-10xl: 8rem;
+
+  // GAP SYSTEM
+  --gap-xs: 0.25rem;
+  --gap-sm: 0.5rem;
+  --gap-md: 1rem;
+  --gap-lg: 1.5rem;
+  --gap-xl: 2rem;
+  --gap-2xl: 3rem;
+  --gap-3xl: 4rem;
+  --gap-4xl: 5rem;
+
+  // PADDING SYSTEM
+  --padding-xs: 0.25rem;
+  --padding-sm: 0.5rem;
+  --padding-md: 1rem;
+  --padding-lg: 1.5rem;
+  --padding-xl: 2rem;
+  --padding-2xl: 3rem;
+  --padding-3xl: 4rem;
+
+
+  /* Border radius */
+  --border-radius-xs: 0.125rem;
+  --border-radius-sm: 0.25rem;
+  --border-radius-full: 50%;
 }
 
 
 html {
   scroll-behavior: smooth;
+  font-size: 100%;
 
-  @include respond(bp-extra-large) {
-    font-size: 100%;
-  }
   @include respond(bp-laptop-large) {
     font-size: 90%;
   }
@@ -58,7 +109,7 @@ html {
   }
 
   @include respond(bp-tablet) {
-    font-size: 70%;
+    font-size: 75%;
   }
   @include respond(bp-mobile-large) {
     font-size: 62%;
@@ -71,17 +122,15 @@ html {
   }
 }
 
+html, body {
+  overflow-x: hidden;
+}
 
 body {
-
   font-family: 'Inter', sans-serif;
-
   line-height: 1.5;
   background-color: var(--background-color);
 }
-
-
-
 
 ul {
   list-style-type: none;
@@ -89,13 +138,10 @@ ul {
 
 a {
   text-decoration: none;
-
   &:active, &:link, &:visited {
     color: unset;
   }
 }
-
-
 
 button {
   background-color: unset;
@@ -104,10 +150,8 @@ button {
 
 h1 {
   /* 44 / 52 / 62 */
-  font-size: 2.75rem;
-  line-height: 1.1;
 
-  color: var(--gray-color-light-3);
+  //line-height: 1.1;
 
   @include respond(bp-extra-large) {
     font-size: 100%;
@@ -134,15 +178,13 @@ h1 {
   @include respond(bp-mobile-small) {
     font-size: 50%;
   }
-
 }
 
 h2  {
   /* 24 / 30 / 36 */
-
   text-transform: uppercase;
-
 }
+
 h2,h3 {
   color: var(--gray-color-light-3);
 }

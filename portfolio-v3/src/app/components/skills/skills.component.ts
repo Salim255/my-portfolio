@@ -14,9 +14,9 @@ export interface SkillsItem {
 export class SkillsComponent {
   skillsList :SkillsItem [] = []
     constructor(){
-      this.skillsList = [{title: 'Frontend Development', icon: "fa-solid fa-desktop", stacks:
+      this.skillsList = [{title: 'Frontend', icon: "fa-solid fa-desktop", stacks:
         ['Angular', 'React', 'Ionic','React native (Occasionally)', 'Sass, CSS', 'HTML' ] },
-        {title: 'Backend Development', icon: 'fa-solid fa-database',
+        {title: 'Backend', icon: 'fa-solid fa-database',
           stacks: ['Nodejs', 'JavasScript', 'Python', 'Postgresql', 'Mongodb']},
         {title: 'DevOps', icon: 'fa-brands fa-aws',
           stacks: ['Docker', 'Kubernetes','Ansible', 'Jenkins', 'prometheus', 'Grafana'

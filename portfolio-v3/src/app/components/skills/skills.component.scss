@@ -5,15 +5,14 @@
   h2 {
     position: relative;
     display: flex;
-    gap: 1rem;
-    @include respond(bp-tablet) {
-      margin-bottom: 4rem;
-   }
+    gap: var(--gap-md);
+    margin-bottom: var(--margin-3xl);
+
     &::before {
       content: "";
       height: 1px;
       width: 10rem;
-      background-color:#013138;
+      background-color: var(--background-color-1);
       display: block;
       align-self: center;
     }
@@ -21,9 +20,9 @@
   &__content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
+    gap: var(--gap-2xl);
 
-    @include respond(bp-tablet) {
+    @include respond(bp-tablet-large) {
       grid-template-columns: repeat(2, 1fr);
    }
   }

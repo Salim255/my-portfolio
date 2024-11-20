@@ -1,98 +1,81 @@
 .menu-section {
-
-  position: fixed;
-  left: 0;
-  top: 0;
+  position: absolute;
+  right: 50%;
+  top: 0%;
+  transform: translate(50%, 0%);
   height: 100vh;
   width: 100%;
-  display: none;
-  opacity: 0;
-  background-color: #001f24;
- // background: linear-gradient(to right bottom, #001f24  , #01404a );
+  z-index: 10;
+  display: flex;
+  transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
   &__show {
-     animation: showMenu-section .5s forwards;
-     display: flex;
      opacity: 1;
   }
 
-  .left-background, .right-background {
-    height: 100%;
-    width: 50%;
-    position: absolute;
-
-  }
-
-  .left-background {
-     position: absolute;
-     left: 0;
-     top: 0;
-  }
-
-  .right-background {
-
+  &__hide {
+    width: 0;
+    opacity: 0;
     right: 0;
-    top: 0;
- }
+  }
 
 .content {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
     color: var(--gray-color-light-3);
     text-transform: uppercase;
     text-align: center;
 
+    z-index: 100;
+    margin: auto;
+
     .links {
-      font-size: 1rem;
+        font-size: 1rem;
+
+        counter-reset: linkCounter;
+        li {
+          padding: 1rem;
+          counter-increment: linkCounter 1;
+          transition: all .4s ease-in-out;
+          &:hover {
+            position: relative;
+            background: linear-gradient(90deg, var(--primary-color),  rgb(0, 17, 15) );
+            transition: background-position 0.5s ease;
+            background-size: 200% 100%;
+            background-position: -110% 0;
+            transform: translateX(10px);
+            transition: all .4s ease-in-out;
+          }
+        }
+        li:not(:last-child) {
+          margin-bottom: 2rem;
+        }
        .active {
         a {
           position: relative;
           color: transparent;
-          background: linear-gradient(90deg,  rgb(0, 17, 15) , var(--primary-color));
+          background: linear-gradient(90deg, var(--background-color) , var(--primary-color) );
           background-clip: text;
-          -webkit-background-clip: text; /* For Safari */
-          transition: background-position 0.5s ease; /* Smooth transition for background */
-          background-size: 200% 100%; /* Double the width for animation effect */
-          background-position: -100% 0; /* Start from the right */
+          -webkit-background-clip: text;
+          transition: background-position 0.5s ease;
+          background-size: 200% 100%;
+          background-position: -100% 0;
+
         }
        }
 
       a {
         letter-spacing: .3rem;
-        font-size: 1.25rem;
-        font-weight: 700;
+        font-size: 2rem;
         font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
-        &:hover {
-          position: relative;
-          color: transparent;
-          background: linear-gradient(90deg,  rgb(0, 17, 15) , var(--primary-color));
-          background-clip: text;
-          -webkit-background-clip: text; /* For Safari */
-          transition: background-position 0.5s ease; /* Smooth transition for background */
-          background-size: 200% 100%; /* Double the width for animation effect */
-          background-position: -100% 0; /* Start from the right */
-        }
-      }
-      li:not(:last-child) {
-        margin-bottom: 2rem;
-
-      }
-
-      &__show {
-        & li:nth-child(even) {
-          transition: all .5s ease;
-          animation: leftLinksAnimation .5s  forwards;
-        }
-        & li:nth-child(odd) {
-          transition: all .5s ease;
-          animation: rightLinksAnimation .5s forwards;
+        display: flex;
+        justify-content: center;
+        gap: 4px;
+        &::before {
+          content: "0" counter(linkCounter )  ". ";
+          font-size: 1rem;
+          align-self: center;
         }
       }
     }
-
-
   }
 
 }
@@ -104,6 +87,21 @@
     100% {
       opacity: 1;
     }
+}
+
+@keyframes hideMenu-section {
+  0%{
+    opacity: 1;
+    display: flex;
+  }
+  50%{
+    opacity: .5;
+    display: flex;
+  }
+  100% {
+    opacity: 0;
+    display: initial;
+  }
 }
 
 

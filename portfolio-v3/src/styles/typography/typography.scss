@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 .header-text {
-  font-size: 1.125rem;
+  font-size: var(--font-size-lg);
   line-height: 1.7;
-  margin-bottom: 1rem;
+  margin-bottom:var(--margin-md);
 }
 
 .margin-btm {
   &__big {
-    margin-bottom: 1.5rem;
+    margin-bottom: var(--margin-xl);
   }
   &__md {
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--margin-xs);
   }
 }
 

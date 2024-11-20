@@ -1,9 +1,46 @@
 <section class="work" id="work">
   <h3>More web creations</h3>
-  <div class="work__container">
-      <app-work-item></app-work-item>
-      <app-work-item></app-work-item>
-      <app-work-item></app-work-item>
-      <app-work-item></app-work-item>
+  <div class="work__container" >
+      <div class="work__container--item" *ngFor="let work of works" >
+        <figure class="work-card animate-more-creation">
+
+          <div class="work-card__image" [ngStyle]="{'--background-url': 'url(' + work.image + ')'}">
+          </div>
+
+         <figcaption class="work-card__caption">
+          <div class="work-card__caption--header">
+             <h3>{{ work.title }}</h3>
+             <ul >
+               <li>
+                 <a href="#git">
+                   <i class="fab fa-github icon"></i>
+                 </a>
+               </li>
+               <li>
+                 <a [href]="work.siteLink">
+                   <i class="fa-solid fa-globe icon"></i>
+                 </a>
+               </li>
+
+             </ul>
+          </div>
+          <div class="work-card__caption--text">
+             <div class="work-description">
+               <p [ngStyle]="{'--work-title': '\'' + work.title + '\''}" >
+                 {{ work.description }}
+               </p>
+             </div>
+           </div>
+           <div class="work-card__caption--tools">
+              <ul>
+                <li *ngFor="let link of work.tools">
+                  {{ link }}
+                </li>
+              </ul>
+            </div>
+         </figcaption>
+     </figure>
+
+      </div>
  </div>
 </section>

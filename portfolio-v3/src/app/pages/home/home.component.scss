@@ -7,39 +7,168 @@ main {
   padding-left: 16rem;
   padding-right: 16rem;
   scroll-behavior: smooth;
-   @include respond(bp-extra-large) {
+
+  .animate {
+    opacity: 0;
+    filter: blur(5px);
+    transition: .5s;
+    &__show {
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
+
+  @include respond( bp-xx-large ){
     padding-left: 16rem;
     padding-right: 16rem;
   }
-   @include respond(bp-laptop-large) {
-    padding-left: 10rem;
-    padding-right: 10rem;
+  @include respond( bp-laptop-x-large ){
+    padding-left: 14rem;
+    padding-right: 14rem;
   }
-  @include respond(bp-laptop) {
+  @include respond( bp-laptop-large ){
+    padding-left: 12rem;
+    padding-right: 12rem;
+  }
+
+   @include respond(bp-laptop-md) {
+     padding-left: 8rem;
+     padding-right: 8rem;
+   }
+   @include respond(bp-laptop-sm) {
+      padding-left: 6rem;
+      padding-right: 6rem;
+   }
+
+  @include respond(bp-tablet-large){
     padding-left: 5rem;
     padding-right: 5rem;
   }
-  @include respond(bp-tablet) {
-    padding-left: 3rem;
-    padding-right: 3rem;
+   @include respond(bp-mobile-large) {
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
-
-
-  .call-to-action {
+  #contact {
     display: flex;
     width: 100%;
     justify-content: center;
   }
 
-  & > *  {
-    margin-top: 14rem;
+
+  #about, #home, #skills {
+    margin-bottom: var(--margin-10xl);
+  }
 
 
-    @include respond(bp-tablet) {
-      margin-top: 8rem;
+
+  @include respond(bp-tablet-large) {
+    #home {
+      ::ng-deep app-welcome  {
+        .welcome {
+          .title-description {
+            transform: translateX(-100%);
+            transition: transform 1s;
+          }
+          .header-text {
+            transform: scale(0);
+            transition: transform 1s;
+          }
+          &__methodology {
+            transform: scale(0.3);
+            transition: transform 2s ease;
+          }
+        }
+      }
+    }
+    #home.animate__show  {
+      ::ng-deep app-welcome  {
+        .welcome {
+          .title-description {
+            transform: translateX(0);
+          }
+          .header-text {
+            transform: scale(1);
+            transition-delay: .5s;
+          }
+          &__methodology {
+            transform: scale(1);
+          }
+        }
+      }
     }
 
+    #about {
+      ::ng-deep app-about-me  {
+        .about-me {
+          &__content{
+            &--text{
+              animation-delay: 2s;
+              transform: translateX(-100%);
+              transition: transform 0.5s ease;
+            }
+          &--hero {
+            transform: scale(0.5);
+            transition: transform 1s ease;
+          }
+          }
+        }
+      }
+    }
+    #about.animate__show {
+      ::ng-deep app-about-me  {
+        .about-me {
+        &__content{
+          &--text{
+            transform: translateX(0);
+          }
+
+          &--hero {
+            transform: scale(1);
+          }
+        }
+        }
+      }
+    }
+
+    #skills {
+      transform: scale(.7);
+      transition: transform 0.5s ease;
+    }
+    #skills.animate__show {
+      transform: scale(1);
+    }
+
+
+    #contact {
+      ::ng-deep app-call-for-action {
+        transform: scale(0.5);
+        transition: transform 0.5s ease;
+      }
+    }
+    #contact.animate__show {
+      ::ng-deep app-call-for-action {
+        transform: scale(1);
+      }
+    }
+
+    #app-footer {
+      transform: scale(0.5);
+      transition: transform 0.5s ease;
+    }
+    #app-footer.animate__show {
+      transform: scale(1);
+    }
   }
+
+  & >:not(#contact):not(#media-section):not(#app-menu) {
+    padding-top: var(--padding-3xl);
+    padding-bottom: var(--padding-3xl);
+  }
+
+  #contact, #media-section, #app-menu {
+    margin-bottom: var(--margin-8xl);
+  }
+
 }
 
 

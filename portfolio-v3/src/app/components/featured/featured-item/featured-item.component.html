@@ -1,48 +1,42 @@
-
-<div class="featured-item">
-  <div class="featured-item__work">
-    <img src="../../../../assets/work/nextier2.png"  />
-  </div>
-  <div class="featured-item__details">
-      <div class="featured-item__details--container">
-        <div class="title">
-            <h3 [style]="{'itemNumber': itemNumber}"> Halcyon Theme</h3>
-        </div>
-        <div class="description" >
-         <div class="description__body">
-            <p>
-              It was a amazing expercince, I work with difence tecnonlie such as soketjs,
-               web sokcets angualr ionic, nodejs expres for the backe end as
-              alsso uyou van see for the front end wioth angualr and ionic
-              A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more.
-              Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm
-              It was a amazing expercince, I work with difence tecnonlie such as soketjs,
-              web sokcets angualr ionic, nodejs expres for the backe end as
-             alsso uyou van see for the front end wioth angualr and ionic
-             A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more.
-             Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm
-            </p>
-         </div>
-        </div>
-        <div class="tools">
-          <ul>
-            <li>html</li>
-            <li>css</li>
-            <li>html</li>
-            <li>css</li>
-            <li>html</li>
-          </ul>
-        </div>
-
-          <ul class="links" >
-            <li>
-              <a href="#git"><i class="fab fa-github icon"></i></a>
-            </li>
-            <li>
-            <a href="#globe"><i class="fa-solid fa-globe icon"></i></a>
-            </li>
-        </ul>
-
+<div class="featured-item animate-featured">
+  <section class="featured-item__figure" [ngStyle]="{'--background-url': 'url(' + item.image + ')'}" >
+  </section>
+  <section class="featured-item__details">
+    <div class="featured-item__details--container">
+      <div class="title">
+         <h3 > {{ item.title }}</h3>
       </div>
-  </div>
+      <div class="description" >
+       <div class="description__body">
+          <p [ngStyle]="{'--project-name': '\'' + item.title + '\''}">
+           {{ item.description}}
+           <span class="sub-description">
+            {{ item.subDescription}}
+           </span>
+          </p>
+       </div>
+      </div>
+      <div class="tools">
+        <ul>
+          <li *ngFor="let listItem of item.tools">
+            {{ listItem  }}
+          </li>
+        </ul>
+      </div>
+
+        <ul class="links" >
+          <li>
+            <a href="#">
+              <i class="fab fa-github icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa-solid fa-globe icon"></i>
+            </a>
+          </li>
+      </ul>
+
+    </div>
+  </section>
 </div>

@@ -1,7 +1,11 @@
 .call-action {
   h3 {
-    font-size: 2.125rem;
+    font-size: var(--font-size-4xl);
     text-align: center;
   }
 
+  &__btn {
+    display: block;
+    margin-top: var(--margin-6xl);
+  }
 }

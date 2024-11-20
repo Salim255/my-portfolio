@@ -2,23 +2,120 @@
 
 .work {
   h3 {
-   font-size: 1.875rem;
-   margin-bottom: 4rem;
+   font-size: var(--font-size-3xl);
+   margin-bottom: var(--margin-6xl);
   }
  &__container {
   display: flex;
-  justify-content: space-between;
+  gap: var(--gap-md);
   flex-wrap: wrap;
-  @include respond(bp-tablet) {
-    gap: 2rem;
- }
-  app-work-item {
-    justify-content: center;
+  justify-content: space-between;
+
+  &--item {
+    margin-bottom: var(--margin-2xl);
     width: 32%;
-    margin-bottom: 2rem;
-    @include respond(bp-tablet) {
+
+     @include respond(bp-laptop-large) {
+      width: 48%;
+    }
+    @include respond(bp-tablet-sm) {
        width: 100%;
     }
+    .work-card {
+      border-radius: var(--border-radius-xs);
+      overflow: hidden;
+      background-color: var( --background-color-1);
+      transition: all ease-in-out .2s;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+
+      &:hover {
+        transform: translateY(-1%);
+      }
+      &:hover .work-description {
+          p {
+            transition: all .2s;
+            &::before {
+              color: var(--primary-color);
+            }
+          }
+      }
+
+      &__image {
+        height: 14rem;
+        background-size: cover;
+        background-blend-mode: screen;
+        background-repeat: no-repeat;
+        background-image: var(--background-url) ;
+        background-position: center;
+        opacity: .5;
+      }
+      &__caption {
+       padding: var(--padding-md) var(--padding-xl) ;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        &--header {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: var(--margin-md);
+          height: 3rem;
+          h3 {
+            font-size: var(--font-size-xxl) ;
+          }
+          ul {
+             display: flex;
+             gap: var(--gap-lg);
+             align-self: center;
+             i {
+              font-size: var(--font-size-xxl);
+             }
+
+          }
+        }
+        &--text {
+          .work-description {
+            margin-bottom: 1.5rem;
+            p {
+              &::before {
+                content: var(--work-title) ;
+              }
+            }
+
+          }
+        }
+
+        &--tools {
+          font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto";
+          font-size: var(--font-size-xxs);
+          color: #9da5ae;
+          font-family: var(--font-family-mono);
+          letter-spacing: 1px;
+          margin-top: auto;
+          ul {
+            display: flex;
+            justify-content: right;
+            gap: var(--gap-md);
+
+          }
+        }
+      }
+    }
+  }
+
+  .animate-more-creation {
+    opacity: 0;
+    transform: scale(0.7) ;
+    transition: transform 0.5s ease;
+    filter: blur(5px);
+      &__show{
+        opacity: 1;
+        filter: blur(0);
+        transform: scale(1);
+      }
   }
  }
 }

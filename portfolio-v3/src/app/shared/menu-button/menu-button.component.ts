@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, HostListener } from "@angular/core";
 import { Subscription } from "rxjs";
 import { AppMenuService } from "src/app/services/app-menu/app-menu.service";
 @Component({
@@ -12,20 +12,22 @@ export class MenuButtonComponent {
   constructor(private menuService : AppMenuService ){}
 
   ngAfterViewInit(): void {
-    this.menStatusSource = this.menuService.getMenuStat.subscribe(stat => {
-          if (stat === 'show') {
-            this.isActive = true;
+    this.menStatusSource = this.menuService.getMenuStat.subscribe(state => {
+          if (state === 'hide') {
+            this.isActive = false;
           }
     })
   }
 
   onToggleMenu(){
+    console.log(this.isActive, "hello toggle");
+
       if (this.isActive) {
         this.isActive = false;
-        this.menuService.setMenuStat('hide');
+        this.menuService.setMenuStat('hide')
       } else {
         this.isActive = true;
-        this.menuService.setMenuStat('show');
+        this.menuService.setMenuStat('show')
       }
   }
 

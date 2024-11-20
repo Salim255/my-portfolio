@@ -1,39 +1,34 @@
-<main  scrollDirection >
+<main  scrollDirection  scrollAnimation >
 
   <div>
     <app-header></app-header>
   </div>
 
-  <div >
-    <app-welcome id="home"></app-welcome>
+  <div   id="home" class="animate animate__show">
+    <app-welcome ></app-welcome>
   </div>
 
-  <div id="about">
+  <div scrollAnimation id="about" class="animate">
     <app-about-me ></app-about-me>
   </div>
 
-  <div id="skills">
+  <div scrollAnimation id="skills" class="animate">
     <app-skills ></app-skills>
   </div>
 
-  <div id="work">
+  <div scrollAnimation id="work" >
     <app-web-creations ></app-web-creations>
   </div>
 
-  <div>
+ <div scrollAnimation id="media-section">
     <app-media></app-media>
   </div>
 
-  <div class="call-to-action">
-    <app-call-for-action id="contact"></app-call-for-action>
+  <div scrollAnimation id="contact" class="animate">
+    <app-call-for-action ></app-call-for-action>
   </div>
 
-
-  <div>
-    <app-menu></app-menu>
-  </div>
-
-  <div>
+  <div scrollAnimation id="app-footer" >
     <app-footer></app-footer>
   </div>
 

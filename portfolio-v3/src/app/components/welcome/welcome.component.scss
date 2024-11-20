@@ -1,46 +1,88 @@
 @import '../../../styles/queries/queries.scss';
 
 .welcome {
+  height: 50vh;
   width: 100%;
   display: flex;
-  padding-top: 5rem;
+  padding-top: var(--padding-2xl);
   justify-content: space-between;
-  gap: 6rem;
-  @include respond(bp-laptop) {
+  align-items: center;
+  gap: var(--gap-4xl);
+
+
+  @include respond(bp-laptop-md) {
     flex-direction: column-reverse;
+    height: 80vh;
+  }
+
+  @include respond(bp-tablet-large) {
+    justify-content: center;
+    height: 70vh;
+    padding-top: 0;
+    gap: var(--gap-4xl);
+  }
+
+  @include respond(bp-mobile-large) {
+    height: 60vh;
   }
 
   &__header {
-    h1{
-      font-size: 2.25rem;
-      line-height: 1.1;
-      letter-spacing: -.5px;
-      margin-bottom: 2rem;
-     }
-    .title {
-      display: flex;
-      gap: 6px;
-
-      p {
-        font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto";
+    &--presentation {
+      .title-description {
+          background-image: linear-gradient(45deg, var(--gray-color-light-5),
+           var(--gray-color-light-2));
+          background-clip: text;
+          color: transparent;
       }
-    }
 
-    a {
-        margin-top: 1.5rem;
-        display: inline-block;
-        background-color: red;
-        app-button {
-          display: inline-block;
+      h1 {
+        font-weight: 700;
+        letter-spacing: 1px;
+        @include respond(bp-tablet-large) {
+          letter-spacing: .5px;
         }
+      }
+      .name {
+        display: flex;
+        gap: var(--gap-sm);
+
+        h1{
+          font-size: var(--font-size-7xl);
+          line-height: 1.1;
+          margin-bottom: var(--margin-xl);
+          font-family: var(--font-family-sans);
+          color: var(--gray-color-light-2);
+
+         }
+        p {
+          color: var(--primary-color);
+          margin-right: var(--margin-xs);
+          font-weight: 500;
+          font-family: var(--font-family-mono);
+        }
+      }
+      .title {
+          font-size: var(--font-size-6xl);
+          color: var(--gray-color-light-4);
+      }
+
     }
+    &--link {
+      margin-top: var(--margin-xl);
+      display: inline-block;
+      @include respond(bp-tablet-large) {
+        margin-top: var(--margin-6xl);
+      }
+      app-button {
+        display: inline-block;
+      }
+     }
   }
 
   i {
-
     position: absolute;
     background: white;
-    border-radius: 50%;
+    border-radius: var(--border-radius-full);
     box-shadow: 0 0 10px #fff,
     0 0 20px #fff,
     0 0 40px #fff,
