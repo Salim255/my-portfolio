@@ -33,13 +33,13 @@
         margin-top: var(--margin-2xl);
         margin-bottom: var(--margin-xs);
         color: var(--gray-color-light-5);
-        font-size: var(--font-size-xs);
-        letter-spacing: .5rem;
+        font-size: var(--font-size-xxs);
+        letter-spacing: .3rem;
      }
    }
   }
 
-  &__right{
+  &__right {
     position: fixed;
     bottom: 0;
     right: 0;

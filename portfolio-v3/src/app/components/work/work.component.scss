@@ -18,8 +18,6 @@
      @include respond(bp-laptop-large) {
       width: 48%;
     }
-
-
     @include respond(bp-tablet-sm) {
        width: 100%;
     }
@@ -107,8 +105,6 @@
       }
     }
   }
-
-
 
   .animate-more-creation {
     opacity: 0;

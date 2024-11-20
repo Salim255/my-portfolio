@@ -10,16 +10,14 @@
 :root {
 
   /* Primary color */
-  --primary-color:  #4FD1C5 /* #007C91  */  /* *//* #00A7A7 */ /* #0b7285 */  /* #96f2d7 */;
-  --primary-color-light-1: #baf2e1;
+  --primary-color:  #4FD1C5 ;
 
-  --gray-color-light-0: #f8f9fa;
-  --gray-color-light-1: #f1f3f5;
+  --gray-color-light-0:  #f8f9fa;
   --gray-color-light-2: #e9ecef;
   --gray-color-light-3: #dee2e6;
   --gray-color-light-4: #ced4da;
   --gray-color-light-5: #adb5bd;
-  --gray-color-light-6: #343a40;
+
 
   /* Secondary color */
   --secondary-color:  gold ;
@@ -101,10 +99,8 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 100%;
 
-  @include respond(bp-extra-large) {
-    font-size: 100%;
-  }
   @include respond(bp-laptop-large) {
     font-size: 90%;
   }
@@ -154,9 +150,9 @@ button {
 
 h1 {
   /* 44 / 52 / 62 */
-  font-size: var(--font-size-5xl);
-  line-height: 1.1;
-  color: var(--gray-color-light-3);
+
+  //line-height: 1.1;
+
   @include respond(bp-extra-large) {
     font-size: 100%;
     letter-spacing: -1px;

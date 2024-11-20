@@ -1,7 +1,8 @@
 @import '../../../styles/queries/queries.scss';
 
 .footer {
-  margin-bottom: var(--margin-7xl);
+  padding-bottom: 10rem;
+  margin-top: 4rem;
   display: flex;
   justify-content: center;
 
@@ -9,25 +10,32 @@
      margin: auto;
      text-align: center;
      &--coordination {
+      .copy-right {
+        cursor: pointer;
+        p {
+          font-size: var(--font-size-xs);
+          text-transform: capitalize;
+          color: var(--gray-color-light-5);
+          font-family: var(--font-family-mono);
+          margin-bottom: .5rem;
+        }
+        transition: all .2s;
+        &:hover p {
+          color: var(--primary-color);
+         }
+      }
 
-       p{
-         font-size: var(--font-size-md);
-         text-transform: capitalize;
-         color: var(--gray-color-light-5);
-         opacity: .6;
-         font-family: var(--font-family-mono)
-       }
      }
   }
 
-  .media-section{
+  .media-section {
    opacity: 0;
   }
-  @include respond(bp-tablet-large){
+  @include respond(bp-tablet-large) {
     .media-section{
       opacity: 1;
     }
-    ::ng-deep app-media .media{
+    ::ng-deep app-media .media {
 
       @include respond(bp-tablet-large) {
           display: flex;
@@ -38,7 +46,7 @@
             display: none;
           }
 
-          &__right{
+          &__right {
             position: static;
             padding: 0;
             align-self: center;
@@ -59,11 +67,9 @@
               }
             }
           }
+      }
     }
   }
-  }
-
-
 }
 
 

@@ -101,7 +101,7 @@
            background-image: url("https://res.cloudinary.com/dlaztxrfw/image/upload/v1730729089/fsdqokldigb9yxgnjosv.webp");
            background-size: cover;
            background-position: center;
-           border-radius: 50%;
+           border-radius: var( --border-radius-full);
 
         }
 

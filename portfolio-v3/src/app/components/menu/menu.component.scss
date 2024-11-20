@@ -38,9 +38,9 @@
           &:hover {
             position: relative;
             background: linear-gradient(90deg, var(--primary-color),  rgb(0, 17, 15) );
-            transition: background-position 0.5s ease; /* Smooth transition for background */
-            background-size: 200% 100%; /* Double the width for animation effect */
-            background-position: -110% 0; /* Start from the right */
+            transition: background-position 0.5s ease;
+            background-size: 200% 100%;
+            background-position: -110% 0;
             transform: translateX(10px);
             transition: all .4s ease-in-out;
           }
@@ -54,10 +54,10 @@
           color: transparent;
           background: linear-gradient(90deg, var(--background-color) , var(--primary-color) );
           background-clip: text;
-          -webkit-background-clip: text; /* For Safari */
-          transition: background-position 0.5s ease; /* Smooth transition for background */
-          background-size: 200% 100%; /* Double the width for animation effect */
-          background-position: -100% 0; /* Start from the right */
+          -webkit-background-clip: text;
+          transition: background-position 0.5s ease;
+          background-size: 200% 100%;
+          background-position: -100% 0;
 
         }
        }

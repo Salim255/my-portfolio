@@ -44,9 +44,7 @@
             p {
               text-align: left;
             }
-            @include respond(bp-tablet-md) {
-             //transform: translate(0, 0%);
-            }
+
           }
         }
 
@@ -63,10 +61,6 @@
 
       }
     }
-   /*  @include respond(bp-tablet-md) {
-      flex-direction: column;
-    } */
-
 
   }
 
