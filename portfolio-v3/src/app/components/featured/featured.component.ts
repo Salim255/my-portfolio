@@ -21,7 +21,7 @@ export class FeaturedComponent {
 
       github: '',
       web:'',
-      tools: ['html', 'css', 'JavaScript']
+      tools: ['html', 'css', 'javaScript', 'angular', 'node', 'socket', 'postgresql']
     },
     {
       title:'Photography',
@@ -38,7 +38,7 @@ export class FeaturedComponent {
 
       github: '',
       web:'',
-      tools: ['html', 'css', 'JavaScript']
+      tools: ['html', 'css', 'react']
     },
     {
       title:'Developer Connecter',
@@ -53,7 +53,7 @@ export class FeaturedComponent {
 
       github: '',
       web:'',
-      tools: ['html', 'css', 'JavaScript']
+      tools: ['html', 'css', 'react', 'node', 'mongoDB']
     }
    ]
 

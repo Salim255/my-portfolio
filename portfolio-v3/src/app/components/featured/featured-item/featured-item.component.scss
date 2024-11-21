@@ -13,7 +13,7 @@
     height: 100%;
   }
   &__figure {
-    grid-column: 1 / 9;
+    grid-column: 1 / 8;
     @include respond(bp-tablet-md) {
       grid-column: 1 / -1;
     }
