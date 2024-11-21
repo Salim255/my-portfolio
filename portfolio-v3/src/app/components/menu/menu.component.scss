@@ -35,14 +35,27 @@
           padding: 1rem;
           counter-increment: linkCounter 1;
           transition: all .4s ease-in-out;
+          position: relative;
+          &::after {
+            content: "";
+            position: absolute;
+            transition: all .4s ease-in;
+          }
           &:hover {
-            position: relative;
-            background: linear-gradient(90deg, var(--primary-color),  rgb(0, 17, 15) );
-            transition: background-position 0.5s ease;
-            background-size: 200% 100%;
-            background-position: -110% 0;
             transform: translateX(10px);
             transition: all .4s ease-in-out;
+            &::after {
+              content: "";
+              height: 2px;
+              position: absolute;
+              bottom:  0;
+              left: 0;
+              width: 100%;
+              background: linear-gradient(90deg, var(--primary-color),  rgb(0, 17, 15) );
+              background-size: 200% 100%;
+              background-position: -110% 0;
+              transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            }
           }
         }
         li:not(:last-child) {
@@ -69,6 +82,7 @@
         display: flex;
         justify-content: center;
         gap: 4px;
+        color: var(--gray-color-light-3);
         &::before {
           content: "0" counter(linkCounter )  ". ";
           font-size: 1rem;
