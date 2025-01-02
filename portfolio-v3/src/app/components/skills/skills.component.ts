@@ -18,7 +18,7 @@ export class SkillsComponent {
         ['Angular', 'React', 'Ionic','React native (Occasionally)', 'Sass, CSS', 'HTML' ] },
         {title: 'Backend', icon: 'fa-solid fa-database',
           stacks: ['Nodejs', 'JavasScript', 'Python', 'Postgresql', 'Mongodb']},
-        {title: 'DevOps', icon: 'fa-brands fa-aws',
+        {title: 'DevOps', icon: 'fa-solid fa-gear',
           stacks: ['Docker', 'Kubernetes','Ansible', 'Jenkins', 'prometheus', 'Grafana'
 
          ]}]
